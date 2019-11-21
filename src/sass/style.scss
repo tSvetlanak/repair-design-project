@@ -1,0 +1,436 @@
+    /*$bgcolor:red;
+body {
+    background-color: $bgcolor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    h1 {
+        font-size: 72px;
+        margin: 0;
+    }
+}*/
+    
+    @mixin displ($jcont:center, $aitems:center) {
+        display: flex;
+        justify-content: $jcont;
+        align-items: $aitems;
+    }
+    
+    @import 'fonts';
+    a {
+        text-decoration: none;
+    }
+    
+    @media only screen and (min-width: 375px) {
+        .header {
+            @include displ($jcont: space-around);
+            width: 100%;
+            height: 10vh;
+            font-size: 12px;
+            line-height: 14px;
+            font-family: FuturaDemiC;
+            background-color: #252525;
+            .logo {
+                text-transform: uppercase;
+                color: #E3B873;
+            }
+            .telefon {
+                color: #FFFFFF;
+            }
+            .button_call {
+                display: none;
+            }
+        }
+        .main {
+            margin-top: -16px;
+            .first-container {
+                position: relative;
+                width: 100%;
+                height: 80vh;
+                background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/bg__first-cont.jpg) no-repeat;
+                .text-block {
+                    position: relative;
+                    height: 50vh;
+                    width: 80vw;
+                    left: 4.8%;
+                    right: 4.8%;
+                    top: 15vh;
+                    .h {
+                        font-family: Yeseva One;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 23px;
+                        line-height: 132.83%;
+                        /* or 31px */
+                        text-transform: uppercase;
+                        color: #FFFFFF;
+                    }
+                    .offer {
+                        font-family: FuturaBookC;
+                        font-size: 18px;
+                        line-height: 135.84%;
+                        /* or 24px */
+                        color: #FFFFFF;
+                    }
+                }
+                .button-block {
+                    @include displ();
+                    flex-direction: column;
+                    .calc {
+                        width: 90%;
+                        height: 10vh;
+                        background: #E3B873;
+                        font-family: FuturaDemiC;
+                        font-size: 13px;
+                        line-height: 15px;
+                        text-align: center;
+                        color: #FFFFFF;
+                        border: none;
+                    }
+                    .applic {
+                        margin-top: 5vh;
+                        width: 90%;
+                        height: 10vh;
+                        background: rgba(0, 0, 0, 0.0);
+                        border: 1px solid #FFFFFF;
+                        box-sizing: border-box;
+                        font-family: FuturaDemiC;
+                        font-size: 13px;
+                        line-height: 15px;
+                        text-align: center;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+            .second-container {
+                background-color: #252525;
+                position: relative;
+                width: 100%;
+                @include displ();
+                flex-direction: column;
+                .tit {
+                    margin: 36px 0 0 0;
+                    position: relative;
+                    width: 45%;
+                    font-family: Yeseva One;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 22px;
+                    line-height: 138.6%;
+                    /* or 30px */
+                    text-align: center;
+                    letter-spacing: -0.07em;
+                    text-transform: uppercase;
+                    color: #E3B873;
+                }
+                .offer {
+                    margin: 22px 0 0 0;
+                    width: 83%;
+                    font-family: FuturaBookC;
+                    font-size: 14px;
+                    line-height: 158.48%;
+                    /* or 22px */
+                    text-align: center;
+                    color: #FFFFFF;
+                }
+                .slider {
+                    margin: 36px 0 0 0;
+                    width: 91%;
+                    height: 40vh;
+                    background: url(../img/image2.jpg) no-repeat;
+                }
+                .specification {
+                    margin: 36px 0 0 0;
+                    width: 90%;
+                    height: 146px;
+                    display: grid;
+                    grid-template-rows: 1fr 1.5fr;
+                    grid-template-columns: 1fr 1.5fr;
+                    grid-column-gap: 10vw;
+                    grid-row-gap: 27px;
+                    .specific-tit {
+                        margin: 0;
+                        font-family: Yeseva One;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 138.6%;
+                        /* identical to box height, or 19px */
+                        text-transform: uppercase;
+                        color: #E3B873;
+                    }
+                    .specific-descr {
+                        margin: 11px 0 0 0;
+                        font-family: FuturaBookC;
+                        font-size: 14px;
+                        line-height: 135.84%;
+                        /* or 19px */
+                        color: #FFFFFF;
+                    }
+                    .address,
+                    .time {
+                        width: 99px;
+                    }
+                }
+            }
+            .third-container {
+                background-color: #252525;
+                position: relative;
+                @include displ();
+                flex-direction: column;
+                .tit__third-container {
+                    font-family: Yeseva One;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 22px;
+                    line-height: 138.6%;
+                    /* or 30px */
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+                }
+                .group-camera .line {
+                    margin-bottom: 14px;
+                }
+                iframe {
+                    height: 100%;
+                }
+                .rect613 {
+                    margin: 28px 0 0 0;
+                }
+                .text__third-container {
+                    width: 90%;
+                    font-family: FuturaBookC;
+                    font-size: 14px;
+                    line-height: 169.8%;
+                    /* or 24px */
+                    text-align: center;
+                    color: #FFFFFF;
+                }
+                .application-form {
+                    margin: 32px 0 0 0;
+                    width: 90%;
+                    height: 311px;
+                    .name-phone {
+                        p {
+                            margin: 0;
+                        }
+                        .label-name,
+                        .label-phone,
+                        .check {
+                            font-family: FuturaBookC;
+                            font-size: 15px;
+                            line-height: 20px;
+                            color: rgba(255, 255, 255, 0.5);
+                        }
+                        .inp-name,
+                        .inp-phone {
+                            margin: 0;
+                            width: 100%;
+                            border: none;
+                            border-bottom: solid 1px;
+                            background-color: #252525;
+                            font-family: FuturaBookC;
+                            font-size: 18px;
+                            line-height: 138.72%;
+                            /* or 25px */
+                            color: #FFFFFF;
+                        }
+                        .check:before {
+                            margin: 5px 10px 0 0;
+                            content: url(../img/rect8.svg);
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+                        input:checked+label:before {
+                            margin: 5px 10px 0 0;
+                            content: url(../img/group48.svg);
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+                        input:disabled+label:before {
+                            margin: 5px 10px 0 0;
+                            content: url(../img/rect8.svg);
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+                        .p-label-phone {
+                            margin: 63px 0 0 0;
+                        }
+                        .p-agree {
+                            margin: 27px 0 0 0;
+                        }
+                        .submit {
+                            margin: 63px 0 0 0;
+                            width: 340px;
+                            height: 51px;
+                            left: 18px;
+                            border: none;
+                            background: #E3B873;
+                            box-shadow: 0px 10px 20px rgba(227, 184, 115, 0.1);
+                            font-family: FuturaDemiC;
+                            font-size: 15px;
+                            line-height: 26px;
+                            text-align: center;
+                            text-transform: uppercase;
+                            color: #FFFFFF;
+                        }
+                    }
+                }
+            }
+            .fourth-container {
+                margin: 84px 0 0 0;
+                background-color: #ffffff;
+                position: relative;
+                @include displ();
+                flex-direction: column;
+                .tit__fourth-container {
+                    font-family: Yeseva One;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 22px;
+                    line-height: 138.6%;
+                    /* or 30px */
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: #E3B873;
+                }
+                .group-repair .line {
+                    margin-bottom: 14px;
+                }
+                .type-of-works {
+                    width: 92%;
+                    .list-of-works {
+                        width: 78%;
+                        height: 245px;
+                        margin: 224px 70px 0 0;
+                        background: #FFFFFF;
+                        box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.05);
+                        .list-tit {
+                            margin: 0;
+                            padding: 21px 47px 0 31px;
+                            font-family: Yeseva One;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 15px;
+                            line-height: 138.6%;
+                            /* identical to box height, or 21px */
+                            color: #363636;
+                        }
+                        ul {
+                            margin: 0;
+                            padding: 10px 41px 38px 45px;
+                            .items {
+                                font-family: FuturaBookC;
+                                font-size: 13px;
+                                line-height: 169.8%;
+                                /* or 22px */
+                                color: #959595;
+                            }
+                        }
+                    }
+                }
+                .redecorating {
+                    margin-top: 40px;
+                    height: 100%;
+                    background: url(../img/image.png) no-repeat;
+                }
+                .overhaul {
+                    margin-top: 51px;
+                    height: 100%;
+                    background: url(../img/image3.png) no-repeat;
+                }
+                .designer-repair {
+                    margin-top: 59px;
+                    height: 100%;
+                    background: url(../img/image31.png) no-repeat;
+                }
+                .cost {
+                    text-align: center;
+                    margin: -23px 45% 0 4%;
+                    width: 51%;
+                    height: 49px;
+                    background: #E3B873;
+                    box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+                    .cost-p {
+                        font-family: Yeseva One;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 15px;
+                        line-height: 138.6%;
+                        /* or 21px */
+                        text-transform: uppercase;
+                        color: #FFFFFF;
+                    }
+                }
+                .tit-end__fourth-container {
+                    margin: 55px 0 0 0;
+                    width: 90%;
+                    height: 66px;
+                    font-family: Yeseva One;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 22px;
+                    line-height: 138.6%;
+                    /* or 30px */
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: #E3B873;
+                }
+                .first-slid {
+                    background: url(../img/image53.png) no-repeat;
+                }
+                .second-slid {
+                    background: url(../img/image31.png) no-repeat;
+                }
+                .third-slid {
+                    background: url(../img/image3.png) no-repeat;
+                }
+                .slider__fouth-container {
+                    margin-top: 24px;
+                    position: relative;
+                    @include displ($jcont: space-between);
+                    width: 90%;
+                    height: 242px;
+                    .buttom-left__butt,
+                    .buttom-right__butt {
+                        border: none;
+                        outline: none;
+                        background-color: #E3B873;
+                        border-radius: 50%;
+                        width: 36px;
+                        height: 36px;
+                        margin: 0 13px 0 14px;
+                        transition: all .2s;
+                        &:hover,
+                        &:focus {
+                            cursor: pointer;
+                        }
+                        &:active {
+                            cursor: pointer;
+                            background-color: rgb(252, 158, 8);
+                            transform: scale(1.2, 1.2);
+                        }
+                    }
+                    .buttom-right__butt img,
+                    .buttom-left__butt img {
+                        display: block;
+                        margin: 0 auto;
+                    }
+                }
+                .fifth-container {
+                    margin: 55px 0 0 0;
+                    background-color: #ffffff;
+                    position: relative;
+                    @include displ();
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+    
+    @media only screen and (max-width: 1440px) {}
