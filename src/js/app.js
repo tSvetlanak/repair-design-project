@@ -1,5 +1,4 @@
 import '../sass/style.scss'
-console.log("Hello, SASS");
 const FirstButton = document.getElementById("button-1");
 console.log(FirstButton);
 const SecondButton = document.getElementById("button-2");
