@@ -1,18 +1,4 @@
-/*$bgcolor:red;
-body {
-    background-color: $bgcolor;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    height: 100vh;
-    padding: 0;
-    margin: 0;
-    h1 {
-        font-size: 72px;
-        margin: 0;
-    }
-}*/
+@charset "UTF-8";
 @font-face {
   font-family: "Proxima Nova";
   src: url(fonts/fecf99e53cccadc7ca35ae6d47572959.eot);
@@ -42,7 +28,7 @@ a {
   text-decoration: none;
 }
 
-@media only screen and (min-width: 375px) {
+@media (min-width: 375px) {
   .header {
     display: flex;
     justify-content: space-around;
@@ -52,6 +38,9 @@ a {
     font-size: 12px;
     line-height: 14px;
     font-family: FuturaDemiC;
+    color: #FFFFFF;
+    text-align: left;
+    text-transform: none;
     background-color: #252525;
   }
   .header .logo {
@@ -88,9 +77,10 @@ a {
     font-weight: normal;
     font-size: 23px;
     line-height: 132.83%;
+    text-align: left;
     /* or 31px */
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: #ffffff;
   }
   .main .first-container .text-block .offer {
     font-family: FuturaBookC;
@@ -98,6 +88,7 @@ a {
     line-height: 135.84%;
     /* or 24px */
     color: #FFFFFF;
+    text-align: left;
   }
   .main .first-container .button-block {
     display: flex;
@@ -106,15 +97,16 @@ a {
     flex-direction: column;
   }
   .main .first-container .button-block .calc {
+    border: none;
     width: 90%;
     height: 10vh;
     background: #E3B873;
-    font-family: FuturaDemiC;
     font-size: 13px;
     line-height: 15px;
-    text-align: center;
+    font-family: FuturaDemiC;
     color: #FFFFFF;
-    border: none;
+    text-align: center;
+    text-transform: none;
   }
   .main .first-container .button-block .applic {
     margin-top: 5vh;
@@ -123,11 +115,12 @@ a {
     background: rgba(0, 0, 0, 0);
     border: 1px solid #FFFFFF;
     box-sizing: border-box;
-    font-family: FuturaDemiC;
     font-size: 13px;
     line-height: 15px;
-    text-align: center;
+    font-family: FuturaDemiC;
     color: #FFFFFF;
+    text-align: center;
+    text-transform: none;
   }
   .main .second-container {
     background-color: #252525;
@@ -147,11 +140,11 @@ a {
     font-weight: normal;
     font-size: 22px;
     line-height: 138.6%;
-    /* or 30px */
     text-align: center;
-    letter-spacing: -0.07em;
+    /* or 31px */
     text-transform: uppercase;
     color: #E3B873;
+    letter-spacing: -0.07em;
   }
   .main .second-container .offer {
     margin: 22px 0 0 0;
@@ -159,9 +152,9 @@ a {
     font-family: FuturaBookC;
     font-size: 14px;
     line-height: 158.48%;
-    /* or 22px */
-    text-align: center;
+    /* or 24px */
     color: #FFFFFF;
+    text-align: center;
   }
   .main .second-container .slider {
     margin: 36px 0 0 0;
@@ -186,7 +179,8 @@ a {
     font-weight: normal;
     font-size: 14px;
     line-height: 138.6%;
-    /* identical to box height, or 19px */
+    text-align: left;
+    /* or 31px */
     text-transform: uppercase;
     color: #E3B873;
   }
@@ -195,8 +189,9 @@ a {
     font-family: FuturaBookC;
     font-size: 14px;
     line-height: 135.84%;
-    /* or 19px */
-    color: #FFFFFF;
+    /* or 24px */
+    color: #ffffff;
+    text-align: left;
   }
   .main .second-container .specification .address,
 .main .second-container .specification .time {
@@ -216,10 +211,10 @@ a {
     font-weight: normal;
     font-size: 22px;
     line-height: 138.6%;
-    /* or 30px */
     text-align: center;
+    /* or 31px */
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: #ffffff;
   }
   .main .third-container .group-camera .line {
     margin-bottom: 14px;
@@ -236,8 +231,8 @@ a {
     font-size: 14px;
     line-height: 169.8%;
     /* or 24px */
-    text-align: center;
     color: #FFFFFF;
+    text-align: center;
   }
   .main .third-container .application-form {
     margin: 32px 0 0 0;
@@ -247,25 +242,53 @@ a {
   .main .third-container .application-form .name-phone p {
     margin: 0;
   }
+  .main .third-container .application-form .name-phone p .inp-name,
+.main .third-container .application-form .name-phone p .inp-phone {
+    margin: 0;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: solid 1px #FFFFFF;
+    background-color: #252525;
+    font-family: FuturaBookC;
+    font-size: 18px;
+    line-height: 138.72%;
+    /* or 24px */
+    color: #FFFFFF;
+    text-align: left;
+  }
+  .main .third-container .application-form .name-phone p .inp-name::-moz-placeholder,
+.main .third-container .application-form .name-phone p .inp-phone::-moz-placeholder {
+    color: #FFFFFF;
+    /* Цвет подсказывающего текста */
+  }
+  .main .third-container .application-form .name-phone p .inp-name::-webkit-input-placeholder,
+.main .third-container .application-form .name-phone p .inp-phone::-webkit-input-placeholder {
+    color: #FFFFFF;
+  }
+  .main .third-container .application-form .name-phone p .inp-name:-ms-input-placeholder,
+.main .third-container .application-form .name-phone p .inp-phone:-ms-input-placeholder {
+    color: #FFFFFF;
+  }
+  .main .third-container .application-form .name-phone p .inp-name::-ms-input-placeholder,
+.main .third-container .application-form .name-phone p .inp-phone::-ms-input-placeholder {
+    color: #FFFFFF;
+  }
+  .main .third-container .application-form .name-phone p .inp-name::placeholder,
+.main .third-container .application-form .name-phone p .inp-phone::placeholder {
+    color: #FFFFFF;
+  }
   .main .third-container .application-form .name-phone .label-name,
 .main .third-container .application-form .name-phone .label-phone,
 .main .third-container .application-form .name-phone .check {
     font-family: FuturaBookC;
     font-size: 15px;
     line-height: 20px;
+    /* or 24px */
     color: rgba(255, 255, 255, 0.5);
+    text-align: left;
   }
-  .main .third-container .application-form .name-phone .inp-name,
-.main .third-container .application-form .name-phone .inp-phone {
-    margin: 0;
-    width: 100%;
-    border: none;
-    border-bottom: solid 1px;
-    background-color: #252525;
-    font-family: FuturaBookC;
-    font-size: 18px;
-    line-height: 138.72%;
-    /* or 25px */
+  .main .third-container .application-form .name-phone .check {
     color: #FFFFFF;
   }
   .main .third-container .application-form .name-phone .check:before {
@@ -300,12 +323,12 @@ a {
     border: none;
     background: #E3B873;
     box-shadow: 0px 10px 20px rgba(227, 184, 115, 0.1);
-    font-family: FuturaDemiC;
     font-size: 15px;
     line-height: 26px;
+    font-family: FuturaDemiC;
+    color: #FFFFFF;
     text-align: center;
     text-transform: uppercase;
-    color: #FFFFFF;
   }
   .main .fourth-container {
     margin: 84px 0 0 0;
@@ -322,10 +345,10 @@ a {
     font-weight: normal;
     font-size: 22px;
     line-height: 138.6%;
-    /* or 30px */
     text-align: center;
+    /* or 31px */
     text-transform: uppercase;
-    color: #E3B873;
+    color: #181818;
   }
   .main .fourth-container .group-repair .line {
     margin-bottom: 14px;
@@ -348,7 +371,9 @@ a {
     font-weight: normal;
     font-size: 15px;
     line-height: 138.6%;
-    /* identical to box height, or 21px */
+    text-align: left;
+    /* or 31px */
+    text-transform: none;
     color: #363636;
   }
   .main .fourth-container .type-of-works .list-of-works ul {
@@ -359,8 +384,9 @@ a {
     font-family: FuturaBookC;
     font-size: 13px;
     line-height: 169.8%;
-    /* or 22px */
+    /* or 24px */
     color: #959595;
+    text-align: left;
   }
   .main .fourth-container .redecorating {
     margin-top: 40px;
@@ -391,9 +417,10 @@ a {
     font-weight: normal;
     font-size: 15px;
     line-height: 138.6%;
-    /* or 21px */
+    text-align: center;
+    /* or 31px */
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: #ffffff;
   }
   .main .fourth-container .tit-end__fourth-container {
     margin: 55px 0 0 0;
@@ -404,8 +431,8 @@ a {
     font-weight: normal;
     font-size: 22px;
     line-height: 138.6%;
-    /* or 30px */
     text-align: center;
+    /* or 31px */
     text-transform: uppercase;
     color: #E3B873;
   }
@@ -419,6 +446,7 @@ a {
     background: url(img/757f38f5df1bd407e76596de8f30f9a7.png) no-repeat;
   }
   .main .fourth-container .slider__fouth-container {
+    z-index: 100;
     margin-top: 24px;
     position: relative;
     display: flex;
@@ -454,13 +482,206 @@ a {
     display: block;
     margin: 0 auto;
   }
-  .main .fourth-container .fifth-container {
-    margin: 55px 0 0 0;
-    background-color: #ffffff;
+  .main .fifth-container {
+    margin: -121px 0 0 0;
+    background-color: #252525;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  }
+  .main .fifth-container .tit__fifth-container {
+    margin-top: 173px;
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 138.6%;
+    text-align: center;
+    /* or 31px */
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  .main .fifth-container .group-project .line {
+    margin-bottom: 14px;
+  }
+  .main .fifth-container .p-project {
+    width: 90%;
+    height: 76px;
+    font-family: FuturaBookC;
+    font-size: 15px;
+    line-height: 135.84%;
+    /* or 24px */
+    color: #FFFFFF;
+    text-align: center;
+  }
+  .main .fifth-container .type-of-works {
+    width: 92%;
+  }
+  .main .fifth-container .type-of-works .list-of-works {
+    width: 78%;
+    height: 245px;
+    margin: 224px 70px 0 0;
+    background: #FFFFFF;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.05);
+  }
+  .main .fifth-container .type-of-works .list-of-works .list-tit {
+    margin: 0;
+    padding: 21px 47px 0 31px;
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 138.6%;
+    text-align: left;
+    /* or 31px */
+    text-transform: none;
+    color: #363636;
+  }
+  .main .fifth-container .type-of-works .list-of-works ul {
+    margin: 0;
+    padding: 10px 41px 38px 45px;
+  }
+  .main .fifth-container .type-of-works .list-of-works ul .items {
+    font-family: FuturaBookC;
+    font-size: 13px;
+    line-height: 169.8%;
+    /* or 24px */
+    color: #959595;
+    text-align: left;
+  }
+  .main .fifth-container .redecorating {
+    margin-top: 40px;
+    height: 100%;
+    background: url(img/addb2cc25cb25b42057d89d3dece9ebd.png) no-repeat;
+  }
+  .main .fifth-container .overhaul {
+    margin-top: 51px;
+    height: 100%;
+    background: url(img/757f38f5df1bd407e76596de8f30f9a7.png) no-repeat;
+  }
+  .main .fifth-container .designer-repair {
+    margin-top: 59px;
+    height: 100%;
+    background: url(img/a869119af99e4d44808df4e7f092910a.png) no-repeat;
+  }
+  .main .fifth-container .cost {
+    text-align: center;
+    margin: -23px 45% 0 4%;
+    width: 51%;
+    height: 49px;
+    background: #E3B873;
+    box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+  }
+  .main .fifth-container .cost .cost-p {
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 138.6%;
+    text-align: center;
+    /* or 31px */
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  .main .sixth-container {
+    margin: -1px 0 0 0;
+    background-color: #252525;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .main .sixth-container .tit__sixth-container {
+    margin: 77px 0 12.5px 0;
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 138.6%;
+    text-align: center;
+    /* or 31px */
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  .main .sixth-container .group-project .line {
+    margin-bottom: 14px;
+  }
+  .main .sixth-container .p-project {
+    width: 90%;
+    height: 42px;
+    margin: 23.5px 0 41px 0;
+    font-family: FuturaBookC;
+    font-size: 15px;
+    line-height: 135.84%;
+    /* or 24px */
+    color: #FFFFFF;
+    text-align: center;
+  }
+  .main .sixth-container .employee {
+    position: relative;
+    width: 90%;
+    height: 449px;
+  }
+  .main .sixth-container .employee .photo {
+    position: absolute;
+    top: 35px;
+    right: 0;
+  }
+  .main .sixth-container .employee .avatar {
+    position: absolute;
+    top: -16px;
+    left: -19px;
+  }
+  .main .sixth-container .employee .employee-portfolio {
+    position: absolute;
+    bottom: 0;
+    right: 10.66%;
+    width: 69.13%;
+    height: 137px;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
+  }
+  .main .sixth-container .employee .employee-portfolio .name {
+    margin: 22px 0 0 0;
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    /* or 31px */
+    text-transform: none;
+    color: #181818;
+  }
+  .main .sixth-container .employee .employee-portfolio .profession {
+    margin: 9px 0 17px 0;
+    font-family: FuturaBookC;
+    font-size: 18px;
+    line-height: 26px;
+    /* or 24px */
+    color: #959595;
+    text-align: center;
+  }
+  .main .sixth-container .employee .employee-portfolio .experience {
+    padding: 4px 0 5px 0;
+    background-color: #E3B873;
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 29px;
+    text-align: center;
+    /* or 31px */
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  .main .sixth-container .the-details {
+    margin-top: 54px;
+  }
+  .main .sixth-container .the-details .photo {
+    top: 57px;
   }
 }
