@@ -55,7 +55,7 @@ a {
   }
 
   .main {
-    margin-top: -16px;
+    margin: -16px 0 0 0;
   }
   .main .first-container {
     position: relative;
@@ -684,4 +684,190 @@ a {
   .main .sixth-container .the-details .photo {
     top: 57px;
   }
+  .main .seventh-container {
+    background-color: #252525;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .main .seventh-container .tit__seventh-container {
+    margin: 76px 0 12.5px 0;
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 138.6%;
+    text-align: center;
+    /* or 31px */
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  .main .seventh-container .application-form {
+    margin: 32px 0 0 0;
+    width: 90%;
+  }
+  .main .seventh-container .application-form .name-phone p {
+    margin: 0;
+  }
+  .main .seventh-container .application-form .name-phone p .inp-question,
+.main .seventh-container .application-form .name-phone p .inp-name,
+.main .seventh-container .application-form .name-phone p .inp-phone {
+    margin: 0;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: solid 1px #FFFFFF;
+    background-color: #252525;
+    font-family: FuturaBookC;
+    font-size: 18px;
+    line-height: 138.72%;
+    /* or 24px */
+    color: #FFFFFF;
+    text-align: left;
+  }
+  .main .seventh-container .application-form .name-phone p .inp-question::-moz-placeholder,
+.main .seventh-container .application-form .name-phone p .inp-name::-moz-placeholder,
+.main .seventh-container .application-form .name-phone p .inp-phone::-moz-placeholder {
+    color: #FFFFFF;
+    /* Цвет подсказывающего текста */
+  }
+  .main .seventh-container .application-form .name-phone p .inp-question::-webkit-input-placeholder,
+.main .seventh-container .application-form .name-phone p .inp-name::-webkit-input-placeholder,
+.main .seventh-container .application-form .name-phone p .inp-phone::-webkit-input-placeholder {
+    color: #FFFFFF;
+  }
+  .main .seventh-container .application-form .name-phone p .inp-question:-ms-input-placeholder,
+.main .seventh-container .application-form .name-phone p .inp-name:-ms-input-placeholder,
+.main .seventh-container .application-form .name-phone p .inp-phone:-ms-input-placeholder {
+    color: #FFFFFF;
+  }
+  .main .seventh-container .application-form .name-phone p .inp-question::-ms-input-placeholder,
+.main .seventh-container .application-form .name-phone p .inp-name::-ms-input-placeholder,
+.main .seventh-container .application-form .name-phone p .inp-phone::-ms-input-placeholder {
+    color: #FFFFFF;
+  }
+  .main .seventh-container .application-form .name-phone p .inp-question::placeholder,
+.main .seventh-container .application-form .name-phone p .inp-name::placeholder,
+.main .seventh-container .application-form .name-phone p .inp-phone::placeholder {
+    color: #FFFFFF;
+  }
+  .main .seventh-container .application-form .name-phone .label-name,
+.main .seventh-container .application-form .name-phone .label-phone,
+.main .seventh-container .application-form .name-phone .label-question,
+.main .seventh-container .application-form .name-phone .check {
+    font-family: FuturaBookC;
+    font-size: 15px;
+    line-height: 20px;
+    /* or 24px */
+    color: rgba(255, 255, 255, 0.5);
+    text-align: left;
+  }
+  .main .seventh-container .application-form .name-phone .check {
+    color: #FFFFFF;
+  }
+  .main .seventh-container .application-form .name-phone .check:before {
+    margin: 5px 10px 0 0;
+    content: url(img/61f4aa5953d11be4de54b239bcc1c5ff.svg);
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .main .seventh-container .application-form .name-phone input:checked + label:before {
+    margin: 5px 10px 0 0;
+    content: url(img/26b657c5a7b89fc892c441785e29d979.svg);
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .main .seventh-container .application-form .name-phone input:disabled + label:before {
+    margin: 5px 10px 0 0;
+    content: url(img/61f4aa5953d11be4de54b239bcc1c5ff.svg);
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .main .seventh-container .application-form .name-phone .p-label-question,
+.main .seventh-container .application-form .name-phone .p-label-phone {
+    margin: 63px 0 0 0;
+  }
+  .main .seventh-container .application-form .name-phone .p-agree {
+    margin: 27px 0 0 0;
+  }
+  .main .seventh-container .application-form .name-phone .submit {
+    margin: 63px 0 0 0;
+    width: 340px;
+    height: 51px;
+    left: 18px;
+    border: none;
+    background: #E3B873;
+    box-shadow: 0px 10px 20px rgba(227, 184, 115, 0.1);
+    font-size: 15px;
+    line-height: 26px;
+    font-family: FuturaDemiC;
+    color: #FFFFFF;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .main .seventh-container .map {
+    margin-top: 46px;
+    overflow: hidden;
+    width: 340px;
+    position: relative;
+  }
+  .main .seventh-container .map .map-small-group {
+    position: absolute;
+    width: 80%;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    color: #000;
+    text-align: center;
+  }
+  .main .seventh-container .map .map-small-group .map-small {
+    line-height: 1.8;
+    font-size: 2px;
+    background: #fff;
+  }
+  .main .seventh-container .map #gmap_canvas img {
+    max-width: none !important;
+    background: none !important;
+  }
+}
+.footer {
+  margin-top: -4px;
+  background-color: #252525;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 210px;
+}
+.footer .h-footer {
+  margin: 42px 0 0 0;
+  font-family: Yeseva One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 138.6%;
+  text-align: center;
+  /* or 31px */
+  text-transform: uppercase;
+  color: #E3B873;
+}
+.footer .feedback {
+  margin: 24px 0 40px 0;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 99px;
+  height: 40px;
+}
+.footer .feedback img {
+  width: 39px;
+  height: 39px;
 }
