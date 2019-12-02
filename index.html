@@ -38,7 +38,7 @@
                     <a class="instagram__link" href="#"> INSTAGRAM</a>
                 </div>
                 <div class="scroll-block">
-                    <p class="scroll-block__p">SCROLL DOWN</p>
+                    <p class="scroll-block__p"> <a href="#content">SCROLL DOWN</a></p>
                 </div>
                 <h1 class="h" id="h">Turnkey Repair in the<br/> city of<span> Rostov-on-Don</span></h1>
                 <p class="offer" id="offer">Get ready-made turnkey repairs on time <br/>with work time saving up to 45 days and 20% from cost of materials due to the organization of work
@@ -48,30 +48,68 @@
                 <button id="applic" class="btn applic">SUBMIT YOUR APPLICATION</button>
 
             </section>
-            <section class="second-container">
-                <h2 class="tit">Completed projects</h2>
-                <p class="offer">Only a small part of the work performed by our company is presented on the site. For 14 years on in the construction market we have made happy more than 1000 families
-                </p>
-                <div class="slider"></div>
-                <div class="specification" id="grid">
-                    <div class="city">
-                        <h3 class="city-h specific-tit">City:</h3>
-                        <p class="address specific-descr">Rostov-on-Don LCD admiral</p>
+            <section id="content" class="second-container">
+                <div class="second-container__wrap">
+                    <div class="second-container__nav">
+                        <ul>
+                            <li>Rostov-on-Don, Admiral</li>
+                            <li>Sochi Thieves</li>
+                            <li> Rostov-on-Don Patriotic</li>
+                        </ul>
                     </div>
-                    <div class="area">
-                        <h3 class="area-h specific-tit">apartment area:</h3>
-                        <p class="space  specific-descr">81 m2</p>
+                    <h2 class="tit">Completed projects</h2>
+                    <p class="offer">Only a small part of the work performed by our company is presented on the site. For 14 years on in the construction market we have made happy more than 1000 families
+                    </p>
+                    <div class="slider"> </div>
+                    <div class="slider__big">
+                        <img src="src/img/MaskGroup1.png" alt="first-slid">
+                        <img src="src/img/MaskGroup.png" alt="first-slid">
+
                     </div>
-                    <div class="rep-time">
-                        <h3 class="rep-time-h specific-tit">Repair time:</h3>
-                        <p class="time specific-descr">3.5 months</p>
+
+                    <button id="button-2" class="buttom-left__butt">
+                            <img src="src/img/vectorst2.svg" alt="" > 
+                        </button >
+
+                    <div class="specification" id="grid">
+                        <div class="city">
+                            <h3 class="city-h specific-tit">City:</h3>
+                            <p class="address specific-descr">Rostov-on-Don LCD admiral</p>
+                        </div>
+                        <div class="area">
+                            <h3 class="area-h specific-tit">apartment area:</h3>
+                            <p class="space-p  specific-descr">81 m2</p>
+                        </div>
+                        <div class="rep-time">
+                            <h3 class="rep-time-h specific-tit">Repair time:</h3>
+                            <p class="time specific-descr">3.5 months</p>
+                        </div>
+                        <div class="rep-cost">
+                            <h3 class="rep-cost-h specific-tit">Repair Cost:</h3>
+                            <p class="cost specific-descr">Upon request</p>
+                        </div>
                     </div>
-                    <div class="rep-cost">
-                        <h3 class="rep-cost-h specific-tit">Repair Cost:</h3>
-                        <p class="cost specific-descr">Upon request</p>
+                    <div class="btn__section2">
+                        <img src="src/img/btn-sec21.svg" alt="">
+                        <div class="slider-wrap">
+                            <label class="my-custom-label">
+                                <input name="test" type="radio" />
+                                <span></span>
+                            </label>
+                            <label class="my-custom-label">
+                                <input name="test" type="radio" />
+                                <span></span>
+                            </label>
+                            <label class="my-custom-label">
+                                <input name="test" type="radio" />
+                                <span></span>
+                            </label>
+                        </div>
+                        <img src="src/img/btn-sec2.svg" alt="">
                     </div>
                 </div>
             </section>
+
             <section class="third-container">
                 <h2 class="tit__third-container">online control</h2>
                 <div class="group-camera">
@@ -87,12 +125,12 @@
                 </p>
                 <form class="application-form" action="" method="get">
                     <div class="name-phone">
-                        <p><label class="label-name" for="name">Name</label></p>
-                        <p> <input class="inp-name" type="text" id="name" placeholder="What is your name:" required pattern="[A-z]{2,}"></p>
-                        <p class="p-label-phone"> <label class="label-phone" for="phone">Phone</label></p>
-                        <p> <input class="inp-phone" type="tel" name="tel" id="phone" placeholder="Your phone number:" required pattern="2[0-9]{3}-[0-9]{3}"></p>
+                        <p class="p-label-name"><label class="label-name" for="name">Name</label>
+                        <input class="inp-name" type="text" id="name" placeholder="What is your name:" required pattern="[A-z]{2,}"></p>
+                        <p class="p-label-phone"> <label class="label-phone" for="phone">Phone</label>
+                         <input class="inp-phone" type="tel" name="tel" id="phone" placeholder="Your phone number:" required pattern="2[0-9]{3}-[0-9]{3}"></>
                         <p class="p-agree"><input class="agree" type="checkbox" id="reading" value="yes" checked hidden><label class="check" for="reading">I agree to the processing of personal data</label></p>
-                        <p> <input class="submit" type="submit" value="SUBMIT"></p>
+                        <p class="p-submit"> <input class="submit" type="submit" value="SUBMIT"></p>
                     </div>
 
                 </form>
@@ -104,8 +142,9 @@
                     <img class="camera" src="src/img/tools.svg" alt="camera">
                     <img class="line" src="src/img/rect67.svg" alt="line">
                 </div>
-
-                <div class="type-of-works redecorating">
+<div class="fourth-container__content">
+    <div class="type-of-works">
+                <div class=" redecorating">
                     <div class="list-of-works">
                         <h3 class="list-tit"> Redecorating</h3>
                         <ul>
@@ -122,9 +161,9 @@
                 <div class="cost">
                     <p class="cost-p">from 900 rub / m2 </p>
                 </div>
-
-
-                <div class="type-of-works overhaul">
+    </div>
+<div class="type-of-works">
+                <div class=" overhaul">
                     <div class="list-of-works">
                         <h3 class="list-tit"> Overhaul</h3>
                         <ul>
@@ -141,9 +180,9 @@
                 <div class="cost">
                     <p class="cost-p">from 1800 rub / m2 </p>
                 </div>
-
-
-                <div class="type-of-works designer-repair">
+</div>
+<div class="type-of-works">
+                <div class=" designer-repair">
                     <div class="list-of-works">
                         <h3 class="list-tit"> Designer Repair</h3>
                         <ul>
@@ -160,6 +199,53 @@
                 <div class="cost">
                     <p class="cost-p">from 4000 rub / m2 </p>
                 </div>
+            </div>
+</div>
+<div class="block-with-form">
+        <div class="circle-image-block">
+            <div class="circle-block">
+
+                <div class="circle-block__little-circle-block little1">
+                    <span class="circle-block__little-circle">01</span>
+                    <p class="circle-block__text">Our specialist will arrive for measurements per day contact, or appoint a date convenient for you</p>
+                </div>
+                <div class="circle-block__little-circle-block little2">
+                    <span class="circle-block__little-circle">02</span>
+                    <p class="circle-block__text">Free metering</p>
+                </div>
+                <div class="circle-block__little-circle-block little3">
+                    <span class="circle-block__little-circle">03</span>
+                    <p class="circle-block__text">Free consultation</p>
+                </div>
+                <div class="circle-block__little-circle-block little4">
+                    <span class="circle-block__little-circle">04</span>
+                    <p class="circle-block__text">Get a cost estimate and the timing of your future repairs</p>
+                </div>
+            </div>
+        </div>
+        <div class="form-side-block">
+                    <form class="black-form" action="" method="get">
+                        <p class="black-form__p-text">Leave a request for free departure of the measurer</p>
+                        <label class="black-form__label" for="name">Name</label>
+                        <input class="black-form__text-input" type="text" name="lname" id="name" placeholder="What is your name:" required pattern="[A-z]{2,}">
+                        <label class="black-form__label" for="phone">Phone</label>
+                        <input class="black-form__text-input" type="phone" name="phone" id="phone" placeholder="Your phone number:" required pattern="[+][0-9]{8,12}">
+                        <label class="black-form__label" for="email">Email</label>
+                        <input class="black-form__text-input" type="email" name="email" id="email" placeholder="Your email:" required>
+
+
+                        <div class="check">
+                            <div class="squaredThree">
+                                <input type="checkbox" value="None" id="squaredThree" name="check" checked />
+                                <label for="squaredThree"></label>
+                            </div>
+                            <input class="black-form__check" type="checkbox" id="check" required>
+                            <label class="black-form__check-label" for="check">I agree to the processing of personal data</label>
+                        </div>
+                        <input class="black-form__text-submit" type="submit" value="Call the measurer">
+                    </form>
+
+        </div>
                 <h2 class="tit-end__fourth-container">We realize your </br> wildest fantasies</h2>
                 <div id="content" class="slider__fouth-container first-slid">
                     <button id="button-1" class="buttom-right__butt">
@@ -170,6 +256,7 @@
                     </button >
                 </div>
             </section>
+
             <section class="fifth-container">
                     <h2 class="tit__fifth-container">design project</h2>
                     <div class="group-project">
