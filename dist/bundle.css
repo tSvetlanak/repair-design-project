@@ -407,25 +407,25 @@ a {
     width: 100%;
   }
   .fourth-container .fourth-container__content .type-of-works .redecorating {
-    width: 100%;
+    width: 92%;
     margin-top: 40px;
     height: 100%;
     background: url(img/addb2cc25cb25b42057d89d3dece9ebd.png) no-repeat;
   }
   .fourth-container .fourth-container__content .type-of-works .overhaul {
-    width: 100%;
+    width: 92%;
     margin-top: 51px;
     height: 100%;
     background: url(img/757f38f5df1bd407e76596de8f30f9a7.png) no-repeat;
   }
   .fourth-container .fourth-container__content .type-of-works .designer-repair {
-    width: 100%;
+    width: 92%;
     margin-top: 59px;
     height: 100%;
     background: url(img/a869119af99e4d44808df4e7f092910a.png) no-repeat;
   }
   .fourth-container .fourth-container__content .type-of-works .list-of-works {
-    width: 78%;
+    width: 85%;
     height: 245px;
     margin: 224px 70px 0 0;
     background: #FFFFFF;
@@ -551,6 +551,9 @@ a {
     align-items: center;
     flex-direction: column;
   }
+  .fifth-container .six-steps-our-work {
+    display: none;
+  }
   .fifth-container .tit__fifth-container {
     margin-top: 173px;
     font-family: Yeseva One;
@@ -570,7 +573,7 @@ a {
     margin-bottom: 14px;
   }
   .fifth-container .p-project {
-    width: 90%;
+    width: 74%;
     height: 76px;
     font-family: FuturaBookC;
     font-size: 15px;
@@ -579,17 +582,52 @@ a {
     color: #FFFFFF;
     text-align: center;
   }
-  .fifth-container .type-of-works {
-    width: 92%;
+  .fifth-container .fifth-container__content {
+    margin: 0;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
-  .fifth-container .type-of-works .list-of-works {
-    width: 78%;
+  .fifth-container .fifth-container__content .type-of-works {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .fifth-container .fifth-container__content .type-of-works .redecorating {
+    width: 92%;
+    margin-top: 40px;
+    height: 100%;
+    background: url(img/addb2cc25cb25b42057d89d3dece9ebd.png) no-repeat;
+  }
+  .fifth-container .fifth-container__content .type-of-works .redecorating .mini {
+    height: 182px;
+  }
+  .fifth-container .fifth-container__content .type-of-works .overhaul {
+    width: 92%;
+    margin-top: 51px;
+    height: 100%;
+    background: url(img/757f38f5df1bd407e76596de8f30f9a7.png) no-repeat;
+  }
+  .fifth-container .fifth-container__content .type-of-works .designer-repair {
+    width: 92%;
+    margin-top: 59px;
+    height: 100%;
+    background: url(img/a869119af99e4d44808df4e7f092910a.png) no-repeat;
+  }
+  .fifth-container .fifth-container__content .type-of-works .list-of-works {
+    width: 85%;
     height: 245px;
     margin: 224px 70px 0 0;
     background: #FFFFFF;
     box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.05);
   }
-  .fifth-container .type-of-works .list-tit {
+  .fifth-container .fifth-container__content .type-of-works .list-of-works .list-tit {
     padding: 21px 47px 0 31px;
     font-family: Yeseva One;
     font-style: normal;
@@ -601,10 +639,10 @@ a {
     text-transform: none;
     color: #363636;
   }
-  .fifth-container .type-of-works ul {
+  .fifth-container .fifth-container__content .type-of-works .list-of-works ul {
     padding: 10px 41px 38px 45px;
   }
-  .fifth-container .type-of-works ul .items {
+  .fifth-container .fifth-container__content .type-of-works .list-of-works ul .items {
     font-family: FuturaBookC;
     font-size: 13px;
     line-height: 169.8%;
@@ -612,32 +650,14 @@ a {
     color: #959595;
     text-align: left;
   }
-  .fifth-container .redecorating {
-    margin-top: 40px;
-    height: 100%;
-    background: url(img/addb2cc25cb25b42057d89d3dece9ebd.png) no-repeat;
-  }
-  .fifth-container .redecorating .mini {
-    height: 182px;
-  }
-  .fifth-container .overhaul {
-    margin-top: 51px;
-    height: 100%;
-    background: url(img/757f38f5df1bd407e76596de8f30f9a7.png) no-repeat;
-  }
-  .fifth-container .designer-repair {
-    margin-top: 59px;
-    height: 100%;
-    background: url(img/a869119af99e4d44808df4e7f092910a.png) no-repeat;
-  }
-  .fifth-container .cost {
+  .fifth-container .fifth-container__content .type-of-works .cost {
     margin: -23px 45% 0 4%;
     width: 51%;
     height: 49px;
     background: #E3B873;
     box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
   }
-  .fifth-container .cost .cost-p {
+  .fifth-container .fifth-container__content .type-of-works .cost .cost-p {
     margin-top: 15px;
     font-family: Yeseva One;
     font-style: normal;
@@ -685,22 +705,29 @@ a {
     color: #FFFFFF;
     text-align: center;
   }
-  .sixth-container .employee {
+  .sixth-container .our-employees {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .sixth-container .our-employees .employee {
     position: relative;
     width: 90%;
     height: 449px;
   }
-  .sixth-container .employee .photo {
+  .sixth-container .our-employees .employee .photo {
     position: absolute;
     top: 35px;
     right: 0;
   }
-  .sixth-container .employee .avatar {
+  .sixth-container .our-employees .employee .avatar {
     position: absolute;
     top: -16px;
     left: -19px;
   }
-  .sixth-container .employee .employee-portfolio {
+  .sixth-container .our-employees .employee .employee-portfolio {
     position: absolute;
     bottom: 0;
     right: 10.66%;
@@ -709,7 +736,7 @@ a {
     background: #FFFFFF;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
   }
-  .sixth-container .employee .employee-portfolio .name {
+  .sixth-container .our-employees .employee .employee-portfolio .name {
     margin: 22px 0 0 0;
     font-family: Yeseva One;
     font-style: normal;
@@ -721,7 +748,7 @@ a {
     text-transform: none;
     color: #181818;
   }
-  .sixth-container .employee .employee-portfolio .profession {
+  .sixth-container .our-employees .employee .employee-portfolio .profession {
     margin: 9px 0 17px 0;
     font-family: FuturaBookC;
     font-size: 18px;
@@ -730,7 +757,7 @@ a {
     color: #959595;
     text-align: center;
   }
-  .sixth-container .employee .employee-portfolio .experience {
+  .sixth-container .our-employees .employee .employee-portfolio .experience {
     padding: 4px 0 5px 0;
     background-color: #E3B873;
     font-family: Yeseva One;
@@ -743,10 +770,10 @@ a {
     text-transform: uppercase;
     color: #ffffff;
   }
-  .sixth-container .the-details {
+  .sixth-container .our-employees .the-details {
     margin-top: 54px;
   }
-  .sixth-container .the-details .photo {
+  .sixth-container .our-employees .the-details .photo {
     top: 57px;
   }
 
@@ -1309,6 +1336,9 @@ a {
     height: 13.3px;
     grid-area: btn__section2;
   }
+  .main .second-container .second-container__wrap .btn__section2 .img-btn__section2:hover, .main .second-container .second-container__wrap .btn__section2 .img-btn__section2:active, .main .second-container .second-container__wrap .btn__section2 .img-btn__section2:focus {
+    cursor: pointer;
+  }
   .main .second-container .second-container__wrap .btn__section2 .slider-wrap {
     display: flex;
     justify-content: center;
@@ -1337,6 +1367,9 @@ a {
     border-radius: 100%;
     vertical-align: middle;
   }
+  .main .second-container .second-container__wrap .btn__section2 .slider-wrap .my-custom-label span:hover, .main .second-container .second-container__wrap .btn__section2 .slider-wrap .my-custom-label span:active, .main .second-container .second-container__wrap .btn__section2 .slider-wrap .my-custom-label span:focus {
+    cursor: pointer;
+  }
   .main .second-container .second-container__wrap .btn__section2 .slider-wrap .my-custom-label input[type=radio]:checked + span {
     background: #fff;
     width: 10px;
@@ -1350,7 +1383,7 @@ a {
   .main .third-container::after {
     content: "";
     width: 100%;
-    height: 28%;
+    height: 34%;
     background: #252525;
     position: absolute;
     left: 0;
@@ -1481,12 +1514,39 @@ a {
     margin: 0;
   }
   .main .fourth-container .fourth-container__content .list-of-works {
-    width: 65%;
-    margin: 263px 70px 0 56px;
+    margin: 251px 70px 0 28px;
+  }
+  .main .fourth-container .fourth-container__content .list-of-works .list-tit {
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    /* or 31px */
+    text-transform: uppercase;
+    color: #363636;
+  }
+  .main .fourth-container .fourth-container__content .list-of-works .items {
+    font-family: FuturaBookC;
+    font-size: 15px;
+    line-height: 25px;
+    /* or 24px */
+    color: #959595;
+    text-align: left;
   }
   .main .fourth-container .fourth-container__content .cost {
     width: 45%;
-    margin: -25px 65% 0 41%;
+    margin: -25px 72% 0 41%;
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    /* or 31px */
+    text-transform: uppercase;
+    color: #ffffff;
   }
   .main .fourth-container .slider__fouth-container {
     display: none;
@@ -1498,7 +1558,7 @@ a {
     align-items: center;
     flex-wrap: wrap;
     margin: 0;
-    padding: 12.5% 0% 0 0;
+    padding: 12.5% 0 9% 0;
   }
   .main .fourth-container .our-conditions .circle-wrap {
     position: relative;
@@ -1727,18 +1787,24 @@ a {
     display: none;
   }
   .main .fourth-container .wildest-fantasies {
+    width: 100%;
+    background: linear-gradient(120.96deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.9) 100%), url(img/c87057480c71df05d2007aca3aa523cd.png) no-repeat;
     display: block;
+    position: relative;
+  }
+  .main .fourth-container .wildest-fantasies .wildest-fantasies__wrap {
     width: 100%;
     position: relative;
     display: grid;
     grid-template-columns: 41% 25% 25%;
+    grid-column-gap: 35px;
     margin: 0;
-    background: linear-gradient(120.96deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.9) 100%), url(img/c87057480c71df05d2007aca3aa523cd.png) no-repeat;
+    padding-right: 102px;
   }
-  .main .fourth-container .wildest-fantasies .wildest-fantasies__wrap {
-    grid-column: 1/-1;
+  .main .fourth-container .wildest-fantasies .wildest-fantasies__wrap .wildest-fantasies__text-block {
+    grid-column: span 1;
   }
-  .main .fourth-container .wildest-fantasies .wildest-fantasies__wrap .wildest-fantasies__tit {
+  .main .fourth-container .wildest-fantasies .wildest-fantasies__wrap .wildest-fantasies__text-block .wildest-fantasies__tit {
     font-family: Yeseva One;
     font-style: normal;
     font-weight: normal;
@@ -1750,14 +1816,377 @@ a {
     color: #E3B873;
     padding: 138px 77px 47px 99px;
   }
-  .main .fourth-container .wildest-fantasies .wildest-fantasies__wrap .wildest-fantasies__nav {
+  .main .fourth-container .wildest-fantasies .wildest-fantasies__wrap .wildest-fantasies__text-block .wildest-fantasies__nav {
+    padding-left: 99px;
     list-style: none;
   }
-  .main .fourth-container .wildest-fantasies .wildest-fantasies__wrap .wildest-fantasies__nav li {
+  .main .fourth-container .wildest-fantasies .wildest-fantasies__wrap .wildest-fantasies__text-block .wildest-fantasies__nav li {
+    border-bottom: 1px solid transparent;
+    width: fit-content;
     font-family: Proxima Nova;
     font-size: 20px;
     line-height: 34px;
     color: #FFFFFF;
-    padding-bottom: 25px;
+    margin-bottom: 17px;
+  }
+  .main .fourth-container .wildest-fantasies .wildest-fantasies__wrap .wildest-fantasies__text-block .wildest-fantasies__nav li:hover, .main .fourth-container .wildest-fantasies .wildest-fantasies__wrap .wildest-fantasies__text-block .wildest-fantasies__nav li:active, .main .fourth-container .wildest-fantasies .wildest-fantasies__wrap .wildest-fantasies__text-block .wildest-fantasies__nav li:focus {
+    color: #E3B873;
+    border-bottom: 1px solid #E3B873;
+    cursor: pointer;
+  }
+  .main .fourth-container .wildest-fantasies .wildest-fantasies__wrap .wildest-fantasies__text-block .wildest-fantasies__nav li:first-child {
+    margin-left: 0;
+    border-bottom: 1px solid #E3B873;
+    color: #E3B873;
+  }
+  .main .fourth-container .wildest-fantasies .wildest-fantasies__wrap .image-group-first {
+    margin-left: -10%;
+    margin-bottom: -45px;
+    z-index: 10;
+  }
+  .main .fourth-container .wildest-fantasies .wildest-fantasies__wrap .image-group-first .item2 {
+    margin-top: -41px;
+  }
+  .main .fourth-container .wildest-fantasies .wildest-fantasies__wrap .image-group-first .item3 {
+    padding-top: 35px;
+    margin-bottom: 118px;
+  }
+  .main .fourth-container .wildest-fantasies .wildest-fantasies__wrap .image-group-second {
+    margin-left: 3%;
+  }
+  .main .fourth-container .wildest-fantasies .wildest-fantasies__wrap .image-group-second .item1 {
+    margin-top: -120px;
+  }
+  .main .fourth-container .wildest-fantasies .wildest-fantasies__wrap .image-group-second .item4 {
+    padding-top: 35px;
+    margin-bottom: 118px;
+  }
+  .main .fifth-container {
+    background-color: #252525;
+    z-index: 2;
+  }
+  .main .fifth-container::after {
+    content: "";
+    width: 100%;
+    height: 33%;
+    background: #FFFFFF;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+  .main .fifth-container .tit__fifth-container {
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    /* or 31px */
+    text-transform: uppercase;
+    color: #181818;
+  }
+  .main .fifth-container .group-project {
+    margin: 13px 0 24px 0;
+  }
+  .main .fifth-container .p-project {
+    height: 57px;
+    width: 53%;
+    font-family: FuturaBookC;
+    font-size: 20px;
+    line-height: 27px;
+    /* or 24px */
+    color: #363636;
+    text-align: center;
+  }
+  .main .fifth-container .fifth-container__content {
+    width: 86%;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    flex-direction: row;
+    padding-left: 5%;
+  }
+  .main .fifth-container .fifth-container__content .type-of-works {
+    margin-top: 39px;
+    width: 33%;
+  }
+  .main .fifth-container .fifth-container__content .redecorating,
+.main .fifth-container .fifth-container__content .designer-repair,
+.main .fifth-container .fifth-container__content .overhaul {
+    margin: 0;
+  }
+  .main .fifth-container .fifth-container__content .list-of-works {
+    margin: 251px 70px 0 28px;
+    height: auto;
+  }
+  .main .fifth-container .fifth-container__content .list-of-works .list-tit {
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    /* or 31px */
+    text-transform: uppercase;
+    color: #363636;
+  }
+  .main .fifth-container .fifth-container__content .list-of-works .items {
+    font-family: FuturaBookC;
+    font-size: 15px;
+    line-height: 25px;
+    /* or 24px */
+    color: #959595;
+    text-align: left;
+  }
+  .main .fifth-container .fifth-container__content .cost {
+    width: 45%;
+    margin: -25px 72% 0 41%;
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    /* or 31px */
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  .main .fifth-container .six-steps-our-work {
+    display: block;
+    width: 86%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 27.4% 60%;
+    grid-column-gap: 9%;
+  }
+  .main .fifth-container .six-steps-our-work .six-steps-our-work__text-block {
+    margin-top: -35%;
+    grid-column: span 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  .main .fifth-container .six-steps-our-work .six-steps-our-work__text-block .how-working-text {
+    margin-left: -46%;
+    font-size: 15px;
+    line-height: 21px;
+    font-family: FuturaDemiC;
+    color: #FFFFFF;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  .main .fifth-container .six-steps-our-work .six-steps-our-work__text-block .six-steps-tit {
+    margin: -43% 40% 0 0;
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 37px;
+    text-align: left;
+    /* or 31px */
+    text-transform: uppercase;
+    color: #E3B873;
+  }
+  .main .fifth-container .six-steps-our-work .six-steps-our-work__text-block .six-steps-tit::after {
+    width: 92px;
+    margin: 20px 0 0 62px;
+    position: absolute;
+    content: "";
+    border: 1px solid #E3B873;
+  }
+  .main .fifth-container .six-steps-our-work .six-steps-our-work__text-block .num-work {
+    margin: -23% 87% 0 0;
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: left;
+    /* or 31px */
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  .main .fifth-container .six-steps-our-work .six-steps-our-work__text-block .first-tit {
+    margin-top: -35%;
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 23px;
+    text-align: left;
+    /* or 31px */
+    text-transform: uppercase;
+    color: #E3B873;
+  }
+  .main .fifth-container .six-steps-our-work .six-steps-our-work__text-block .about-first-step {
+    margin-top: -40%;
+    font-family: FuturaBookC;
+    font-size: 15px;
+    line-height: 25px;
+    /* or 24px */
+    color: #FFFFFF;
+    text-align: left;
+  }
+  .main .fifth-container .six-steps-our-work .list-of-six-steps {
+    margin-top: 60px;
+    grid-column: span 1;
+    display: grid;
+    grid-template-rows: 15% 15% 50%;
+    grid-row-gap: 45px;
+  }
+  .main .fifth-container .six-steps-our-work .list-of-six-steps .steps {
+    margin-left: 8%;
+    grid-row: span 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+  .main .fifth-container .six-steps-our-work .list-of-six-steps .steps li {
+    opacity: 0.3;
+    width: 16%;
+    font-family: FuturaBookC;
+    font-size: 15px;
+    line-height: 18px;
+    /* or 24px */
+    color: #FFFFFF;
+    text-align: left;
+  }
+  .main .fifth-container .six-steps-our-work .list-of-six-steps .steps li a {
+    border-bottom: 1px solid #FFFFFF;
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 21px;
+    text-align: center;
+    /* or 31px */
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  .main .fifth-container .six-steps-our-work .list-of-six-steps .steps li:hover, .main .fifth-container .six-steps-our-work .list-of-six-steps .steps li:active, .main .fifth-container .six-steps-our-work .list-of-six-steps .steps li:focus {
+    opacity: 1;
+    cursor: pointer;
+  }
+  .main .fifth-container .six-steps-our-work .list-of-six-steps .first-list li:first-child {
+    opacity: 1;
+    cursor: pointer;
+  }
+  .main .fifth-container .six-steps-our-work .list-of-six-steps .howwework-img {
+    width: 93%;
+    margin-left: 8%;
+    height: 376px;
+  }
+  .main .fifth-container .six-steps-our-work .btn__section5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main .fifth-container .six-steps-our-work .btn__section5 .img-btn__section5:hover, .main .fifth-container .six-steps-our-work .btn__section5 .img-btn__section5:active, .main .fifth-container .six-steps-our-work .btn__section5 .img-btn__section5:focus {
+    cursor: pointer;
+  }
+  .main .fifth-container .six-steps-our-work .btn__section5 .slider-wrap {
+    margin: 0 29.5px 0 29.5px;
+  }
+  .main .fifth-container .six-steps-our-work .btn__section5 .slider-wrap .my-custom-label {
+    display: inline-block;
+    width: 10px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+  }
+  .main .fifth-container .six-steps-our-work .btn__section5 .slider-wrap .my-custom-label input[type=radio] {
+    display: none;
+  }
+  .main .fifth-container .six-steps-our-work .btn__section5 .slider-wrap .my-custom-label span {
+    background: #bbb;
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 100%;
+    vertical-align: middle;
+  }
+  .main .fifth-container .six-steps-our-work .btn__section5 .slider-wrap .my-custom-label span:hover, .main .fifth-container .six-steps-our-work .btn__section5 .slider-wrap .my-custom-label span:active, .main .fifth-container .six-steps-our-work .btn__section5 .slider-wrap .my-custom-label span:focus {
+    cursor: pointer;
+  }
+  .main .fifth-container .six-steps-our-work .btn__section5 .slider-wrap .my-custom-label input[type=radio]:checked + span {
+    background: #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+  }
+  .main .sixth-container {
+    position: relative;
+    text-align: center;
+    padding-top: 95.5px;
+  }
+  .main .sixth-container .our-employees {
+    padding-top: 95.5px;
+    width: 86%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  .main .sixth-container .our-employees .employee .photo {
+    top: 0;
+    position: relative;
+  }
+  .main .sixth-container .our-employees .employee .avatar {
+    position: absolute;
+    top: -48px;
+    left: -13px;
+  }
+  .main .sixth-container .our-employees .employee .employee-portfolio {
+    position: absolute;
+    bottom: 0;
+    right: 15.66%;
+    width: 69.13%;
+    height: 137px;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
+  }
+  .main .sixth-container .our-employees .employee .employee-portfolio .name {
+    margin: 22px 0 0 0;
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    /* or 31px */
+    text-transform: none;
+    color: #181818;
+  }
+  .main .sixth-container .our-employees .employee .employee-portfolio .profession {
+    margin: 9px 0 17px 0;
+    font-family: FuturaBookC;
+    font-size: 18px;
+    line-height: 26px;
+    /* or 24px */
+    color: #959595;
+    text-align: center;
+  }
+  .main .sixth-container .our-employees .employee .employee-portfolio .experience {
+    padding: 4px 0 5px 0;
+    background-color: #E3B873;
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 29px;
+    text-align: center;
+    /* or 31px */
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  .main .sixth-container .our-employees .the-details {
+    margin: 0;
+  }
+  .main .sixth-container .our-employees .the-details .photo {
+    top: 0;
   }
 }

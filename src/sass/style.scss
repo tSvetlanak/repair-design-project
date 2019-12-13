@@ -1,1395 +1,1693 @@
-            @mixin displ($jcont:center, $aitems:center) {
-                display: flex;
-                justify-content: $jcont;
-                align-items: $aitems;
+@mixin displ($jcont:center, $aitems:center) {
+    display: flex;
+    justify-content: $jcont;
+    align-items: $aitems;
+}
+
+@mixin font($fontf:Yeseva One, $fontst:normal, $fontw:normal, $fonts:23px, $lineh:138.6%, $texttrans:uppercase, $color:#ffffff, $textal:center) {
+    font-family: $fontf;
+    font-style: $fontst;
+    font-weight: $fontw;
+    font-size: $fonts;
+    line-height: $lineh;
+    text-align: $textal;
+    /* or 31px */
+    text-transform: $texttrans;
+    color: $color;
+}
+
+@mixin futbokc($fontf:FuturaBookC, $lineh:24px, $fonts:18px, $color:#FFFFFF, $textal:left) {
+    font-family: $fontf;
+    font-size: $fonts;
+    line-height: $lineh;
+    /* or 24px */
+    color: $color;
+    text-align: $textal;
+}
+
+@mixin futdem($fontf:FuturaDemiC, $lineh:14px, $fonts:12px, $color:#FFFFFF, $textal:left, $texttrans:none) {
+    font-size: $fonts;
+    line-height: $lineh;
+    font-family: $fontf;
+    color: $color;
+    text-align: $textal;
+    text-transform: $texttrans;
+}
+
+@import 'fonts';
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 375px) and (max-height: 812px) {
+    // and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)
+    //@media (min-width: 375px) {
+    .header {
+        @include displ($jcont: space-around);
+        width: 100%;
+        height: 82px;
+        @include futdem();
+        background-color: #252525;
+        .logo {
+            text-transform: uppercase;
+            color: #E3B873;
+        }
+        .telefon {
+            color: #FFFFFF;
+        }
+        .button_call {
+            display: none;
+        }
+        .nav {
+            display: none;
+        }
+    }
+    .main {
+        margin: 0;
+        .first-container {
+            width: 100%;
+            height: 80vh;
+            background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/bg__first-cont.jpg) no-repeat;
+            display: grid;
+            grid-template-rows: 145px 110px 83px 77px;
+            grid-template-columns: 1fr;
+            grid-template-areas: "h" "offer" "calcmob" "applicmob";
+            background-size: cover;
+            .scroll-block,
+            .instagram,
+            .applic {
+                display: none;
             }
-            
-            @mixin font($fontf:Yeseva One, $fontst:normal, $fontw:normal, $fonts:23px, $lineh:138.6%, $texttrans:uppercase, $color:#ffffff, $textal:center) {
-                font-family: $fontf;
-                font-style: $fontst;
-                font-weight: $fontw;
-                font-size: $fonts;
-                line-height: $lineh;
-                text-align: $textal;
-                /* or 31px */
-                text-transform: $texttrans;
-                color: $color;
+            .h {
+                grid-area: h;
+                width: 90%;
+                padding-top: 85px;
+                margin: 0 4.7% 0 4.7%;
+                @include font($lineh: 132.83%, $textal: left);
             }
-            
-            @mixin futbokc($fontf:FuturaBookC, $lineh:24px, $fonts:18px, $color:#FFFFFF, $textal:left) {
-                font-family: $fontf;
-                font-size: $fonts;
-                line-height: $lineh;
-                /* or 24px */
-                color: $color;
-                text-align: $textal;
+            .offer {
+                grid-area: offer;
+                width: auto;
+                padding-top: 16px;
+                margin: 0 16.7% 0 4.7%;
+                @include futbokc();
             }
-            
-            @mixin futdem($fontf:FuturaDemiC, $lineh:14px, $fonts:12px, $color:#FFFFFF, $textal:left, $texttrans:none) {
-                font-size: $fonts;
-                line-height: $lineh;
-                font-family: $fontf;
-                color: $color;
-                text-align: $textal;
-                text-transform: $texttrans;
+            .calcmob {
+                border: none;
+                margin-top: 32px;
+                grid-area: calcmob;
+                background: #E3B873;
             }
-            
-            @import 'fonts';
-            * {
+            .applicmob {
+                margin-top: 26px;
+                grid-area: applicmob;
+                background: rgba(0, 0, 0, 0.0);
+                border: 1px solid #FFFFFF;
                 box-sizing: border-box;
-                margin: 0;
-                padding: 0;
             }
-            
-            a {
-                text-decoration: none;
+            .calcmob,
+            .applicmob {
+                margin-left: 4.7%;
+                width: 90%;
+                @include futdem($lineh: 15px, $fonts: 13px, $textal: center);
+                &:hover,
+                &:active &:focus {
+                    cursor: pointer;
+                    background: #E3B873;
+                    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
+                }
             }
-            
-            @media only screen and (min-width: 375px) and (max-height: 812px) {
-                // and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)
-                //@media (min-width: 375px) {
-                .header {
-                    @include displ($jcont: space-around);
-                    width: 100%;
-                    height: 82px;
-                    @include futdem();
-                    background-color: #252525;
-                    .logo {
-                        text-transform: uppercase;
-                        color: #E3B873;
+        }
+    }
+    .second-container {
+        position: relative;
+        width: 100%;
+        .second-container__wrap {
+            margin: 0;
+            background-color: #252525;
+            @include displ();
+            flex-direction: column;
+            .second-container__nav {
+                display: none;
+            }
+            .tit {
+                margin: 36px 0 0 0;
+                position: relative;
+                width: 45%;
+                @include font($fonts: 22px, $color: #E3B873);
+                letter-spacing: -0.07em;
+            }
+            .offer {
+                margin: 22px 0 0 0;
+                width: 83%;
+                @include futbokc($fonts: 14px, $lineh: 158.48%, $textal: center);
+            }
+            .slider {
+                margin: 36px 0 0 0;
+                width: 91%;
+                height: 68vh;
+                background: url(../img/image2.jpg) no-repeat;
+                background-size: cover;
+            }
+            .slider__big {
+                display: none;
+            }
+            .specification {
+                margin: 36px 0 0 0;
+                width: 90%;
+                height: 146px;
+                display: grid;
+                grid-template-rows: 1fr 1.5fr;
+                grid-template-columns: 1fr 1.5fr;
+                grid-column-gap: 10vw;
+                grid-row-gap: 27px;
+                .specific-tit {
+                    margin: 0;
+                    @include font($fonts: 14px, $color: #E3B873, $textal: left);
+                }
+                .specific-descr {
+                    margin: 11px 0 0 0;
+                    @include futbokc( $fonts: 14px, $lineh: 135.84%, $color: #ffffff);
+                }
+                .address,
+                .time {
+                    width: 99px;
+                }
+            }
+        }
+    }
+    .third-container {
+        background-color: #252525;
+        position: relative;
+        @include displ();
+        flex-direction: column;
+        .tit__third-container {
+            margin-top: 69px;
+            @include font($fonts: 22px, $color: #ffffff);
+        }
+        .group-camera {
+            margin: 20px 0 23px 0;
+            & .line {
+                margin-bottom: 14px;
+            }
+        }
+        iframe {
+            height: 100%;
+        }
+        .rect613 {
+            margin: 28px 0 22px 0;
+        }
+        .text__third-container {
+            width: 90%;
+            @include futbokc($fonts: 14px, $lineh: 169.8%, $textal: center);
+        }
+        .application-form {
+            margin: 32px 0 0 0;
+            width: 90%;
+            height: 301px;
+            .name-phone {
+                p {
+                    .inp-name,
+                    .inp-phone {
+                        width: 100%;
+                        border: none;
+                        outline: none;
+                        border-bottom: solid 1px #FFFFFF;
+                        background-color: #252525;
+                        @include futbokc($fonts: 18px, $lineh: 138.72%, $color: #FFFFFF);
                     }
-                    .telefon {
+                    .inp-name::-moz-placeholder,
+                    .inp-phone::-moz-placeholder {
+                        color: #FFFFFF;
+                        /* Цвет подсказывающего текста */
+                    }
+                    .inp-name::-webkit-input-placeholder,
+                    .inp-phone::-webkit-input-placeholder {
                         color: #FFFFFF;
                     }
-                    .button_call {
-                        display: none;
+                    .inp-name:-ms-input-placeholder,
+                    .inp-phone:-ms-input-placeholder {
+                        color: #FFFFFF;
                     }
-                    .nav {
-                        display: none;
+                    .inp-name::-ms-input-placeholder,
+                    .inp-phone::-ms-input-placeholder {
+                        color: #FFFFFF;
                     }
-                }
-                .main {
-                    margin: 0;
-                    .first-container {
-                        width: 100%;
-                        height: 80vh;
-                        background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/bg__first-cont.jpg) no-repeat;
-                        display: grid;
-                        grid-template-rows: 145px 110px 83px 77px;
-                        grid-template-columns: 1fr;
-                        grid-template-areas: "h" "offer" "calcmob" "applicmob";
-                        background-size: cover;
-                        .scroll-block,
-                        .instagram,
-                        .applic {
-                            display: none;
-                        }
-                        .h {
-                            grid-area: h;
-                            width: 90%;
-                            padding-top: 85px;
-                            margin: 0 4.7% 0 4.7%;
-                            @include font($lineh: 132.83%, $textal: left);
-                        }
-                        .offer {
-                            grid-area: offer;
-                            width: auto;
-                            padding-top: 16px;
-                            margin: 0 16.7% 0 4.7%;
-                            @include futbokc();
-                        }
-                        .calcmob {
-                            border: none;
-                            margin-top: 32px;
-                            grid-area: calcmob;
-                            background: #E3B873;
-                        }
-                        .applicmob {
-                            margin-top: 26px;
-                            grid-area: applicmob;
-                            background: rgba(0, 0, 0, 0.0);
-                            border: 1px solid #FFFFFF;
-                            box-sizing: border-box;
-                        }
-                        .calcmob,
-                        .applicmob {
-                            margin-left: 4.7%;
-                            width: 90%;
-                            @include futdem($lineh: 15px, $fonts: 13px, $textal: center);
-                            &:hover,
-                            &:active &:focus {
-                                cursor: pointer;
-                                background: #E3B873;
-                                box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
-                            }
-                        }
+                    .inp-name::placeholder,
+                    .inp-phone::placeholder {
+                        color: #FFFFFF;
                     }
                 }
-                .second-container {
-                    position: relative;
+                .label-name,
+                .label-phone,
+                .check {
+                    @include futbokc($fonts: 15px, $lineh: 20px, $color: rgba(255, 255, 255, 0.5));
+                }
+                .check {
+                    color: #FFFFFF
+                }
+                .check:before {
+                    margin: 5px 10px 0 0;
+                    content: url(../img/rect8.svg);
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                input:checked+label:before {
+                    margin: 5px 10px 0 0;
+                    content: url(../img/group48.svg);
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                input:disabled+label:before {
+                    margin: 5px 10px 0 0;
+                    content: url(../img/rect8.svg);
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                .p-label-phone {
+                    margin: 63px 0 0 0;
+                }
+                .p-agree {
+                    margin: 27px 0 0 0;
+                }
+                .submit {
+                    margin: 63px 0 0 0;
                     width: 100%;
-                    .second-container__wrap {
-                        margin: 0;
-                        background-color: #252525;
-                        @include displ();
-                        flex-direction: column;
-                        .second-container__nav {
-                            display: none;
-                        }
-                        .tit {
-                            margin: 36px 0 0 0;
-                            position: relative;
-                            width: 45%;
-                            @include font($fonts: 22px, $color: #E3B873);
-                            letter-spacing: -0.07em;
-                        }
-                        .offer {
-                            margin: 22px 0 0 0;
-                            width: 83%;
-                            @include futbokc($fonts: 14px, $lineh: 158.48%, $textal: center);
-                        }
-                        .slider {
-                            margin: 36px 0 0 0;
-                            width: 91%;
-                            height: 68vh;
-                            background: url(../img/image2.jpg) no-repeat;
-                            background-size: cover;
-                        }
-                        .slider__big {
-                            display: none;
-                        }
-                        .specification {
-                            margin: 36px 0 0 0;
-                            width: 90%;
-                            height: 146px;
-                            display: grid;
-                            grid-template-rows: 1fr 1.5fr;
-                            grid-template-columns: 1fr 1.5fr;
-                            grid-column-gap: 10vw;
-                            grid-row-gap: 27px;
-                            .specific-tit {
-                                margin: 0;
-                                @include font($fonts: 14px, $color: #E3B873, $textal: left);
-                            }
-                            .specific-descr {
-                                margin: 11px 0 0 0;
-                                @include futbokc( $fonts: 14px, $lineh: 135.84%, $color: #ffffff);
-                            }
-                            .address,
-                            .time {
-                                width: 99px;
-                            }
-                        }
-                    }
-                }
-                .third-container {
-                    background-color: #252525;
-                    position: relative;
-                    @include displ();
-                    flex-direction: column;
-                    .tit__third-container {
-                        margin-top: 69px;
-                        @include font($fonts: 22px, $color: #ffffff);
-                    }
-                    .group-camera {
-                        margin: 20px 0 23px 0;
-                        & .line {
-                            margin-bottom: 14px;
-                        }
-                    }
-                    iframe {
-                        height: 100%;
-                    }
-                    .rect613 {
-                        margin: 28px 0 22px 0;
-                    }
-                    .text__third-container {
-                        width: 90%;
-                        @include futbokc($fonts: 14px, $lineh: 169.8%, $textal: center);
-                    }
-                    .application-form {
-                        margin: 32px 0 0 0;
-                        width: 90%;
-                        height: 301px;
-                        .name-phone {
-                            p {
-                                .inp-name,
-                                .inp-phone {
-                                    width: 100%;
-                                    border: none;
-                                    outline: none;
-                                    border-bottom: solid 1px #FFFFFF;
-                                    background-color: #252525;
-                                    @include futbokc($fonts: 18px, $lineh: 138.72%, $color: #FFFFFF);
-                                }
-                                .inp-name::-moz-placeholder,
-                                .inp-phone::-moz-placeholder {
-                                    color: #FFFFFF;
-                                    /* Цвет подсказывающего текста */
-                                }
-                                .inp-name::-webkit-input-placeholder,
-                                .inp-phone::-webkit-input-placeholder {
-                                    color: #FFFFFF;
-                                }
-                                .inp-name:-ms-input-placeholder,
-                                .inp-phone:-ms-input-placeholder {
-                                    color: #FFFFFF;
-                                }
-                                .inp-name::-ms-input-placeholder,
-                                .inp-phone::-ms-input-placeholder {
-                                    color: #FFFFFF;
-                                }
-                                .inp-name::placeholder,
-                                .inp-phone::placeholder {
-                                    color: #FFFFFF;
-                                }
-                            }
-                            .label-name,
-                            .label-phone,
-                            .check {
-                                @include futbokc($fonts: 15px, $lineh: 20px, $color: rgba(255, 255, 255, 0.5));
-                            }
-                            .check {
-                                color: #FFFFFF
-                            }
-                            .check:before {
-                                margin: 5px 10px 0 0;
-                                content: url(../img/rect8.svg);
-                                display: inline-block;
-                                vertical-align: middle;
-                            }
-                            input:checked+label:before {
-                                margin: 5px 10px 0 0;
-                                content: url(../img/group48.svg);
-                                display: inline-block;
-                                vertical-align: middle;
-                            }
-                            input:disabled+label:before {
-                                margin: 5px 10px 0 0;
-                                content: url(../img/rect8.svg);
-                                display: inline-block;
-                                vertical-align: middle;
-                            }
-                            .p-label-phone {
-                                margin: 63px 0 0 0;
-                            }
-                            .p-agree {
-                                margin: 27px 0 0 0;
-                            }
-                            .submit {
-                                margin: 63px 0 0 0;
-                                width: 100%;
-                                height: 51px;
-                                left: 18px;
-                                border: none;
-                                background: #E3B873;
-                                box-shadow: 0px 10px 20px rgba(227, 184, 115, 0.1);
-                                @include futdem($lineh: 26px, $fonts: 15px, $textal: center, $texttrans: uppercase);
-                            }
-                        }
-                    }
-                }
-                .fourth-container {
-                    position: relative;
-                    margin: 84px 0 0 0;
-                    width: 100%;
-                    background-color: #ffffff;
-                    @include displ();
-                    flex-direction: column;
-                    .tit__fourth-container {
-                        @include font($fonts: 22px, $color: #181818);
-                    }
-                    .group-repair {
-                        margin-top: 20px;
-                        & .line {
-                            margin-bottom: 14px;
-                        }
-                    }
-                    .fourth-container__content {
-                        margin: 0;
-                        width: 100%;
-                        position: relative;
-                        @include displ();
-                        flex-direction: column;
-                        .type-of-works {
-                            position: relative;
-                            @include displ();
-                            flex-direction: column;
-                            width: 100%;
-                            .redecorating {
-                                width: 100%;
-                                margin-top: 40px;
-                                height: 100%;
-                                background: url(../img/image.png) no-repeat;
-                                // background-size: cover;
-                            }
-                            .overhaul {
-                                width: 100%;
-                                margin-top: 51px;
-                                height: 100%;
-                                background: url(../img/image3.png) no-repeat;
-                                //   background-size: cover;
-                            }
-                            .designer-repair {
-                                width: 100%;
-                                margin-top: 59px;
-                                height: 100%;
-                                background: url(../img/image31.png) no-repeat;
-                                // background-size: cover;
-                            }
-                            .list-of-works {
-                                width: 78%;
-                                height: 245px;
-                                margin: 224px 70px 0 0;
-                                background: #FFFFFF;
-                                box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.05);
-                                .list-tit {
-                                    padding: 21px 47px 0 31px;
-                                    @include font($fonts: 15px, $color: #363636, $texttrans: none, $textal: left);
-                                }
-                                ul {
-                                    padding: 10px 41px 38px 45px;
-                                    .items {
-                                        @include futbokc($lineh: 169.8%, $fonts: 13px, $color: #959595);
-                                    }
-                                }
-                            }
-                            .cost {
-                                margin: -23px 45% 0 4%;
-                                width: 51%;
-                                height: 49px;
-                                background: #E3B873;
-                                box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
-                                .cost-p {
-                                    margin-top: 15px;
-                                    @include font($fonts: 15px);
-                                }
-                            }
-                        }
-                    }
-                    .wildest-fantasies,
-                    .our-conditions {
-                        display: none;
-                    }
-                    .tit-end__fourth-container {
-                        margin: 55px 0 0 0;
-                        width: 90%;
-                        height: 66px;
-                        @include font($fonts: 22px, $color: #E3B873);
-                    }
-                    .first-slid {
-                        background: url(../img/image53.png) no-repeat;
-                        background-size: cover;
-                    }
-                    .second-slid {
-                        background: url(../img/image31.png) no-repeat;
-                        background-size: cover;
-                    }
-                    .third-slid {
-                        background: url(../img/image3.png) no-repeat;
-                        background-size: cover;
-                    }
-                    .slider__fouth-container {
-                        display: block;
-                        z-index: 100;
-                        margin-top: 24px;
-                        position: relative;
-                        @include displ($jcont: space-between);
-                        width: 90%;
-                        height: 242px;
-                        .buttom-left__butt,
-                        .buttom-right__butt {
-                            border: none;
-                            outline: none;
-                            background-color: #E3B873;
-                            border-radius: 50%;
-                            width: 36px;
-                            height: 36px;
-                            margin: 0 13px 0 14px;
-                            transition: all .2s;
-                            &:hover,
-                            &:focus {
-                                cursor: pointer;
-                            }
-                            &:active {
-                                cursor: pointer;
-                                background-color: rgb(252, 158, 8);
-                                transform: scale(1.2, 1.2);
-                            }
-                        }
-                        .buttom-right__butt img,
-                        .buttom-left__butt img {
-                            display: block;
-                            margin: 0 auto;
-                        }
-                    }
-                }
-                .fifth-container {
-                    margin: -121px 0 0 0;
-                    background-color: #252525;
-                    position: relative;
-                    @include displ();
-                    flex-direction: column;
-                    .tit__fifth-container {
-                        margin-top: 173px;
-                        @include font($fonts: 22px);
-                    }
-                    .group-project {
-                        margin: 16px 0 23px 0;
-                        & .line {
-                            margin-bottom: 14px;
-                        }
-                    }
-                    .p-project {
-                        width: 90%;
-                        height: 76px;
-                        @include futbokc($fonts: 15px, $textal: center);
-                    }
-                    .type-of-works {
-                        width: 92%;
-                        .list-of-works {
-                            width: 78%;
-                            height: 245px;
-                            margin: 224px 70px 0 0;
-                            background: #FFFFFF;
-                            box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.05);
-                            ;
-                        }
-                        .list-tit {
-                            padding: 21px 47px 0 31px;
-                            @include font($fonts: 15px, $color: #363636, $texttrans: none, $textal: left);
-                        }
-                        ul {
-                            padding: 10px 41px 38px 45px;
-                            .items {
-                                @include futbokc($lineh: 169.8%, $fonts: 13px, $color: #959595);
-                            }
-                        }
-                    }
-                    .redecorating {
-                        margin-top: 40px;
-                        height: 100%;
-                        background: url(../img/image.png) no-repeat;
-                        .mini {
-                            height: 182px
-                        }
-                    }
-                    .overhaul {
-                        margin-top: 51px;
-                        height: 100%;
-                        background: url(../img/image3.png) no-repeat;
-                    }
-                    .designer-repair {
-                        margin-top: 59px;
-                        height: 100%;
-                        background: url(../img/image31.png) no-repeat;
-                    }
-                    .cost {
-                        margin: -23px 45% 0 4%;
-                        width: 51%;
-                        height: 49px;
-                        background: #E3B873;
-                        box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
-                        .cost-p {
-                            margin-top: 15px;
-                            @include font($fonts: 15px);
-                        }
-                    }
-                }
-                .sixth-container {
-                    margin: -1px 0 0 0;
-                    background-color: #252525;
-                    position: relative;
-                    @include displ();
-                    flex-direction: column;
-                    .tit__sixth-container {
-                        margin: 77px 0 12.5px 0;
-                        @include font($fonts: 22px);
-                    }
-                    .group-project .line {
-                        margin-bottom: 14px;
-                    }
-                    .p-project {
-                        width: 90%;
-                        height: 42px;
-                        margin: 23.5px 0 41px 0;
-                        @include futbokc($fonts: 15px, $textal: center);
-                    }
-                    .employee {
-                        position: relative;
-                        width: 90%;
-                        height: 449px;
-                        .photo {
-                            position: absolute;
-                            top: 35px;
-                            right: 0;
-                        }
-                        .avatar {
-                            position: absolute;
-                            top: -16px;
-                            left: -19px;
-                        }
-                        .employee-portfolio {
-                            position: absolute;
-                            bottom: 0;
-                            right: 10.66%;
-                            width: 69.13%;
-                            height: 137px;
-                            background: #FFFFFF;
-                            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
-                            .name {
-                                margin: 22px 0 0 0;
-                                @include font($fonts: 18px, $lineh: 25px, $color: #181818, $texttrans: none);
-                            }
-                            .profession {
-                                margin: 9px 0 17px 0;
-                                @include futbokc($fonts: 18px, $lineh: 26px, $textal: center, $color: #959595);
-                            }
-                            .experience {
-                                padding: 4px 0 5px 0;
-                                background-color: #E3B873;
-                                @include font($fonts: 13px, $lineh: 29px);
-                            }
-                        }
-                    }
-                    .the-details {
-                        margin-top: 54px;
-                        .photo {
-                            top: 57px;
-                        }
-                    }
-                }
-                .seventh-container {
-                    background-color: #252525;
-                    position: relative;
-                    @include displ();
-                    flex-direction: column;
-                    width: 100%;
-                    .tit__seventh-container {
-                        margin: 76px 0 12.5px 0;
-                        @include font($fonts: 22px);
-                    }
-                    .application-form {
-                        margin: 32px 0 0 0;
-                        width: 90%;
-                        .name-phone {
-                            p {
-                                margin: 0;
-                                .inp-question,
-                                .inp-name,
-                                .inp-phone {
-                                    margin: 0;
-                                    width: 100%;
-                                    border: none;
-                                    outline: none;
-                                    border-bottom: solid 1px #FFFFFF;
-                                    background-color: #252525;
-                                    @include futbokc($fonts: 18px, $lineh: 138.72%, $color: #FFFFFF);
-                                }
-                                .inp-question::-moz-placeholder,
-                                .inp-name::-moz-placeholder,
-                                .inp-phone::-moz-placeholder {
-                                    color: #FFFFFF;
-                                    /* Цвет подсказывающего текста */
-                                }
-                                .inp-question::-webkit-input-placeholder,
-                                .inp-name::-webkit-input-placeholder,
-                                .inp-phone::-webkit-input-placeholder {
-                                    color: #FFFFFF;
-                                }
-                                .inp-question:-ms-input-placeholder,
-                                .inp-name:-ms-input-placeholder,
-                                .inp-phone:-ms-input-placeholder {
-                                    color: #FFFFFF;
-                                }
-                                .inp-question::-ms-input-placeholder,
-                                .inp-name::-ms-input-placeholder,
-                                .inp-phone::-ms-input-placeholder {
-                                    color: #FFFFFF;
-                                }
-                                .inp-question::placeholder,
-                                .inp-name::placeholder,
-                                .inp-phone::placeholder {
-                                    color: #FFFFFF;
-                                }
-                            }
-                            .label-name,
-                            .label-phone,
-                            .label-question,
-                            .check {
-                                @include futbokc($fonts: 15px, $lineh: 20px, $color: rgba(255, 255, 255, 0.5));
-                            }
-                            .check {
-                                color: #FFFFFF
-                            }
-                            .check:before {
-                                margin: 5px 10px 0 0;
-                                content: url(../img/rect8.svg);
-                                display: inline-block;
-                                vertical-align: middle;
-                            }
-                            input:checked+label:before {
-                                margin: 5px 10px 0 0;
-                                content: url(../img/group48.svg);
-                                display: inline-block;
-                                vertical-align: middle;
-                            }
-                            input:disabled+label:before {
-                                margin: 5px 10px 0 0;
-                                content: url(../img/rect8.svg);
-                                display: inline-block;
-                                vertical-align: middle;
-                            }
-                            .p-label-question,
-                            .p-label-phone {
-                                margin: 63px 0 0 0;
-                            }
-                            .p-agree {
-                                margin: 27px 0 0 0;
-                            }
-                            .submit {
-                                margin: 63px 0 0 0;
-                                width: 340px;
-                                height: 51px;
-                                left: 18px;
-                                border: none;
-                                background: #E3B873;
-                                box-shadow: 0px 10px 20px rgba(227, 184, 115, 0.1);
-                                @include futdem($lineh: 26px, $fonts: 15px, $textal: center, $texttrans: uppercase);
-                            }
-                        }
-                    }
-                    .map {
-                        margin-top: 46px;
-                        overflow: hidden;
-                        width: 340px;
-                        position: relative;
-                        .map-small-group {
-                            position: absolute;
-                            width: 80%;
-                            bottom: 10px;
-                            left: 0;
-                            right: 0;
-                            margin-left: auto;
-                            margin-right: auto;
-                            color: #000;
-                            text-align: center;
-                            .map-small {
-                                line-height: 1.8;
-                                font-size: 2px;
-                                background: #fff;
-                            }
-                        }
-                        #gmap_canvas img {
-                            max-width: none!important;
-                            background: none!important;
-                        }
-                    }
+                    height: 51px;
+                    left: 18px;
+                    border: none;
+                    background: #E3B873;
+                    box-shadow: 0px 10px 20px rgba(227, 184, 115, 0.1);
+                    @include futdem($lineh: 26px, $fonts: 15px, $textal: center, $texttrans: uppercase);
                 }
             }
-            
-            .footer {
-                margin-top: -4px;
-                background-color: #252525;
+        }
+    }
+    .fourth-container {
+        position: relative;
+        margin: 84px 0 0 0;
+        width: 100%;
+        background-color: #ffffff;
+        @include displ();
+        flex-direction: column;
+        .tit__fourth-container {
+            @include font($fonts: 22px, $color: #181818);
+        }
+        .group-repair {
+            margin-top: 20px;
+            & .line {
+                margin-bottom: 14px;
+            }
+        }
+        .fourth-container__content {
+            margin: 0;
+            width: 100%;
+            position: relative;
+            @include displ();
+            flex-direction: column;
+            .type-of-works {
                 position: relative;
                 @include displ();
                 flex-direction: column;
                 width: 100%;
-                height: 210px;
-                .h-footer {
-                    margin: 42px 0 0 0;
-                    @include font($fonts: 18px, $color: #E3B873);
+                .redecorating {
+                    width: 92%;
+                    margin-top: 40px;
+                    height: 100%;
+                    background: url(../img/image.png) no-repeat;
                 }
-                .feedback {
-                    margin: 24px 0 40px 0;
-                    position: relative;
-                    @include displ($jcont: space-between);
-                    width: 99px;
-                    height: 40px;
-                    img {
-                        width: 39px;
-                        height: 39px;
+                .overhaul {
+                    width: 92%;
+                    margin-top: 51px;
+                    height: 100%;
+                    background: url(../img/image3.png) no-repeat;
+                }
+                .designer-repair {
+                    width: 92%;
+                    margin-top: 59px;
+                    height: 100%;
+                    background: url(../img/image31.png) no-repeat;
+                }
+                .list-of-works {
+                    width: 85%;
+                    height: 245px;
+                    margin: 224px 70px 0 0;
+                    background: #FFFFFF;
+                    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.05);
+                    .list-tit {
+                        padding: 21px 47px 0 31px;
+                        @include font($fonts: 15px, $color: #363636, $texttrans: none, $textal: left);
+                    }
+                    ul {
+                        padding: 10px 41px 38px 45px;
+                        .items {
+                            @include futbokc($lineh: 169.8%, $fonts: 13px, $color: #959595);
+                        }
+                    }
+                }
+                .cost {
+                    margin: -23px 45% 0 4%;
+                    width: 51%;
+                    height: 49px;
+                    background: #E3B873;
+                    box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+                    .cost-p {
+                        margin-top: 15px;
+                        @include font($fonts: 15px);
                     }
                 }
             }
-            
-            @media only screen and (min-width: 812px) and (max-width: 1440px) {
-                .header {
-                    @include displ($jcont: space-between);
-                    background-color: #252525;
-                    height: 82px;
-                    position: relative;
-                    text-align: center;
-                    width: 100%;
-                    .logo {
-                        margin-left: 6%;
-                        @include futdem($fonts: 14px, $lineh: 16px, $color: #E3B873, $texttrans: uppercase);
+        }
+        .wildest-fantasies,
+        .our-conditions {
+            display: none;
+        }
+        .tit-end__fourth-container {
+            margin: 55px 0 0 0;
+            width: 90%;
+            height: 66px;
+            @include font($fonts: 22px, $color: #E3B873);
+        }
+        .first-slid {
+            background: url(../img/image53.png) no-repeat;
+            background-size: cover;
+        }
+        .second-slid {
+            background: url(../img/image31.png) no-repeat;
+            background-size: cover;
+        }
+        .third-slid {
+            background: url(../img/image3.png) no-repeat;
+            background-size: cover;
+        }
+        .slider__fouth-container {
+            display: block;
+            z-index: 100;
+            margin-top: 24px;
+            position: relative;
+            @include displ($jcont: space-between);
+            width: 90%;
+            height: 242px;
+            .buttom-left__butt,
+            .buttom-right__butt {
+                border: none;
+                outline: none;
+                background-color: #E3B873;
+                border-radius: 50%;
+                width: 36px;
+                height: 36px;
+                margin: 0 13px 0 14px;
+                transition: all .2s;
+                &:hover,
+                &:focus {
+                    cursor: pointer;
+                }
+                &:active {
+                    cursor: pointer;
+                    background-color: rgb(252, 158, 8);
+                    transform: scale(1.2, 1.2);
+                }
+            }
+            .buttom-right__butt img,
+            .buttom-left__butt img {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+    .fifth-container {
+        margin: -121px 0 0 0;
+        background-color: #252525;
+        position: relative;
+        @include displ();
+        flex-direction: column;
+        .six-steps-our-work {
+            display: none;
+        }
+        .tit__fifth-container {
+            margin-top: 173px;
+            @include font($fonts: 22px);
+        }
+        .group-project {
+            margin: 16px 0 23px 0;
+            & .line {
+                margin-bottom: 14px;
+            }
+        }
+        .p-project {
+            width: 74%;
+            height: 76px;
+            @include futbokc($fonts: 15px, $textal: center);
+        }
+        .fifth-container__content {
+            margin: 0;
+            width: 100%;
+            position: relative;
+            @include displ();
+            flex-direction: column;
+            .type-of-works {
+                position: relative;
+                @include displ();
+                flex-direction: column;
+                width: 100%;
+                .redecorating {
+                    width: 92%;
+                    margin-top: 40px;
+                    height: 100%;
+                    background: url(../img/image.png) no-repeat;
+                    .mini {
+                        height: 182px
                     }
-                    .telefon {
-                        @include futdem($fonts: 14px, $lineh: 16px, $textal: right, $color: #E3B873);
-                        text-decoration-line: underline;
+                }
+                .overhaul {
+                    width: 92%;
+                    margin-top: 51px;
+                    height: 100%;
+                    background: url(../img/image3.png) no-repeat;
+                }
+                .designer-repair {
+                    width: 92%;
+                    margin-top: 59px;
+                    height: 100%;
+                    background: url(../img/image31.png) no-repeat;
+                }
+                .list-of-works {
+                    width: 85%;
+                    height: 245px;
+                    margin: 224px 70px 0 0;
+                    background: #FFFFFF;
+                    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.05);
+                    .list-tit {
+                        padding: 21px 47px 0 31px;
+                        @include font($fonts: 15px, $color: #363636, $texttrans: none, $textal: left);
                     }
-                    .button_call {
-                        display: block;
-                        margin: auto;
-                        width: 11.2%;
-                        height: 37px;
+                    ul {
+                        padding: 10px 41px 38px 45px;
+                        .items {
+                            @include futbokc($lineh: 169.8%, $fonts: 13px, $color: #959595);
+                        }
+                    }
+                }
+                .cost {
+                    margin: -23px 45% 0 4%;
+                    width: 51%;
+                    height: 49px;
+                    background: #E3B873;
+                    box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+                    .cost-p {
+                        margin-top: 15px;
+                        @include font($fonts: 15px);
+                    }
+                }
+            }
+        }
+    }
+    .sixth-container {
+        margin: -1px 0 0 0;
+        background-color: #252525;
+        position: relative;
+        @include displ();
+        flex-direction: column;
+        .tit__sixth-container {
+            margin: 77px 0 12.5px 0;
+            @include font($fonts: 22px);
+        }
+        .group-project .line {
+            margin-bottom: 14px;
+        }
+        .p-project {
+            width: 90%;
+            height: 42px;
+            margin: 23.5px 0 41px 0;
+            @include futbokc($fonts: 15px, $textal: center);
+        }
+        .our-employees {
+            position: relative;
+            @include displ();
+            flex-direction: column;
+            .employee {
+                position: relative;
+                width: 90%;
+                height: 449px;
+                .photo {
+                    position: absolute;
+                    top: 35px;
+                    right: 0;
+                }
+                .avatar {
+                    position: absolute;
+                    top: -16px;
+                    left: -19px;
+                }
+                .employee-portfolio {
+                    position: absolute;
+                    bottom: 0;
+                    right: 10.66%;
+                    width: 69.13%;
+                    height: 137px;
+                    background: #FFFFFF;
+                    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
+                    .name {
+                        margin: 22px 0 0 0;
+                        @include font($fonts: 18px, $lineh: 25px, $color: #181818, $texttrans: none);
+                    }
+                    .profession {
+                        margin: 9px 0 17px 0;
+                        @include futbokc($fonts: 18px, $lineh: 26px, $textal: center, $color: #959595);
+                    }
+                    .experience {
+                        padding: 4px 0 5px 0;
+                        background-color: #E3B873;
+                        @include font($fonts: 13px, $lineh: 29px);
+                    }
+                }
+            }
+            .the-details {
+                margin-top: 54px;
+                .photo {
+                    top: 57px;
+                }
+            }
+        }
+    }
+    .seventh-container {
+        background-color: #252525;
+        position: relative;
+        @include displ();
+        flex-direction: column;
+        width: 100%;
+        .tit__seventh-container {
+            margin: 76px 0 12.5px 0;
+            @include font($fonts: 22px);
+        }
+        .application-form {
+            margin: 32px 0 0 0;
+            width: 90%;
+            .name-phone {
+                p {
+                    margin: 0;
+                    .inp-question,
+                    .inp-name,
+                    .inp-phone {
+                        margin: 0;
+                        width: 100%;
                         border: none;
+                        outline: none;
+                        border-bottom: solid 1px #FFFFFF;
+                        background-color: #252525;
+                        @include futbokc($fonts: 18px, $lineh: 138.72%, $color: #FFFFFF);
+                    }
+                    .inp-question::-moz-placeholder,
+                    .inp-name::-moz-placeholder,
+                    .inp-phone::-moz-placeholder {
+                        color: #FFFFFF;
+                        /* Цвет подсказывающего текста */
+                    }
+                    .inp-question::-webkit-input-placeholder,
+                    .inp-name::-webkit-input-placeholder,
+                    .inp-phone::-webkit-input-placeholder {
+                        color: #FFFFFF;
+                    }
+                    .inp-question:-ms-input-placeholder,
+                    .inp-name:-ms-input-placeholder,
+                    .inp-phone:-ms-input-placeholder {
+                        color: #FFFFFF;
+                    }
+                    .inp-question::-ms-input-placeholder,
+                    .inp-name::-ms-input-placeholder,
+                    .inp-phone::-ms-input-placeholder {
+                        color: #FFFFFF;
+                    }
+                    .inp-question::placeholder,
+                    .inp-name::placeholder,
+                    .inp-phone::placeholder {
+                        color: #FFFFFF;
+                    }
+                }
+                .label-name,
+                .label-phone,
+                .label-question,
+                .check {
+                    @include futbokc($fonts: 15px, $lineh: 20px, $color: rgba(255, 255, 255, 0.5));
+                }
+                .check {
+                    color: #FFFFFF
+                }
+                .check:before {
+                    margin: 5px 10px 0 0;
+                    content: url(../img/rect8.svg);
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                input:checked+label:before {
+                    margin: 5px 10px 0 0;
+                    content: url(../img/group48.svg);
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                input:disabled+label:before {
+                    margin: 5px 10px 0 0;
+                    content: url(../img/rect8.svg);
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                .p-label-question,
+                .p-label-phone {
+                    margin: 63px 0 0 0;
+                }
+                .p-agree {
+                    margin: 27px 0 0 0;
+                }
+                .submit {
+                    margin: 63px 0 0 0;
+                    width: 340px;
+                    height: 51px;
+                    left: 18px;
+                    border: none;
+                    background: #E3B873;
+                    box-shadow: 0px 10px 20px rgba(227, 184, 115, 0.1);
+                    @include futdem($lineh: 26px, $fonts: 15px, $textal: center, $texttrans: uppercase);
+                }
+            }
+        }
+        .map {
+            margin-top: 46px;
+            overflow: hidden;
+            width: 340px;
+            position: relative;
+            .map-small-group {
+                position: absolute;
+                width: 80%;
+                bottom: 10px;
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
+                color: #000;
+                text-align: center;
+                .map-small {
+                    line-height: 1.8;
+                    font-size: 2px;
+                    background: #fff;
+                }
+            }
+            #gmap_canvas img {
+                max-width: none!important;
+                background: none!important;
+            }
+        }
+    }
+}
+
+.footer {
+    margin-top: -4px;
+    background-color: #252525;
+    position: relative;
+    @include displ();
+    flex-direction: column;
+    width: 100%;
+    height: 210px;
+    .h-footer {
+        margin: 42px 0 0 0;
+        @include font($fonts: 18px, $color: #E3B873);
+    }
+    .feedback {
+        margin: 24px 0 40px 0;
+        position: relative;
+        @include displ($jcont: space-between);
+        width: 99px;
+        height: 40px;
+        img {
+            width: 39px;
+            height: 39px;
+        }
+    }
+}
+
+@media only screen and (min-width: 812px) and (max-width: 1440px) {
+    .header {
+        @include displ($jcont: space-between);
+        background-color: #252525;
+        height: 82px;
+        position: relative;
+        text-align: center;
+        width: 100%;
+        .logo {
+            margin-left: 6%;
+            @include futdem($fonts: 14px, $lineh: 16px, $color: #E3B873, $texttrans: uppercase);
+        }
+        .telefon {
+            @include futdem($fonts: 14px, $lineh: 16px, $textal: right, $color: #E3B873);
+            text-decoration-line: underline;
+        }
+        .button_call {
+            display: block;
+            margin: auto;
+            width: 11.2%;
+            height: 37px;
+            border: none;
+            color: #E3B873;
+            background: #E3B873;
+            box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+            border-radius: 2px;
+            @include futdem($fonts: 13px, $lineh: 15px, $textal: center, $texttrans: uppercase);
+            &:hover,
+            &:focus {
+                cursor: pointer;
+            }
+            &:active {
+                cursor: pointer;
+            }
+        }
+        .nav {
+            margin: 0 4.7% 0 3.1%;
+            display: block;
+            width: 40%;
+            ul {
+                @include displ($jcont: space-between);
+                list-style: none;
+                li {
+                    margin-left: 3.3%;
+                    @include futbokc($fonts: 14px, $lineh: 16px, $textal: center);
+                    &:hover,
+                    &:active,
+                    &:focus {
                         color: #E3B873;
-                        background: #E3B873;
-                        box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
-                        border-radius: 2px;
-                        @include futdem($fonts: 13px, $lineh: 15px, $textal: center, $texttrans: uppercase);
+                        cursor: pointer;
+                    }
+                    &:first-child {
+                        margin-left: 0;
+                        color: #E3B873;
+                    }
+                }
+            }
+        }
+    }
+    .main {
+        .first-container {
+            background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/image43.png) no-repeat;
+            height: 707px;
+            display: grid;
+            grid-template-rows: 299px 108px 92px;
+            grid-template-columns: 82px 0.5fr 0.5fr 0.5fr 0.5fr;
+            grid-template-areas: "instagram h h h ." "instagram offer offer offer ." "instagram calcmob applic .  . " "instagram  .  .  .  . ";
+            .instagram {
+                position: relative;
+                background-color: #252525;
+                display: block;
+                grid-area: instagram;
+                .instagram__link {
+                    position: absolute;
+                    top: 50%;
+                    @include futdem($fonts: 14px, $lineh: 16px, $textal: center, $color: #E3B873);
+                    transform: rotate(90deg);
+                    &:after {
+                        width: 51px;
+                        margin: 8% 18%;
+                        position: absolute;
+                        content: "";
+                        border: 1.5px solid #E3B873;
+                        transform: rotate(-180deg);
+                    }
+                }
+            }
+            .scroll-block {
+                position: absolute;
+                left: 0px;
+                top: 739px;
+                @include displ();
+                height: 97px;
+                width: 17%;
+                z-index: 10;
+                background-color: #131313;
+                &:hover {
+                    color: #ffffff99;
+                    cursor: pointer;
+                }
+                .scroll-block__p {
+                    margin-left: -16%;
+                    a {
+                        @include font($fonts: 14px, $lineh: 19px);
+                        &::after {
+                            display: block;
+                            position: absolute;
+                            margin: -22px 0 0 120px;
+                            content: url('../img/Group62.svg');
+                        }
+                    }
+                }
+            }
+            .h {
+                padding-top: 194px;
+                margin: 0 0 0 7%;
+                grid-area: h;
+                @include font($lineh: 53px, $fonts: 40px, $textal: left);
+                span {
+                    color: #E3B873;
+                }
+            }
+            .offer {
+                padding-top: 19px;
+                width: auto;
+                margin: 0 46.5% 0 7%;
+                grid-area: offer;
+                @include futbokc($fonts: 22px, $lineh: 30px);
+            }
+            .calcmob {
+                grid-area: calcmob;
+                margin: 41px 0 0 21%;
+                border: none;
+                background: #E3B873;
+            }
+            .applic {
+                display: block;
+                grid-area: applic;
+                margin: 41px 0 0 -9.5%;
+                background: rgba(0, 0, 0, 0.0);
+                border: 1px solid #FFFFFF;
+            }
+            .btn {
+                width: 58%;
+                height: 51px;
+                @include futdem($lineh: 15px, $fonts: 13px, $textal: center);
+                &:hover,
+                &:active,
+                &:focus {
+                    cursor: pointer;
+                    background: #E3B873;
+                    box-shadow: 0px 5px 15px rgba(115, 145, 227, 0.3);
+                }
+            }
+            .applicmob {
+                display: none;
+            }
+        }
+        .second-container {
+            //  width: 100%;
+            .second-container__wrap {
+                overflow: hidden;
+                padding: 5.7% 0 0 5%;
+                background-color: #252525;
+                position: relative;
+                display: grid;
+                grid-template-areas: ' .  second-container__nav' 'tit   slider' 'offer  slider' ' specification  slider' 'btn__section2 slider' '. buttom-left__butt';
+                grid-template-columns: 442px 1fr;
+                grid-template-rows: 34px 66px 87px 160px 60px;
+                grid-column-gap: 3vw;
+                grid-row-gap: 35px;
+                .second-container__nav {
+                    width: auto;
+                    display: block;
+                    grid-area: second-container__nav;
+                    ul {
+                        @include displ($jcont: start);
+                        list-style: none;
+                        li {
+                            margin-left: 60.5px;
+                            @include font($fonts: 14px, $lineh: 19px, $color: rgba(255, 255, 255, 0.3));
+                            &:hover,
+                            &:active,
+                            &:focus {
+                                color: #E3B873;
+                                border-bottom: 1px solid #E3B873;
+                                cursor: pointer;
+                            }
+                            &:first-child {
+                                margin-left: 0;
+                                border-bottom: 1px solid #E3B873;
+                                color: #E3B873;
+                            }
+                        }
+                    }
+                }
+                .tit {
+                    grid-area: tit;
+                    margin: 0;
+                    width: 45%;
+                    @include font($fonts: 27px, $lineh: 37px, $color: #E3B873, $textal: left);
+                    letter-spacing: -0.07em;
+                    &::after {
+                        width: 92px;
+                        margin: 20px 0 0 30px;
+                        position: absolute;
+                        content: "";
+                        border: 1px solid #E3B873;
+                    }
+                }
+                .offer {
+                    width: 100%;
+                    margin: 0;
+                    grid-area: offer;
+                    @include futbokc($lineh: 29px);
+                }
+                .specification {
+                    grid-area: specification;
+                    margin: 0;
+                    width: 100%;
+                    display: grid;
+                    grid-template-rows: 1fr 1.5fr;
+                    grid-template-columns: 1fr 1.5fr;
+                    grid-column-gap: 5vw;
+                    .specific-tit {
+                        margin: 0;
+                        @include font($fonts: 18px, $lineh: 25px, $color: #E3B873, $textal: left);
+                    }
+                    .specific-descr {
+                        margin: 9px 0 0 0;
+                        @include futbokc( $fonts: 15px, $lineh: 20px, $color: #ffffff);
+                    }
+                    .address,
+                    .time {
+                        width: 99px;
+                    }
+                }
+                .slider {
+                    display: none;
+                    background-image: none;
+                }
+                .slider__big {
+                    grid-area: slider;
+                    display: block;
+                    margin-top: 76px;
+                    margin-left: -32px;
+                    min-width: 0;
+                    @include displ($jcont: space-between, $aitems: center);
+                    img:nth-child(2) {
+                        margin-left: -42px;
+                    }
+                }
+                .buttom-left__butt {
+                    grid-area: buttom-left__butt;
+                    border: none;
+                    outline: none;
+                    background-color: #E3B873;
+                    border-radius: 50%;
+                    width: 55px;
+                    height: 55px;
+                    margin: -602px 0 0 714px;
+                    transition: all .2s;
+                    &:hover,
+                    &:focus {
+                        cursor: pointer;
+                    }
+                    &:active {
+                        cursor: pointer;
+                        background-color: rgb(252, 158, 8);
+                        transform: scale(1.2, 1.2);
+                    }
+                    img {
+                        display: block;
+                        margin: 0 auto;
+                    }
+                }
+                .btn__section2 {
+                    margin-top: 47px;
+                    @include displ();
+                    width: 206px;
+                    height: 13.3px;
+                    grid-area: btn__section2;
+                    .img-btn__section2 {
                         &:hover,
+                        &:active,
                         &:focus {
                             cursor: pointer;
                         }
-                        &:active {
-                            cursor: pointer;
+                    }
+                    .slider-wrap {
+                        @include displ();
+                        width: 64px;
+                        height: 40px;
+                        margin: 0 29.5px 0 29.5px;
+                        overflow: hidden;
+                        color: #fff;
+                        .my-custom-label {
+                            display: inline-block;
+                            width: 40px;
+                            height: 20px;
+                            line-height: 20px;
+                            text-align: center;
+                            input[type=radio] {
+                                display: none;
+                            }
+                            span {
+                                background: #bbb;
+                                display: inline-block;
+                                width: 9px;
+                                height: 9px;
+                                border-radius: 100%;
+                                vertical-align: middle;
+                                &:hover,
+                                &:active,
+                                &:focus {
+                                    cursor: pointer;
+                                }
+                            }
+                            input[type=radio]:checked+span {
+                                background: #fff;
+                                width: 10px;
+                                height: 10px;
+                                border-radius: 100%;
+                            }
                         }
                     }
-                    .nav {
-                        margin: 0 4.7% 0 3.1%;
-                        display: block;
-                        width: 40%;
-                        ul {
-                            @include displ($jcont: space-between);
+                }
+            }
+        }
+        .third-container {
+            background: #FFF;
+            z-index: 2;
+            &::after {
+                content: '';
+                width: 100%;
+                height: 34%;
+                background: #252525;
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: -1;
+            }
+            .group-camera {
+                margin: 13px 0 31.2px 0;
+            }
+            iframe {
+                width: 57%;
+                height: 434px;
+                box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15);
+            }
+            .rect613 {
+                margin: 63px 0 35px 0;
+            }
+            .text__third-container {
+                width: 47%;
+                height: 130px;
+                @include futbokc($fonts: 20px, $lineh: 34px, $color: #363636, $textal: center);
+            }
+            .application-form {
+                margin-top: 100px;
+                margin-bottom: 148px;
+                width: 57%;
+                height: auto;
+                .name-phone {
+                    position: relative;
+                    display: grid;
+                    grid-template-areas: 'p-label-name p-label-phone submit' ' p-agree p-agree  p-agree ';
+                    grid-template-columns: 33% 34% 33%;
+                    grid-template-rows: 51px 18px;
+                    grid-column-gap: 3.5%;
+                    grid-row-gap: 26px;
+                    .p-label-name {
+                        grid-area: p-label-name;
+                    }
+                    .p-label-phone {
+                        grid-area: p-label-phone;
+                    }
+                    p {
+                        margin: 0;
+                        .inp-name,
+                        .inp-phone {
+                            border-bottom: solid 1px rgba(54, 54, 54, 0.5);
+                            background-color: #ffffff;
+                            @include futbokc($fonts: 18px, $lineh: 24px, $color: #363636);
+                        }
+                        .label-name,
+                        .label-phone,
+                        .check {
+                            @include futbokc($fonts: 15px, $lineh: 20px, $color: rgba(54, 54, 54, 0.5));
+                            transform: rotate(-0.07deg);
+                        }
+                        .inp-name::-moz-placeholder,
+                        .inp-phone::-moz-placeholder {
+                            color: #363636;
+                            /* Цвет подсказывающего текста */
+                        }
+                        .inp-name::-webkit-input-placeholder,
+                        .inp-phone::-webkit-input-placeholder {
+                            color: #363636;
+                        }
+                        .inp-name:-ms-input-placeholder,
+                        .inp-phone:-ms-input-placeholder {
+                            color: #363636;
+                        }
+                        .inp-name::-ms-input-placeholder,
+                        .inp-phone::-ms-input-placeholder {
+                            color: #363636;
+                        }
+                        .inp-name::placeholder,
+                        .inp-phone::placeholder {
+                            color: #363636;
+                        }
+                    }
+                    .p-submit {
+                        grid-area: submit;
+                        .submit {
+                            margin: 0;
+                        }
+                    }
+                    .p-agree {
+                        margin: 0 auto;
+                        grid-area: p-agree;
+                        .check {
+                            color: #363636
+                        }
+                    }
+                }
+            }
+        }
+        .fourth-container {
+            margin: 0;
+            .tit__fourth-container {}
+            .group-repair {
+                margin: 13px 0 31px 0;
+            }
+            .fourth-container__content {
+                width: 86%;
+                @include displ($jcont: space-around);
+                flex-direction: row;
+                padding-left: 5%;
+                .type-of-works {
+                    width: 33%;
+                }
+                .redecorating,
+                .overhaul,
+                .designer-repair {
+                    margin: 0;
+                }
+                .list-of-works {
+                    margin: 251px 70px 0 28px;
+                    .list-tit {
+                        @include font($fonts: 18px, $lineh: 25px, $color: #363636);
+                    }
+                    .items {
+                        @include futbokc($fonts: 15px, $lineh: 25px, $color: #959595);
+                    }
+                }
+                .cost {
+                    width: 45%;
+                    margin: -25px 72% 0 41%;
+                    @include font($fonts: 18px, $lineh: 25px);
+                }
+            }
+            .slider__fouth-container {
+                display: none;
+            }
+            .our-conditions {
+                width: 100%;
+                @include displ($jcont: space-between);
+                flex-wrap: wrap;
+                margin: 0;
+                padding: 12.5% 0 9% 0;
+                .circle-wrap {
+                    position: relative;
+                    @include displ($aitems: flex-end);
+                    left: -17%;
+                    bottom: 59px;
+                    width: 636px;
+                    height: 636px;
+                    border-radius: 50%;
+                    background: linear-gradient(#fff, #fff) padding-box, linear-gradient(to right, #fff 0%, #fff 20%, #fff 20%, #E3B873 100%) border-box;
+                    border: 3px solid transparent;
+                    .circle-content {
+                        position: relative;
+                        bottom: 55px;
+                        left: 113px;
+                        width: 417px;
+                        height: 586px;
+                        background: url(../img/image61.png);
+                        background-size: cover;
+                        .circle-content__item {
+                            position: absolute;
+                            @include displ($jcont: flex-start);
+                            width: 100%;
+                            .item-num {
+                                display: block;
+                                width: 30px;
+                                height: 30px;
+                                border-radius: 50%;
+                                background-color: #E3B873;
+                                @include font($fonts: 18px, $lineh: 25px);
+                                box-shadow: 0px 0px 0px 10px #ffffff;
+                            }
+                            .item__text {
+                                width: 100%;
+                                font-family: FuturaMediumC;
+                                font-size: 18px;
+                                line-height: 21px;
+                                color: #363636;
+                                padding-left: 2%;
+                            }
+                        }
+                        .item1 {
+                            top: 9%;
+                            left: 65%;
+                        }
+                        .item2 {
+                            top: 30%;
+                            left: 88%;
+                        }
+                        .item3 {
+                            top: 58%;
+                            left: 95%;
+                        }
+                        .item4 {
+                            top: 84%;
+                            left: 81%;
+                        }
+                    }
+                }
+                .form-block {
+                    margin-right: 111px;
+                    margin-bottom: 40px;
+                    position: relative;
+                    @include displ();
+                    flex-direction: column;
+                    width: 40%;
+                    .application-form {
+                        background-color: #252525;
+                        width: 95%;
+                        .form-text {
+                            margin: 0 auto;
+                            width: 58.7%;
+                            padding-top: 5.53%;
+                            // padding-bottom: 7.7%;
+                            @include futdem($fonts: 20px, $lineh: 25px, $textal: center);
+                        }
+                        .name-phone {
+                            margin-top: 35px;
+                            padding: 0 9.7% 0 9.7%;
+                            .inp-name,
+                            .inp-phone,
+                            .inp-email {
+                                margin: 0;
+                                width: 100%;
+                                border: none;
+                                outline: none;
+                                border-bottom: solid 1px #FFFFFF;
+                                background-color: #252525;
+                                font-family: FuturaMediumC;
+                                font-size: 18px;
+                                line-height: 25px;
+                                color: #FFFFFF;
+                            }
+                            .inp-name::-moz-placeholder,
+                            .inp-phone::-moz-placeholder,
+                            .inp-email::-moz-placeholder {
+                                color: #FFFFFF;
+                                /* Цвет подсказывающего текста */
+                            }
+                            .inp-name::-webkit-input-placeholder,
+                            .inp-phone::-webkit-input-placeholder,
+                            .inp-email::-webkit-input-placeholder {
+                                color: #FFFFFF;
+                            }
+                            .inp-name:-ms-input-placeholder,
+                            .inp-phone:-ms-input-placeholder,
+                            .inp-email:-ms-input-placeholder {
+                                color: #FFFFFF;
+                            }
+                            .inp-name::-ms-input-placeholder,
+                            .inp-phone::-ms-input-placeholder,
+                            .inp-email::-ms-input-placeholder {
+                                color: #FFFFFF;
+                            }
+                            .inp-name::placeholder,
+                            .inp-phone::placeholder,
+                            .inp-email::placeholder {
+                                color: #FFFFFF;
+                            }
+                            .label-name,
+                            .label-phone,
+                            .label-email {
+                                @include futbokc($fonts: 15px, $lineh: 20px, $color: rgba(255, 255, 255, 0.5));
+                            }
+                            .label-name {
+                                display: block;
+                            }
+                            .label-email,
+                            .label-phone {
+                                display: block;
+                                margin: 48px 0 0 0;
+                            }
+                            .p-agree {
+                                margin: 35px 0 0 0;
+                                .agree:checked+.check:before {
+                                    margin: 5px 10px 0 0;
+                                    content: url(../img/group48.svg);
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                }
+                                .agree:disabled+.check:before {
+                                    margin: 5px 10px 0 0;
+                                    content: url(../img/rect8.svg);
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                }
+                                .check {
+                                    color: #FFFFFF;
+                                    @include futbokc($fonts: 16px, $lineh: 22px, $color: #ffffff);
+                                    &:before {
+                                        margin: 5px 10px 0 0;
+                                        content: url(../img/rect8.svg);
+                                        display: inline-block;
+                                        vertical-align: middle;
+                                    }
+                                }
+                            }
+                            .submit {
+                                margin: 12.4% 9.7% 5.3% 48%;
+                                width: 53%;
+                                height: 51px;
+                                border: none;
+                                @include futdem($lineh: 18px, $fonts: 13px, $textal: center, $texttrans: uppercase);
+                                background: #E3B873;
+                                box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.15);
+                            }
+                        }
+                    }
+                    .your-profit {
+                        margin-top: 23px;
+                        width: 87.35%;
+                        @include displ($jcont: flex-start);
+                        .your-profit-img {
+                            margin-left: -4px;
+                            width: 105px;
+                            height: 105px;
+                        }
+                        .your-profit__text {
+                            padding-bottom: 4.75%;
+                            @include futdem($fonts: 20px, $lineh: 25px, $color: #E3B873, );
+                            text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
+                        }
+                    }
+                }
+            }
+            .tit-end__fourth-container {
+                display: none;
+            }
+            .wildest-fantasies {
+                width: 100%;
+                background: linear-gradient(120.96deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.9) 100%), url(../img/image51_bg.png) no-repeat;
+                display: block;
+                position: relative;
+                .wildest-fantasies__wrap {
+                    width: 100%;
+                    position: relative;
+                    display: grid;
+                    grid-template-columns: 41% 25% 25%;
+                    grid-column-gap: 35px;
+                    margin: 0;
+                    padding-right: 102px;
+                    .wildest-fantasies__text-block {
+                        grid-column: span 1;
+                        .wildest-fantasies__tit {
+                            @include font($fonts: 27px, $lineh: 37px, $color: #E3B873, $textal: left);
+                            padding: 138px 77px 47px 99px;
+                        }
+                        .wildest-fantasies__nav {
+                            padding-left: 99px;
                             list-style: none;
                             li {
-                                margin-left: 3.3%;
-                                @include futbokc($fonts: 14px, $lineh: 16px, $textal: center);
+                                border-bottom: 1px solid transparent;
+                                width: fit-content;
+                                font-family: Proxima Nova;
+                                font-size: 20px;
+                                line-height: 34px;
+                                color: #FFFFFF;
+                                margin-bottom: 17px;
                                 &:hover,
                                 &:active,
                                 &:focus {
                                     color: #E3B873;
+                                    border-bottom: 1px solid #E3B873;
                                     cursor: pointer;
                                 }
                                 &:first-child {
                                     margin-left: 0;
+                                    border-bottom: 1px solid #E3B873;
                                     color: #E3B873;
                                 }
                             }
                         }
                     }
+                    .image-group-first {
+                        margin-left: -10%;
+                        margin-bottom: -45px;
+                        z-index: 10;
+                        .item2 {
+                            margin-top: -41px;
+                        }
+                        .item3 {
+                            padding-top: 35px;
+                            margin-bottom: 118px;
+                        }
+                    }
+                    .image-group-second {
+                        margin-left: 3%;
+                        .item1 {
+                            margin-top: -120px;
+                        }
+                        .item4 {
+                            padding-top: 35px;
+                            margin-bottom: 118px;
+                        }
+                    }
                 }
-                .main {
-                    .first-container {
-                        background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/image43.png) no-repeat;
-                        height: 707px;
-                        display: grid;
-                        grid-template-rows: 299px 108px 92px;
-                        grid-template-columns: 82px 0.5fr 0.5fr 0.5fr 0.5fr;
-                        grid-template-areas: "instagram h h h ." "instagram offer offer offer ." "instagram calcmob applic .  . " "instagram  .  .  .  . ";
-                        .instagram {
-                            position: relative;
-                            background-color: #252525;
-                            display: block;
-                            grid-area: instagram;
-                            .instagram__link {
-                                position: absolute;
-                                top: 50%;
-                                @include futdem($fonts: 14px, $lineh: 16px, $textal: center, $color: #E3B873);
-                                transform: rotate(90deg);
-                                &:after {
-                                    width: 51px;
-                                    margin: 8% 18%;
-                                    position: absolute;
-                                    content: "";
-                                    border: 1.5px solid #E3B873;
-                                    transform: rotate(-180deg);
-                                }
-                            }
-                        }
-                        .scroll-block {
+            }
+        }
+        .fifth-container {
+            background-color: #252525;
+            z-index: 2;
+            &::after {
+                content: '';
+                width: 100%;
+                height: 33%;
+                background: #FFFFFF;
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: -1;
+            }
+            .tit__fifth-container {
+                @include font($fonts: 20px, $lineh: 28px, $color: #181818);
+            }
+            .group-project {
+                margin: 13px 0 24px 0;
+            }
+            .p-project {
+                height: 57px;
+                width: 53%;
+                @include futbokc($fonts: 20px, $lineh: 27px, $textal: center, $color: #363636);
+            }
+            .fifth-container__content {
+                width: 86%;
+                @include displ($jcont: space-around, $aitems: baseline);
+                flex-direction: row;
+                padding-left: 5%;
+                .type-of-works {
+                    margin-top: 39px;
+                    width: 33%;
+                }
+                .redecorating,
+                .designer-repair,
+                .overhaul {
+                    margin: 0;
+                }
+                .list-of-works {
+                    margin: 251px 70px 0 28px;
+                    height: auto;
+                    .list-tit {
+                        @include font($lineh: 25px, $fonts: 18px, $color: #363636);
+                    }
+                    .items {
+                        @include futbokc($lineh: 25px, $fonts: 15px, $color: #959595);
+                    }
+                }
+                .cost {
+                    width: 45%;
+                    margin: -25px 72% 0 41%;
+                    @include font($fonts: 18px, $lineh: 25px);
+                }
+            }
+            .six-steps-our-work {
+                display: block;
+                width: 86%;
+                position: relative;
+                display: grid;
+                grid-template-columns: 27.4% 60%;
+                grid-column-gap: 9%;
+                .six-steps-our-work__text-block {
+                    margin-top: -35%;
+                    grid-column: span 1;
+                    @include displ($jcont: space-around);
+                    flex-direction: column;
+                    .how-working-text {
+                        margin-left: -46%;
+                        @include futdem($fonts: 15px, $lineh: 21px, $texttrans: uppercase);
+                    }
+                    .six-steps-tit {
+                        margin: -43% 40% 0 0;
+                        @include font($fonts: 27px, $lineh: 37px, $color: #E3B873, $textal: left);
+                        &::after {
+                            width: 92px;
+                            margin: 20px 0 0 62px;
                             position: absolute;
-                            left: 0px;
-                            top: 739px;
-                            @include displ();
-                            height: 97px;
-                            width: 17%;
-                            z-index: 10;
-                            background-color: #131313;
-                            &:hover {
-                                color: #ffffff99;
-                                cursor: pointer;
+                            content: "";
+                            border: 1px solid #E3B873;
+                        }
+                    }
+                    .num-work {
+                        margin: -23% 87% 0 0;
+                        @include font($fonts: 18px, $lineh: 25px, $textal: left);
+                    }
+                    .first-tit {
+                        margin-top: -35%;
+                        @include font($fonts: 15px, $lineh: 23px, $color: #E3B873, $textal: left);
+                    }
+                    .about-first-step {
+                        margin-top: -40%;
+                        @include futbokc($fonts: 15px, $lineh: 25px);
+                    }
+                }
+                .list-of-six-steps {
+                    margin-top: 60px;
+                    grid-column: span 1;
+                    display: grid;
+                    grid-template-rows: 15% 15% 50%;
+                    grid-row-gap: 45px;
+                    .steps {
+                        margin-left: 8%;
+                        grid-row: span 1;
+                        @include displ($jcont: space-between);
+                        list-style: none;
+                        li {
+                            opacity: 0.3;
+                            width: 16%;
+                            @include futbokc($fonts: 15px, $lineh: 18px);
+                            a {
+                                border-bottom: 1px solid #FFFFFF;
+                                @include font($fonts: 15px, $lineh: 21px);
                             }
-                            .scroll-block__p {
-                                margin-left: -16%;
-                                a {
-                                    @include font($fonts: 14px, $lineh: 19px);
-                                    &::after {
-                                        display: block;
-                                        position: absolute;
-                                        margin: -22px 0 0 120px;
-                                        content: url('../img/Group62.svg');
-                                    }
-                                }
-                            }
-                        }
-                        .h {
-                            padding-top: 194px;
-                            margin: 0 0 0 7%;
-                            grid-area: h;
-                            @include font($lineh: 53px, $fonts: 40px, $textal: left);
-                            span {
-                                color: #E3B873;
-                            }
-                        }
-                        .offer {
-                            padding-top: 19px;
-                            width: auto;
-                            margin: 0 46.5% 0 7%;
-                            grid-area: offer;
-                            @include futbokc($fonts: 22px, $lineh: 30px);
-                        }
-                        .calcmob {
-                            grid-area: calcmob;
-                            margin: 41px 0 0 21%;
-                            border: none;
-                            background: #E3B873;
-                        }
-                        .applic {
-                            display: block;
-                            grid-area: applic;
-                            margin: 41px 0 0 -9.5%;
-                            background: rgba(0, 0, 0, 0.0);
-                            border: 1px solid #FFFFFF;
-                        }
-                        .btn {
-                            width: 58%;
-                            height: 51px;
-                            @include futdem($lineh: 15px, $fonts: 13px, $textal: center);
                             &:hover,
                             &:active,
                             &:focus {
+                                opacity: 1;
                                 cursor: pointer;
-                                background: #E3B873;
-                                box-shadow: 0px 5px 15px rgba(115, 145, 227, 0.3);
                             }
-                        }
-                        .applicmob {
-                            display: none;
                         }
                     }
-                    .second-container {
-                        //  width: 100%;
-                        .second-container__wrap {
-                            overflow: hidden;
-                            padding: 5.7% 0 0 5%;
-                            background-color: #252525;
-                            position: relative;
-                            display: grid;
-                            grid-template-areas: ' .  second-container__nav' 'tit   slider' 'offer  slider' ' specification  slider' 'btn__section2 slider' '. buttom-left__butt';
-                            grid-template-columns: 442px 1fr;
-                            grid-template-rows: 34px 66px 87px 160px 60px;
-                            grid-column-gap: 3vw;
-                            grid-row-gap: 35px;
-                            .second-container__nav {
-                                width: auto;
-                                display: block;
-                                grid-area: second-container__nav;
-                                ul {
-                                    @include displ($jcont: start);
-                                    list-style: none;
-                                    li {
-                                        margin-left: 60.5px;
-                                        @include font($fonts: 14px, $lineh: 19px, $color: rgba(255, 255, 255, 0.3));
-                                        &:hover,
-                                        &:active,
-                                        &:focus {
-                                            color: #E3B873;
-                                            border-bottom: 1px solid #E3B873;
-                                            cursor: pointer;
-                                        }
-                                        &:first-child {
-                                            margin-left: 0;
-                                            border-bottom: 1px solid #E3B873;
-                                            color: #E3B873;
-                                        }
-                                    }
-                                }
+                    .first-list {
+                        li {
+                            &:first-child {
+                                opacity: 1;
+                                cursor: pointer;
                             }
-                            .tit {
-                                grid-area: tit;
-                                margin: 0;
-                                width: 45%;
-                                @include font($fonts: 27px, $lineh: 37px, $color: #E3B873, $textal: left);
-                                letter-spacing: -0.07em;
-                                &::after {
-                                    width: 92px;
-                                    margin: 20px 0 0 30px;
-                                    position: absolute;
-                                    content: "";
-                                    border: 1px solid #E3B873;
-                                }
-                            }
-                            .offer {
-                                width: 100%;
-                                margin: 0;
-                                grid-area: offer;
-                                @include futbokc($lineh: 29px);
-                            }
-                            .specification {
-                                grid-area: specification;
-                                margin: 0;
-                                width: 100%;
-                                display: grid;
-                                grid-template-rows: 1fr 1.5fr;
-                                grid-template-columns: 1fr 1.5fr;
-                                grid-column-gap: 5vw;
-                                .specific-tit {
-                                    margin: 0;
-                                    @include font($fonts: 18px, $lineh: 25px, $color: #E3B873, $textal: left);
-                                }
-                                .specific-descr {
-                                    margin: 9px 0 0 0;
-                                    @include futbokc( $fonts: 15px, $lineh: 20px, $color: #ffffff);
-                                }
-                                .address,
-                                .time {
-                                    width: 99px;
-                                }
-                            }
-                            .slider {
+                        }
+                    }
+                    .howwework-img {
+                        width: 93%;
+                        margin-left: 8%;
+                        height: 376px;
+                    }
+                }
+                .btn__section5 {
+                    @include displ();
+                    .img-btn__section5 {
+                        &:hover,
+                        &:active,
+                        &:focus {
+                            cursor: pointer;
+                        }
+                    }
+                    .slider-wrap {
+                        margin: 0 29.5px 0 29.5px;
+                        .my-custom-label {
+                            display: inline-block;
+                            width: 10px;
+                            height: 20px;
+                            line-height: 20px;
+                            text-align: center;
+                            input[type=radio] {
                                 display: none;
-                                background-image: none;
                             }
-                            .slider__big {
-                                grid-area: slider;
-                                display: block;
-                                margin-top: 76px;
-                                margin-left: -32px;
-                                min-width: 0;
-                                @include displ($jcont: space-between, $aitems: center);
-                                img:nth-child(2) {
-                                    margin-left: -42px;
-                                }
-                            }
-                            .buttom-left__butt {
-                                grid-area: buttom-left__butt;
-                                border: none;
-                                outline: none;
-                                background-color: #E3B873;
-                                border-radius: 50%;
-                                width: 55px;
-                                height: 55px;
-                                margin: -602px 0 0 714px;
-                                transition: all .2s;
+                            span {
+                                background: #bbb;
+                                display: inline-block;
+                                width: 9px;
+                                height: 9px;
+                                border-radius: 100%;
+                                vertical-align: middle;
                                 &:hover,
+                                &:active,
                                 &:focus {
                                     cursor: pointer;
                                 }
-                                &:active {
-                                    cursor: pointer;
-                                    background-color: rgb(252, 158, 8);
-                                    transform: scale(1.2, 1.2);
-                                }
-                                img {
-                                    display: block;
-                                    margin: 0 auto;
-                                }
                             }
-                            .btn__section2 {
-                                margin-top: 47px;
-                                @include displ();
-                                width: 206px;
-                                height: 13.3px;
-                                grid-area: btn__section2;
-                                .slider-wrap {
-                                    @include displ();
-                                    width: 64px;
-                                    height: 40px;
-                                    margin: 0 29.5px 0 29.5px;
-                                    overflow: hidden;
-                                    color: #fff;
-                                    .my-custom-label {
-                                        display: inline-block;
-                                        width: 40px;
-                                        height: 20px;
-                                        line-height: 20px;
-                                        text-align: center;
-                                        input[type=radio] {
-                                            display: none;
-                                        }
-                                        span {
-                                            background: #bbb;
-                                            display: inline-block;
-                                            width: 9px;
-                                            height: 9px;
-                                            border-radius: 100%;
-                                            vertical-align: middle;
-                                        }
-                                        input[type=radio]:checked+span {
-                                            background: #fff;
-                                            width: 10px;
-                                            height: 10px;
-                                            border-radius: 100%;
-                                        }
-                                    }
-                                }
+                            input[type=radio]:checked+span {
+                                background: #fff;
+                                width: 10px;
+                                height: 10px;
+                                border-radius: 100%;
                             }
                         }
                     }
-                    .third-container {
-                        background: #FFF;
-                        z-index: 2;
-                        &::after {
-                            content: '';
-                            width: 100%;
-                            height: 28%;
-                            background: #252525;
-                            position: absolute;
-                            left: 0;
-                            top: 0;
-                            z-index: -1;
-                        }
-                        .group-camera {
-                            margin: 13px 0 31.2px 0;
-                        }
-                        iframe {
-                            width: 57%;
-                            height: 434px;
-                            box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15);
-                        }
-                        .rect613 {
-                            margin: 63px 0 35px 0;
-                        }
-                        .text__third-container {
-                            width: 47%;
-                            height: 130px;
-                            @include futbokc($fonts: 20px, $lineh: 34px, $color: #363636, $textal: center);
-                        }
-                        .application-form {
-                            margin-top: 100px;
-                            margin-bottom: 148px;
-                            width: 57%;
-                            height: auto;
-                            .name-phone {
-                                position: relative;
-                                display: grid;
-                                grid-template-areas: 'p-label-name p-label-phone submit' ' p-agree p-agree  p-agree ';
-                                grid-template-columns: 33% 34% 33%;
-                                grid-template-rows: 51px 18px;
-                                grid-column-gap: 3.5%;
-                                grid-row-gap: 26px;
-                                .p-label-name {
-                                    grid-area: p-label-name;
-                                }
-                                .p-label-phone {
-                                    grid-area: p-label-phone;
-                                }
-                                p {
-                                    margin: 0;
-                                    .inp-name,
-                                    .inp-phone {
-                                        border-bottom: solid 1px rgba(54, 54, 54, 0.5);
-                                        background-color: #ffffff;
-                                        @include futbokc($fonts: 18px, $lineh: 24px, $color: #363636);
-                                    }
-                                    .label-name,
-                                    .label-phone,
-                                    .check {
-                                        @include futbokc($fonts: 15px, $lineh: 20px, $color: rgba(54, 54, 54, 0.5));
-                                        transform: rotate(-0.07deg);
-                                    }
-                                    .inp-name::-moz-placeholder,
-                                    .inp-phone::-moz-placeholder {
-                                        color: #363636;
-                                        /* Цвет подсказывающего текста */
-                                    }
-                                    .inp-name::-webkit-input-placeholder,
-                                    .inp-phone::-webkit-input-placeholder {
-                                        color: #363636;
-                                    }
-                                    .inp-name:-ms-input-placeholder,
-                                    .inp-phone:-ms-input-placeholder {
-                                        color: #363636;
-                                    }
-                                    .inp-name::-ms-input-placeholder,
-                                    .inp-phone::-ms-input-placeholder {
-                                        color: #363636;
-                                    }
-                                    .inp-name::placeholder,
-                                    .inp-phone::placeholder {
-                                        color: #363636;
-                                    }
-                                }
-                                .p-submit {
-                                    grid-area: submit;
-                                    .submit {
-                                        margin: 0;
-                                    }
-                                }
-                                .p-agree {
-                                    margin: 0 auto;
-                                    grid-area: p-agree;
-                                    .check {
-                                        color: #363636
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    .fourth-container {
-                        margin: 0;
-                        .tit__fourth-container {}
-                        .group-repair {
-                            margin: 13px 0 31px 0;
-                        }
-                        .fourth-container__content {
-                            width: 86%;
-                            @include displ($jcont: space-around);
-                            flex-direction: row;
-                            padding-left: 5%;
-                            .type-of-works {
-                                width: 33%;
-                            }
-                            .redecorating,
-                            .overhaul,
-                            .designer-repair {
-                                margin: 0;
-                            }
-                            .list-of-works {
-                                width: 65%;
-                                margin: 263px 70px 0 56px;
-                            }
-                            .cost {
-                                width: 45%;
-                                margin: -25px 65% 0 41%;
-                            }
-                        }
-                        .slider__fouth-container {
-                            display: none;
-                        }
-                        .our-conditions {
-                            width: 100%;
-                            @include displ($jcont: space-between);
-                            flex-wrap: wrap;
-                            margin: 0;
-                            padding: 12.5% 0% 0 0;
-                            .circle-wrap {
-                                position: relative;
-                                @include displ($aitems: flex-end);
-                                left: -17%;
-                                bottom: 59px;
-                                width: 636px;
-                                height: 636px;
-                                border-radius: 50%;
-                                background: linear-gradient(#fff, #fff) padding-box, linear-gradient(to right, #fff 0%, #fff 20%, #fff 20%, #E3B873 100%) border-box;
-                                border: 3px solid transparent;
-                                .circle-content {
-                                    position: relative;
-                                    bottom: 55px;
-                                    left: 113px;
-                                    width: 417px;
-                                    height: 586px;
-                                    background: url(../img/image61.png);
-                                    background-size: cover;
-                                    .circle-content__item {
-                                        position: absolute;
-                                        @include displ($jcont: flex-start);
-                                        width: 100%;
-                                        .item-num {
-                                            display: block;
-                                            width: 30px;
-                                            height: 30px;
-                                            border-radius: 50%;
-                                            background-color: #E3B873;
-                                            @include font($fonts: 18px, $lineh: 25px);
-                                            box-shadow: 0px 0px 0px 10px #ffffff;
-                                        }
-                                        .item__text {
-                                            width: 100%;
-                                            font-family: FuturaMediumC;
-                                            font-size: 18px;
-                                            line-height: 21px;
-                                            color: #363636;
-                                            padding-left: 2%;
-                                        }
-                                    }
-                                    .item1 {
-                                        top: 9%;
-                                        left: 65%;
-                                    }
-                                    .item2 {
-                                        top: 30%;
-                                        left: 88%;
-                                    }
-                                    .item3 {
-                                        top: 58%;
-                                        left: 95%;
-                                    }
-                                    .item4 {
-                                        top: 84%;
-                                        left: 81%;
-                                    }
-                                }
-                            }
-                            .form-block {
-                                margin-right: 111px;
-                                margin-bottom: 40px;
-                                position: relative;
-                                @include displ();
-                                flex-direction: column;
-                                width: 40%;
-                                .application-form {
-                                    background-color: #252525;
-                                    width: 95%;
-                                    .form-text {
-                                        margin: 0 auto;
-                                        width: 58.7%;
-                                        padding-top: 5.53%;
-                                        // padding-bottom: 7.7%;
-                                        @include futdem($fonts: 20px, $lineh: 25px, $textal: center);
-                                    }
-                                    .name-phone {
-                                        margin-top: 35px;
-                                        padding: 0 9.7% 0 9.7%;
-                                        .inp-name,
-                                        .inp-phone,
-                                        .inp-email {
-                                            margin: 0;
-                                            width: 100%;
-                                            border: none;
-                                            outline: none;
-                                            border-bottom: solid 1px #FFFFFF;
-                                            background-color: #252525;
-                                            font-family: FuturaMediumC;
-                                            font-size: 18px;
-                                            line-height: 25px;
-                                            color: #FFFFFF;
-                                        }
-                                        .inp-name::-moz-placeholder,
-                                        .inp-phone::-moz-placeholder,
-                                        .inp-email::-moz-placeholder {
-                                            color: #FFFFFF;
-                                            /* Цвет подсказывающего текста */
-                                        }
-                                        .inp-name::-webkit-input-placeholder,
-                                        .inp-phone::-webkit-input-placeholder,
-                                        .inp-email::-webkit-input-placeholder {
-                                            color: #FFFFFF;
-                                        }
-                                        .inp-name:-ms-input-placeholder,
-                                        .inp-phone:-ms-input-placeholder,
-                                        .inp-email:-ms-input-placeholder {
-                                            color: #FFFFFF;
-                                        }
-                                        .inp-name::-ms-input-placeholder,
-                                        .inp-phone::-ms-input-placeholder,
-                                        .inp-email::-ms-input-placeholder {
-                                            color: #FFFFFF;
-                                        }
-                                        .inp-name::placeholder,
-                                        .inp-phone::placeholder,
-                                        .inp-email::placeholder {
-                                            color: #FFFFFF;
-                                        }
-                                        .label-name,
-                                        .label-phone,
-                                        .label-email {
-                                            @include futbokc($fonts: 15px, $lineh: 20px, $color: rgba(255, 255, 255, 0.5));
-                                        }
-                                        .label-name {
-                                            display: block;
-                                        }
-                                        .label-email,
-                                        .label-phone {
-                                            display: block;
-                                            margin: 48px 0 0 0;
-                                        }
-                                        .p-agree {
-                                            margin: 35px 0 0 0;
-                                            .agree:checked+.check:before {
-                                                margin: 5px 10px 0 0;
-                                                content: url(../img/group48.svg);
-                                                display: inline-block;
-                                                vertical-align: middle;
-                                            }
-                                            .agree:disabled+.check:before {
-                                                margin: 5px 10px 0 0;
-                                                content: url(../img/rect8.svg);
-                                                display: inline-block;
-                                                vertical-align: middle;
-                                            }
-                                            .check {
-                                                color: #FFFFFF;
-                                                @include futbokc($fonts: 16px, $lineh: 22px, $color: #ffffff);
-                                                &:before {
-                                                    margin: 5px 10px 0 0;
-                                                    content: url(../img/rect8.svg);
-                                                    display: inline-block;
-                                                    vertical-align: middle;
-                                                }
-                                            }
-                                        }
-                                        .submit {
-                                            margin: 12.4% 9.7% 5.3% 48%;
-                                            width: 53%;
-                                            height: 51px;
-                                            border: none;
-                                            @include futdem($lineh: 18px, $fonts: 13px, $textal: center, $texttrans: uppercase);
-                                            background: #E3B873;
-                                            box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.15);
-                                        }
-                                    }
-                                }
-                                .your-profit {
-                                    margin-top: 23px;
-                                    width: 87.35%;
-                                    @include displ($jcont: flex-start);
-                                    .your-profit-img {
-                                        margin-left: -4px;
-                                        width: 105px;
-                                        height: 105px;
-                                    }
-                                    .your-profit__text {
-                                        padding-bottom: 4.75%;
-                                        @include futdem($fonts: 20px, $lineh: 25px, $color: #E3B873, );
-                                        text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
-                                    }
-                                }
-                            }
-                        }
-                        .tit-end__fourth-container {
-                            display: none;
-                        }
-                        .wildest-fantasies {
-                            display: block;
-                            width: 100%;
-                            position: relative;
-                            display: grid;
-                            // grid-template-areas: 'wildest-fantasies__tit' ' p-agree p-agree  p-agree ';
-                            grid-template-columns: 41% 25% 25%;
-                            //  grid-template-rows: 51px 18px;
-                            // grid-column-gap: 40px;
-                            // grid-row-gap: 40px;
-                            margin: 0;
-                            //  padding-right: 100px;
-                            // height: 864px;
-                            background: linear-gradient(120.96deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.9) 100%), url(../img/image51_bg.png) no-repeat;
-                            .wildest-fantasies__wrap {
-                                // @include displ();
-                                //  flex-direction: column;
-                                grid-column: 1/-1;
-                                //  grid-row: 1/3;
-                                .wildest-fantasies__tit {
-                                    @include font($fonts: 27px, $lineh: 37px, $color: #E3B873, $textal: left);
-                                    padding: 138px 77px 47px 99px;
-                                }
-                                .wildest-fantasies__nav {
-                                    list-style: none;
-                                    li {
-                                        font-family: Proxima Nova;
-                                        font-size: 20px;
-                                        line-height: 34px;
-                                        color: #FFFFFF;
-                                        padding-bottom: 25px;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    .fifth-container {}
                 }
             }
+        }
+        .sixth-container {
+            position: relative;
+            text-align: center;
+            padding-top: 95.5px;
+            .our-employees {
+                padding-top: 95.5px;
+                width: 86%;
+                position: relative;
+                @include displ($jcont: space-between);
+                flex-direction: row;
+                .employee {
+                    .photo {
+                        top: 0;
+                        position: relative;
+                    }
+                    .avatar {
+                        position: absolute;
+                        top: -48px;
+                        left: -13px;
+                    }
+                    .employee-portfolio {
+                        position: absolute;
+                        bottom: 0;
+                        right: 15.66%;
+                        width: 69.13%;
+                        height: 137px;
+                        background: #FFFFFF;
+                        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
+                        .name {
+                            margin: 22px 0 0 0;
+                            @include font($fonts: 18px, $lineh: 25px, $color: #181818, $texttrans: none);
+                        }
+                        .profession {
+                            margin: 9px 0 17px 0;
+                            @include futbokc($fonts: 18px, $lineh: 26px, $textal: center, $color: #959595);
+                        }
+                        .experience {
+                            padding: 4px 0 5px 0;
+                            background-color: #E3B873;
+                            @include font($fonts: 13px, $lineh: 29px);
+                        }
+                    }
+                }
+                .the-details {
+                    margin: 0;
+                    .photo {
+                        top: 0;
+                    }
+                }
+            }
+        }
+    }
+}
