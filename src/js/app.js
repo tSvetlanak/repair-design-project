@@ -7,7 +7,7 @@ FirstButton.addEventListener("click", func, { passive: true }, false);
 SecondButton.addEventListener("click", func, { passive: true }, false);
 
 function func() {
-    const content = document.getElementById("content");
+    const content = document.getElementById("sliderfc");
     switch (content.className) {
         case "slider__fouth-container first-slid":
             content.className = ("slider__fouth-container second-slid");

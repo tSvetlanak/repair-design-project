@@ -70,12 +70,15 @@ a {
     }
     .main {
         margin: 0;
+        .our-clients {
+            display: none;
+        }
         .first-container {
             width: 100%;
-            height: 80vh;
+            height: 110vh;
             background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/bg__first-cont.jpg) no-repeat;
             display: grid;
-            grid-template-rows: 145px 110px 83px 77px;
+            grid-template-rows: 145px 110px 83px 77px 5%;
             grid-template-columns: 1fr;
             grid-template-areas: "h" "offer" "calcmob" "applicmob";
             background-size: cover;
@@ -155,7 +158,9 @@ a {
                 background: url(../img/image2.jpg) no-repeat;
                 background-size: cover;
             }
-            .slider__big {
+            .slider__big,
+            .buttom-left__butt,
+            .btn__section2 {
                 display: none;
             }
             .specification {
@@ -249,32 +254,38 @@ a {
                 .check {
                     @include futbokc($fonts: 15px, $lineh: 20px, $color: rgba(255, 255, 255, 0.5));
                 }
-                .check {
-                    color: #FFFFFF
-                }
-                .check:before {
-                    margin: 5px 10px 0 0;
-                    content: url(../img/rect8.svg);
-                    display: inline-block;
-                    vertical-align: middle;
-                }
-                input:checked+label:before {
-                    margin: 5px 10px 0 0;
-                    content: url(../img/group48.svg);
-                    display: inline-block;
-                    vertical-align: middle;
-                }
-                input:disabled+label:before {
-                    margin: 5px 10px 0 0;
-                    content: url(../img/rect8.svg);
-                    display: inline-block;
-                    vertical-align: middle;
+                .block-check {
+                    margin: 27px 0 0 0;
+                    color: #FFFFFF;
+                    .check {
+                        .check__input {
+                            position: absolute;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            appearance: none;
+                        }
+                        .check__box {
+                            margin-top: .5%;
+                            position: absolute;
+                            width: 1em;
+                            height: 1em;
+                            background-color: #E3B873;
+                        }
+                        .check__box-text {
+                            @include futbokc($fonts: 18px, $lineh: 138.72%, $color: #FFFFFF);
+                            padding-left: 8%;
+                        }
+                        .check__input:checked+.check__box {
+                            background-size: cover;
+                            background-image: url(../img/group48.svg);
+                        }
+                        .check__input:focus+.check__box {
+                            cursor: pointer;
+                        }
+                    }
                 }
                 .p-label-phone {
                     margin: 63px 0 0 0;
-                }
-                .p-agree {
-                    margin: 27px 0 0 0;
                 }
                 .submit {
                     margin: 63px 0 0 0;
@@ -285,6 +296,13 @@ a {
                     background: #E3B873;
                     box-shadow: 0px 10px 20px rgba(227, 184, 115, 0.1);
                     @include futdem($lineh: 26px, $fonts: 15px, $textal: center, $texttrans: uppercase);
+                    &:hover,
+                    &:focus {
+                        cursor: pointer;
+                    }
+                    &:active {
+                        cursor: pointer;
+                    }
                 }
             }
         }
@@ -528,12 +546,13 @@ a {
             @include futbokc($fonts: 15px, $textal: center);
         }
         .our-employees {
+            width: 100%;
             position: relative;
             @include displ();
             flex-direction: column;
             .employee {
                 position: relative;
-                width: 90%;
+                width: 87%;
                 height: 449px;
                 .photo {
                     position: absolute;
@@ -575,6 +594,9 @@ a {
                 }
             }
         }
+        .about-our-employees {
+            display: none;
+        }
     }
     .seventh-container {
         background-color: #252525;
@@ -582,151 +604,188 @@ a {
         @include displ();
         flex-direction: column;
         width: 100%;
-        .tit__seventh-container {
-            margin: 76px 0 12.5px 0;
-            @include font($fonts: 22px);
-        }
-        .application-form {
-            margin: 32px 0 0 0;
+        .form-wrap {
             width: 90%;
-            .name-phone {
-                p {
-                    margin: 0;
-                    .inp-question,
-                    .inp-name,
-                    .inp-phone {
+            .tit__seventh-container {
+                margin: 76px 0 12.5px 0;
+                @include font($fonts: 22px);
+            }
+            .application-form {
+                margin-top: 32px;
+                width: 100%;
+                .name-phone {
+                    p {
                         margin: 0;
+                        .inp-question,
+                        .inp-name,
+                        .inp-phone {
+                            margin: 0;
+                            width: 100%;
+                            border: none;
+                            outline: none;
+                            border-bottom: solid 1px #FFFFFF;
+                            background-color: transparent;
+                            @include futbokc($fonts: 18px, $lineh: 138.72%, $color: #FFFFFF);
+                            transition: 0.3s;
+                            &:focus {
+                                border-bottom: 1px solid #acafb1;
+                            }
+                        }
+                        .inp-question::-moz-placeholder,
+                        .inp-name::-moz-placeholder,
+                        .inp-phone::-moz-placeholder {
+                            color: #FFFFFF;
+                            /* Цвет подсказывающего текста */
+                        }
+                        .inp-question::-webkit-input-placeholder,
+                        .inp-name::-webkit-input-placeholder,
+                        .inp-phone::-webkit-input-placeholder {
+                            color: #FFFFFF;
+                        }
+                        .inp-question:-ms-input-placeholder,
+                        .inp-name:-ms-input-placeholder,
+                        .inp-phone:-ms-input-placeholder {
+                            color: #FFFFFF;
+                        }
+                        .inp-question::-ms-input-placeholder,
+                        .inp-name::-ms-input-placeholder,
+                        .inp-phone::-ms-input-placeholder {
+                            color: #FFFFFF;
+                        }
+                        .inp-question::placeholder,
+                        .inp-name::placeholder,
+                        .inp-phone::placeholder {
+                            color: #FFFFFF;
+                        }
+                        .label-name,
+                        .label-phone,
+                        .label-question {
+                            @include futbokc($fonts: 15px, $lineh: 20px, $color: rgba(255, 255, 255, 0.5));
+                        }
+                    }
+                    .p-label-question,
+                    .p-label-phone {
+                        margin: 63px 0 0 0;
+                    }
+                    .block-check {
+                        margin: 27px 0 0 0;
+                        color: #FFFFFF;
+                        .check {
+                            .check__input {
+                                position: absolute;
+                                -webkit-appearance: none;
+                                -moz-appearance: none;
+                                appearance: none;
+                            }
+                            .check__box {
+                                position: absolute;
+                                width: 1em;
+                                height: 1em;
+                                background-color: #E3B873;
+                            }
+                            .check__box-text {
+                                @include futbokc($fonts: 18px, $lineh: 138.72%, $color: #FFFFFF);
+                                padding-left: 10%;
+                            }
+                            .check__input:checked+.check__box {
+                                background-size: cover;
+                                background-image: url(../img/group48.svg);
+                            }
+                            .check__input:focus+.check__box {
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    .submit {
+                        margin: 63px 0 0 0;
                         width: 100%;
+                        height: 51px;
+                        left: 18px;
                         border: none;
-                        outline: none;
-                        border-bottom: solid 1px #FFFFFF;
-                        background-color: #252525;
-                        @include futbokc($fonts: 18px, $lineh: 138.72%, $color: #FFFFFF);
+                        background: #E3B873;
+                        box-shadow: 0px 10px 20px rgba(227, 184, 115, 0.1);
+                        @include futdem($lineh: 26px, $fonts: 15px, $textal: center, $texttrans: uppercase);
+                        &:focus,
+                        &:hover,
+                        &:active {
+                            cursor: pointer;
+                            background: rgb(248, 207, 141);
+                        }
                     }
-                    .inp-question::-moz-placeholder,
-                    .inp-name::-moz-placeholder,
-                    .inp-phone::-moz-placeholder {
-                        color: #FFFFFF;
-                        /* Цвет подсказывающего текста */
-                    }
-                    .inp-question::-webkit-input-placeholder,
-                    .inp-name::-webkit-input-placeholder,
-                    .inp-phone::-webkit-input-placeholder {
-                        color: #FFFFFF;
-                    }
-                    .inp-question:-ms-input-placeholder,
-                    .inp-name:-ms-input-placeholder,
-                    .inp-phone:-ms-input-placeholder {
-                        color: #FFFFFF;
-                    }
-                    .inp-question::-ms-input-placeholder,
-                    .inp-name::-ms-input-placeholder,
-                    .inp-phone::-ms-input-placeholder {
-                        color: #FFFFFF;
-                    }
-                    .inp-question::placeholder,
-                    .inp-name::placeholder,
-                    .inp-phone::placeholder {
-                        color: #FFFFFF;
-                    }
-                }
-                .label-name,
-                .label-phone,
-                .label-question,
-                .check {
-                    @include futbokc($fonts: 15px, $lineh: 20px, $color: rgba(255, 255, 255, 0.5));
-                }
-                .check {
-                    color: #FFFFFF
-                }
-                .check:before {
-                    margin: 5px 10px 0 0;
-                    content: url(../img/rect8.svg);
-                    display: inline-block;
-                    vertical-align: middle;
-                }
-                input:checked+label:before {
-                    margin: 5px 10px 0 0;
-                    content: url(../img/group48.svg);
-                    display: inline-block;
-                    vertical-align: middle;
-                }
-                input:disabled+label:before {
-                    margin: 5px 10px 0 0;
-                    content: url(../img/rect8.svg);
-                    display: inline-block;
-                    vertical-align: middle;
-                }
-                .p-label-question,
-                .p-label-phone {
-                    margin: 63px 0 0 0;
-                }
-                .p-agree {
-                    margin: 27px 0 0 0;
-                }
-                .submit {
-                    margin: 63px 0 0 0;
-                    width: 340px;
-                    height: 51px;
-                    left: 18px;
-                    border: none;
-                    background: #E3B873;
-                    box-shadow: 0px 10px 20px rgba(227, 184, 115, 0.1);
-                    @include futdem($lineh: 26px, $fonts: 15px, $textal: center, $texttrans: uppercase);
                 }
             }
         }
-        .map {
-            margin-top: 46px;
-            overflow: hidden;
-            width: 340px;
+        .how-to-find-us {
             position: relative;
-            .map-small-group {
-                position: absolute;
-                width: 80%;
-                bottom: 10px;
-                left: 0;
-                right: 0;
-                margin-left: auto;
-                margin-right: auto;
-                color: #000;
+            @include displ();
+            flex-direction: column;
+            width: 100%;
+            .map {
+                margin: 46px 0 0 0;
+                overflow: hidden;
+                width: 100%;
+                position: relative;
                 text-align: center;
-                .map-small {
-                    line-height: 1.8;
-                    font-size: 2px;
-                    background: #fff;
+                .map__iframe {
+                    width: 340px;
+                    height: 255px;
+                }
+                .map-small-group {
+                    position: absolute;
+                    width: 80%;
+                    bottom: 10px;
+                    left: 0;
+                    right: 0;
+                    margin-left: auto;
+                    margin-right: auto;
+                    color: #000;
+                    text-align: center;
+                    .map-small {
+                        line-height: 1.8;
+                        font-size: 2px;
+                        background: #fff;
+                    }
+                }
+                #gmap_canvas img {
+                    max-width: none!important;
+                    background: none!important;
                 }
             }
-            #gmap_canvas img {
-                max-width: none!important;
-                background: none!important;
+            .our-contact {
+                margin-top: -4px;
+                background-color: #252525;
+                position: relative;
+                @include displ();
+                flex-direction: column;
+                width: 100%;
+                height: 210px;
+                .h__our-contact {
+                    margin: 42px 0 0 0;
+                    @include font($fonts: 18px, $color: #E3B873);
+                }
+                .feedback {
+                    margin: 24px 0 40px 0;
+                    position: relative;
+                    @include displ($jcont: space-between);
+                    width: 99px;
+                    height: 40px;
+                    a>img {
+                        width: 39px;
+                        height: 39px;
+                        &:hover,
+                        &:focus {
+                            cursor: pointer;
+                        }
+                        &:active {
+                            cursor: pointer;
+                        }
+                    }
+                }
             }
         }
     }
-}
-
-.footer {
-    margin-top: -4px;
-    background-color: #252525;
-    position: relative;
-    @include displ();
-    flex-direction: column;
-    width: 100%;
-    height: 210px;
-    .h-footer {
-        margin: 42px 0 0 0;
-        @include font($fonts: 18px, $color: #E3B873);
-    }
-    .feedback {
-        margin: 24px 0 40px 0;
-        position: relative;
-        @include displ($jcont: space-between);
-        width: 99px;
-        height: 40px;
-        img {
-            width: 39px;
-            height: 39px;
-        }
+    .footer {
+        display: none;
     }
 }
 
@@ -827,7 +886,7 @@ a {
                 z-index: 10;
                 background-color: #131313;
                 &:hover {
-                    color: #ffffff99;
+                    color: #e4dede99;
                     cursor: pointer;
                 }
                 .scroll-block__p {
@@ -1149,10 +1208,11 @@ a {
                             margin: 0;
                         }
                     }
-                    .p-agree {
+                    .block-check {
+                        width: 45%;
                         margin: 0 auto;
                         grid-area: p-agree;
-                        .check {
+                        .check .check__box-text {
                             color: #363636
                         }
                     }
@@ -1161,7 +1221,6 @@ a {
         }
         .fourth-container {
             margin: 0;
-            .tit__fourth-container {}
             .group-repair {
                 margin: 13px 0 31px 0;
             }
@@ -1274,7 +1333,6 @@ a {
                             margin: 0 auto;
                             width: 58.7%;
                             padding-top: 5.53%;
-                            // padding-bottom: 7.7%;
                             @include futdem($fonts: 20px, $lineh: 25px, $textal: center);
                         }
                         .name-phone {
@@ -1335,27 +1393,24 @@ a {
                             }
                             .p-agree {
                                 margin: 35px 0 0 0;
-                                .agree:checked+.check:before {
-                                    margin: 5px 10px 0 0;
-                                    content: url(../img/group48.svg);
-                                    display: inline-block;
-                                    vertical-align: middle;
-                                }
-                                .agree:disabled+.check:before {
-                                    margin: 5px 10px 0 0;
-                                    content: url(../img/rect8.svg);
-                                    display: inline-block;
-                                    vertical-align: middle;
-                                }
                                 .check {
-                                    color: #FFFFFF;
-                                    @include futbokc($fonts: 16px, $lineh: 22px, $color: #ffffff);
-                                    &:before {
-                                        margin: 5px 10px 0 0;
-                                        content: url(../img/rect8.svg);
-                                        display: inline-block;
-                                        vertical-align: middle;
+                                    .check__text {
+                                        margin-left: 7%;
+                                        @include futbokc($fonts: 16px, $lineh: 22px, $color: #ffffff);
                                     }
+                                    &:before {
+                                        position: absolute;
+                                        margin-top: 2px;
+                                        content: "";
+                                        width: 1em;
+                                        height: 1em;
+                                        background-color: #E3B873;
+                                        cursor: pointer;
+                                    }
+                                }
+                                input:checked+label:before {
+                                    background-size: cover;
+                                    background-image: url(../img/group48.svg);
                                 }
                             }
                             .submit {
@@ -1366,6 +1421,7 @@ a {
                                 @include futdem($lineh: 18px, $fonts: 13px, $textal: center, $texttrans: uppercase);
                                 background: #E3B873;
                                 box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.15);
+                                cursor: pointer;
                             }
                         }
                     }
@@ -1615,7 +1671,7 @@ a {
                                 display: none;
                             }
                             span {
-                                background: #bbb;
+                                background: rgba($color: #FFFFFF, $alpha: 0.3);
                                 display: inline-block;
                                 width: 9px;
                                 height: 9px;
@@ -1625,11 +1681,12 @@ a {
                                 &:active,
                                 &:focus {
                                     cursor: pointer;
+                                    opacity: 1;
                                 }
                             }
                             input[type=radio]:checked+span {
-                                background: #fff;
-                                width: 10px;
+                                opacity: 1;
+                                width: 20px;
                                 height: 10px;
                                 border-radius: 100%;
                             }
@@ -1642,49 +1699,251 @@ a {
             position: relative;
             text-align: center;
             padding-top: 95.5px;
+            background-color: #FFFFFF;
+            z-index: 2;
+            &::after {
+                content: '';
+                width: 100%;
+                height: 64%;
+                background: #252525;
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: -1;
+            }
+            .tit__sixth-container {
+                @include font($fonts: 20px, $lineh: 28px);
+            }
+            .p-project {
+                @include futbokc($fonts: 20px, $lineh: 27px, $textal: center);
+            }
             .our-employees {
-                padding-top: 95.5px;
-                width: 86%;
+                padding-top: 38.5px;
+                width: 80%;
                 position: relative;
                 @include displ($jcont: space-between);
                 flex-direction: row;
                 .employee {
+                    width: auto;
+                    height: auto;
                     .photo {
+                        height: 358px;
                         top: 0;
                         position: relative;
                     }
                     .avatar {
                         position: absolute;
-                        top: -48px;
-                        left: -13px;
+                        top: -47px;
+                        left: -46px;
                     }
                     .employee-portfolio {
                         position: absolute;
-                        bottom: 0;
+                        bottom: -13%;
                         right: 15.66%;
                         width: 69.13%;
                         height: 137px;
                         background: #FFFFFF;
                         box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
-                        .name {
-                            margin: 22px 0 0 0;
-                            @include font($fonts: 18px, $lineh: 25px, $color: #181818, $texttrans: none);
-                        }
-                        .profession {
-                            margin: 9px 0 17px 0;
-                            @include futbokc($fonts: 18px, $lineh: 26px, $textal: center, $color: #959595);
-                        }
-                        .experience {
-                            padding: 4px 0 5px 0;
-                            background-color: #E3B873;
-                            @include font($fonts: 13px, $lineh: 29px);
-                        }
                     }
                 }
                 .the-details {
                     margin: 0;
                     .photo {
                         top: 0;
+                    }
+                }
+            }
+            .about-our-employees {
+                padding: 6% 0 88.6px 0;
+                display: block;
+                width: 45%;
+                p {
+                    @include futbokc($fonts: 20px, $lineh: 34px, $textal: center, $color: #363636);
+                }
+            }
+        }
+        .our-clients {
+            display: block;
+            position: relative;
+            text-align: center;
+            width: 100%;
+            .our-clients__tit {
+                padding-bottom: 14px;
+                @include font($fonts: 20px, $lineh: 28px, $color: #181818);
+            }
+            .group-clients .line {
+                margin-bottom: 14px;
+            }
+            .our-clients__p {
+                padding-top: 25px;
+                @include futbokc($fonts: 20px, $lineh: 27px, $textal: center, $color: #363636);
+            }
+            .feedback-about-us {
+                padding-top: 39px;
+                position: relative;
+                @include displ();
+                flex-direction: row;
+                .clients-wrap {
+                    margin-left: 2%;
+                    width: 28%;
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                    .clients {
+                        padding: 7%;
+                        background: #FFFFFF;
+                        box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
+                        .clients__info {
+                            @include displ($jcont: left);
+                            .clients__name {
+                                padding-left: 5%;
+                                width: 66%;
+                                @include font($fonts: 18px, $lineh: 23px, $color: #181818, $textal: left);
+                            }
+                        }
+                        .p_about {
+                            @include futbokc($fonts: 15px, $lineh: 27px, $color: #959595);
+                            text-transform: lowercase;
+                        }
+                    }
+                    .clients-area {
+                        margin: -9% 0 0 -19%;
+                    }
+                }
+            }
+        }
+        .seventh-container {
+            background: #FFFFFF;
+            &::after {
+                content: '';
+                width: 100%;
+                height: 64%;
+                background: linear-gradient(180deg, rgba(24, 24, 24, 0.9) 3.47%, rgba(24, 24, 24, 0.72) 100%), url(../img/image72.png) no-repeat;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+            .form-wrap {
+                z-index: 10;
+                width: 66%;
+                padding: 1% 10% 1% 10%;
+                background-color: #252525;
+                .tit__seventh-container {
+                    margin-bottom: 7.5%;
+                    @include font($fonts: 20px, $lineh: 28px);
+                }
+                .application-form {
+                    z-index: 100;
+                    margin: 0 auto;
+                    width: 85%;
+                    .name-phone {
+                        display: flex;
+                        flex-wrap: wrap;
+                        height: 400px;
+                        align-content: space-between;
+                    }
+                    .p-label-name,
+                    .p-label-phone,
+                    .p-label-question {
+                        margin: 0;
+                    }
+                    .p-label-name {
+                        margin-right: 11%;
+                    }
+                    .p-label-name,
+                    .p-label-phone {
+                        width: 44.5%;
+                    }
+                    .p-label-question {
+                        width: 100%;
+                    }
+                    .block-check {
+                        margin: 0 0 0 21%;
+                        width: 100%;
+                    }
+                    .submit {
+                        width: 38.5%;
+                        margin: 0 0 7% 34%;
+                    }
+                }
+            }
+            .how-to-find-us {
+                margin-top: 4%;
+                position: relative;
+                @include displ();
+                flex-direction: column-reverse;
+                .map {
+                    z-index: 10;
+                    margin: 0 0 5% 0;
+                    .map__iframe {
+                        width: 925px;
+                        height: 465px;
+                    }
+                }
+                .our-contact {
+                    z-index: 10;
+                    background: transparent;
+                    .h__our-contact {
+                        width: 38%;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        @include displ($jcont: space-between);
+        background-color: #252525;
+        height: 82px;
+        position: relative;
+        text-align: center;
+        width: 100%;
+        .logo {
+            margin-left: 6%;
+            @include futdem($fonts: 14px, $lineh: 16px, $color: #E3B873, $texttrans: uppercase);
+        }
+        .telefon {
+            @include futdem($fonts: 14px, $lineh: 16px, $textal: right, $color: #E3B873);
+            text-decoration-line: underline;
+        }
+        .button_call {
+            display: block;
+            margin: auto;
+            width: 11.2%;
+            height: 37px;
+            border: none;
+            color: #E3B873;
+            background: #E3B873;
+            box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+            border-radius: 2px;
+            @include futdem($fonts: 13px, $lineh: 15px, $textal: center, $texttrans: uppercase);
+            &:hover,
+            &:focus {
+                cursor: pointer;
+            }
+            &:active {
+                cursor: pointer;
+            }
+        }
+        .nav {
+            margin: 0 4.7% 0 3.1%;
+            display: block;
+            width: 40%;
+            ul {
+                @include displ($jcont: space-between);
+                list-style: none;
+                li {
+                    margin-left: 3.3%;
+                    @include futbokc($fonts: 14px, $lineh: 16px, $textal: center);
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: #E3B873;
+                        cursor: pointer;
+                    }
+                    &:first-child {
+                        margin-left: 0;
+                        color: #E3B873;
                     }
                 }
             }

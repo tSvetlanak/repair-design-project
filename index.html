@@ -8,7 +8,7 @@
     <title>Repair-design-project</title>
     <link rel="stylesheet" href="dist/normalize.css">
     <link rel="stylesheet" href="dist/bundle.css">
-    <script src="dist/bundle.js"></script>
+
 </head>
 
 <body>
@@ -48,6 +48,7 @@
                 <button id="applic" class="btn applic">SUBMIT YOUR APPLICATION</button>
 
             </section>
+
             <section id="content" class="second-container">
                 <div class="second-container__wrap">
                     <div class="second-container__nav">
@@ -64,12 +65,11 @@
                     <div class="slider__big">
                         <img src="src/img/MaskGroup1.png" alt="first-slid">
                         <img src="src/img/MaskGroup.png" alt="first-slid">
-
                     </div>
 
-                    <button id="button-2" class="buttom-left__butt">
+                    <button id="btn" class="buttom-left__butt">
                             <img src="src/img/vectorst2.svg" alt="" > 
-                        </button >
+                    </button >
 
                     <div class="specification" id="grid">
                         <div class="city">
@@ -108,10 +108,10 @@
                         <img class="img-btn__section2" src="src/img/btn-sec2.svg" alt="">
                     </div>
                 </div>
-            </section>
+        </section>
 
-            <section class="third-container">
-                <h2 class="tit__third-container">online control</h2>
+        <section class="third-container">
+            <h2 class="tit__third-container">online control</h2>
                 <div class="group-camera">
                     <img class="line" src="src/img/rect67.svg" alt="line">
                     <img class="camera" src="src/img/group1.svg" alt="camera">
@@ -129,14 +129,20 @@
                         <input class="inp-name" type="text" id="name" placeholder="What is your name:" required pattern="[A-z]{2,}"></p>
                         <p class="p-label-phone"> <label class="label-phone" for="phone">Phone</label>
                          <input class="inp-phone" type="tel" name="tel" id="phone" placeholder="Your phone number:" required pattern="2[0-9]{3}-[0-9]{3}"></>
-                        <p class="p-agree"><input class="agree" type="checkbox" id="reading" value="yes" checked hidden><label class="check" for="reading">I agree to the processing of personal data</label></p>
-                        <p class="p-submit"> <input class="submit" type="submit" value="SUBMIT"></p>
+                         <div class="block-check"> 
+                            <label class="check">
+                              <input class="check__input" type="checkbox" value="yes" checked >
+                              <span class="check__box"></span> 
+                              <span class="check__box-text"> I agree to the processing of personal data</span>
+                            </label>
+                         </div>
+                         <p class="p-submit"> <input class="submit" type="submit" value="SUBMIT"></p>
                     </div>
-
                 </form>
-            </section>
-            <section class="fourth-container">
-                <h2 class="tit__fourth-container">TYPES OF REPAIR</h2>
+        </section>
+
+        <section class="fourth-container">
+            <h2 class="tit__fourth-container">TYPES OF REPAIR</h2>
                 <div class="group-repair">
                     <img class="line" src="src/img/rect67.svg" alt="line">
                     <img class="camera" src="src/img/tools.svg" alt="camera">
@@ -162,7 +168,7 @@
                     <p class="cost-p">from 900 rub / m2 </p>
                 </div>
     </div>
-<div class="type-of-works">
+    <div class="type-of-works">
                 <div class=" overhaul">
                     <div class="list-of-works">
                         <h3 class="list-tit"> Overhaul</h3>
@@ -180,8 +186,8 @@
                 <div class="cost">
                     <p class="cost-p">from 1800 rub / m2 </p>
                 </div>
-</div>
-<div class="type-of-works">
+    </div>
+    <div class="type-of-works">
                 <div class=" designer-repair">
                     <div class="list-of-works">
                         <h3 class="list-tit"> Designer Repair</h3>
@@ -200,7 +206,7 @@
                     <p class="cost-p">from 4000 rub / m2 </p>
                 </div>
             </div>
-</div>
+    </div>
 <div class="our-conditions">
         <div class="circle-wrap">
             <div class="circle-content">
@@ -223,38 +229,36 @@
             </div>
         </div>
         <div class="form-block">
-                           <form class="application-form" action="" method="get">
-                                  <p class="form-text">Leave a request for free departure of the measurer</p>
+             <form class="application-form" action="" method="get">
+                 <p class="form-text">Leave a request for free departure of the measurer</p>
                         
-                                <div class="name-phone">
-                                    <label class="label-name" for="name">Name</label>
-                                    <input class="inp-name" type="text" id="name" placeholder="What is your name:" required pattern="[A-z]{2,}">
-                                    <label class="label-phone" for="phone">Phone</label>
-                                    <input class="inp-phone" type="tel" name="tel" id="phone" placeholder="Your phone number:" required pattern="2[0-9]{3}-[0-9]{3}">
-                                    <label class="label-email" for="email">e-Mail</label>
-                                    <input class="inp-email" type="email" name="email" id="email" placeholder="Your email:" required>
-                                      
-                                    <p class="p-agree"><input class="agree" type="checkbox" id="reading" value="yes" checked hidden >
-                                        <label class="check" for="reading">I agree to the processing of personal data</label>
-                                    </p>
-                                    <p class="p-submit"> <input class="submit" type="submit" value="Call the measurer"></p>
-                                </div>
-                            </form>
-                            <div class="your-profit">
-                                  <img class="your-profit-img" src="src/img/Group221.svg" alt=""> 
-                                  <p class="your-profit__text">Help save 10 - 20% of the <br/>
-                                                               cost of materials</p>
-                            </div>
+                     <div class="name-phone">
+                        <label class="label-name" for="name">Name</label>
+                        <input class="inp-name" type="text" id="name" placeholder="What is your name:" required pattern="[A-z]{2,}">
+                        <label class="label-phone" for="phone">Phone</label>
+                        <input class="inp-phone" type="tel" name="tel" id="phone" placeholder="Your phone number:" required pattern="2[0-9]{3}-[0-9]{3}">
+                        <label class="label-email" for="email">e-Mail</label>
+                        <input class="inp-email" type="email" name="email" id="email" placeholder="Your email:" required>
+                        <p class="p-agree"><input class="agree" type="checkbox" id="reading1" value="yes" checked hidden>
+                        <label class="check" for="reading1"><span class="check__text"> I agree to the processing of personal data</span></label>
+                        </p> 
+                                    
+                        <input class="submit" type="submit" value="Call the measurer">
+                    </div>
+             </form>
+                     <div class="your-profit">
+                         <img class="your-profit-img" src="src/img/Group221.svg" alt=""> 
+                         <p class="your-profit__text">Help save 10 - 20% of the <br/>
+                                                 cost of materials</p>
+                    </div>
         </div>
-        
-       
-    </div>
-                <h2 class="tit-end__fourth-container">We realize your </br> wildest fantasies</h2>
-               <div class="wildest-fantasies">
-                    <div class="wildest-fantasies__wrap">
-                   <div class="wildest-fantasies__text-block">
-                    <h2 class="wildest-fantasies__tit">We realize your </br> wildest fantasies</h2>
-                      <div class="wildest-fantasies__nav">
+</div>
+     <h2 class="tit-end__fourth-container">We realize your </br> wildest fantasies</h2>
+     <div class="wildest-fantasies">
+        <div class="wildest-fantasies__wrap">
+             <div class="wildest-fantasies__text-block">
+               <h2 class="wildest-fantasies__tit">We realize your </br> wildest fantasies</h2>
+                    <div class="wildest-fantasies__nav">
                        <ul>
                            <li class="item">American classic</li>
                            <li class="item"> Empire</li>
@@ -268,32 +272,32 @@
                            <li class="item"> High tech</li>
                            <li class="item">Eclecticism</li>
                        </ul>
-                       </div>
                     </div>
-                   
-                   <div class="image-group-first">
-                   <img class="item2" src="src/img/image5_item2.png" alt="">
-                   <img class="item3" src="src/img/image5_item3.png" alt="">
-                   </div>
-                   <div class="image-group-second">
-                   <img class="item1" src="src/img/image5_item1.png" alt="">
-                   <img class="item4" src="src/img/image5_item4.png" alt="">
-                  </div>
             </div>
+                   
+        <div class="image-group-first">
+             <img class="item2" src="src/img/image5_item2.png" alt="">
+                   <img class="item3" src="src/img/image5_item3.png" alt="">
         </div>
+        <div class="image-group-second">
+                <img class="item1" src="src/img/image5_item1.png" alt="">
+                <img class="item4" src="src/img/image5_item4.png" alt="">
+         </div>
+     </div>
+</div>
 
                
-                <div id="content" class="slider__fouth-container first-slid">
-                    <button id="button-1" class="buttom-right__butt">
-                               <img src="src/img/vectorst1.svg" alt="" >
+                 <div id="sliderfc" class="slider__fouth-container first-slid">
+                   <button class="buttom-right__butt" type="button" id="button-1">
+                       <img src="src/img/vectorst1.svg" alt="" >
                     </button>
-                    <button id="button-2" class="buttom-left__butt">
-                               <img src="src/img/vectorst2.svg" alt="" > 
+                    <button class="buttom-left__butt" type="button" id="button-2">
+                        <img src="src/img/vectorst2.svg" alt="" > 
                     </button >
-                </div>
-            </section>
+                 </div>
+        </section>
 
-            <section class="fifth-container">
+        <section class="fifth-container">
                     <h2 class="tit__fifth-container">design project</h2>
                     <div class="group-project">
                         <img class="line" src="src/img/rect67.svg" alt="line">
@@ -426,7 +430,7 @@
                     </div>
         </div>
                 </section>
-                <section class="sixth-container">
+     <section class="sixth-container">
                         <h2 class="tit__sixth-container">our team</h2>
                         <div class="group-project">
                             <img class="line" src="src/img/rect67.svg" alt="line">
@@ -462,46 +466,157 @@
                         <p class="experience">Work experience 12 years</p>
                     </div>
                  </div>
+         </div>
+                <div class="about-our-employees">
+                    <img src="src/img/rect613.svg" alt="line" class="rect613">
+                     <p>Each employee of our company is a qualified full-time specialist</br> with work experience of 6 years.</br>
+                     We do not have laborers and guest workers, each employee carries out </br> work corresponding to his specialty.</p>
+               </div> 
+ </section>
+
+<section class="our-clients">
+            <h2 class="our-clients__tit">our clients</h2>
+            <div class="group-clients">
+                <img class="line" src="src/img/rect67.svg" alt="line">
+                <img class="design" src="src/img/group43.svg" alt="design">
+                <img class="line" src="src/img/rect67.svg" alt="line">
+            </div>
+            <p class="our-clients__p">80% of our customers recommend us to their</br> friends and family.</p>
+           
+            <div class="feedback-about-us">
+                    <div class="clients-wrap">
+                <div class="clients">
+                    <div class="clients__info">
+                        <img class="clients__foto" src="src/img/client1.png" alt="">
+                        <h3 class="clients__name">Fedosova Maria Konstantinovna</h3>
+                   </div>
+                        <p class="p_about">I want to thank the guys for their work.
+                         WE PUT YOUR SHOWER PART IN REPAIR. I am VERY grateful that I
+                        referred to the repair as to my own. GREAT THANKS I EXPRESS THE
+                        PROJECT TO GEORGIA FOR ITS PROFESSIONALISM AND APPROACH. THE REPAIR PROCESS WAS 
+                        TURNED OUT IN TERMS, FASTER THAN ANTICIPATED. TEAM MOBILE AND PROFESSIONAL.
+                        WORKS PERFORMED QUALITATIVELY WITHOUT COMMENTS. QUALITY SATISFIED. PRICES DEMOCRATIC.
+                         I RECOMMEND THESE MASTERS.</p>
+                 </div>
+                <img class="clients-area" src="src/img/client21.svg" alt="">
+                    </div>
+                <div class="clients-wrap">
+                <div class="clients">
+                    <div class="clients__info">
+                        <img class="clients__foto" src="src/img/client2.png" alt="">
+                         <h3 class="clients__name">Afanasyev Sergey Alexandrovich</h3>
+                    </div>
+                        <p class="p_about">I want to thank the guys for their work. 
+                        WE PUT YOUR SHOWER PART IN REPAIR. I am VERY grateful that
+                        I referred to the repair as to my own. GREAT THANKS I EXPRESS 
+                        THE PROJECT TO GEORGIA FOR ITS PROFESSIONALISM AND APPROACH. 
+                        THE REPAIR PROCESS WAS TURNED OUT IN TERMS, FASTER THAN ANTICIPATED.
+                        TEAM MOBILE AND PROFESSIONAL.
+                        WORKS PERFORMED QUALITATIVELY WITHOUT COMMENTS.
+                        QUALITY SATISFIED. PRICES DEMOCRATIC. I RECOMMEND THESE MASTERS.</p>
                 </div>
-                </section>
+                <img class="clients-area" src="src/img/client22.svg" alt="">
+                 </div>
+                <div class="clients-wrap">
+                <div class="clients">
+                    <div class="clients__info">
+                        <img class="clients__foto" src="src/img/client3.png" alt="">
+                        <h3 class="clients__name">Kiriev Egor Leonidovich</h3>
+                    </div>
+                        <p class="p_about">I want to thank the guys for their work. 
+                        WE PUT YOUR SHOWER PART IN REPAIR. I am VERY grateful that
+                        I referred to the repair as to my own. GREAT THANKS I EXPRESS 
+                        THE PROJECT TO GEORGIA FOR ITS PROFESSIONALISM AND APPROACH. 
+                        THE REPAIR PROCESS WAS TURNED OUT IN TERMS, FASTER THAN ANTICIPATED.
+                        TEAM MOBILE AND PROFESSIONAL.
+                        WORKS PERFORMED QUALITATIVELY WITHOUT COMMENTS.
+                        QUALITY SATISFIED. PRICES DEMOCRATIC. I RECOMMEND THESE MASTERS.</p>
+                </div>
+                <img class="clients-area" src="src/img/client23.svg" alt="">
+            </div>
+            </div>
+</section>
+
 <section class="seventh-container">
+    <div class="form-wrap">
     <h2 class="tit__seventh-container">have any questions? </h2>
     <form class="application-form" action="" method="get">
         <div class="name-phone">
-            <p><label class="label-name" for="name">Name</label></p>
-            <p> <input class="inp-name" type="text" id="name" placeholder="What is your name:" required pattern="[A-z]{2,}"></p>
-            <p class="p-label-phone"> <label class="label-phone" for="phone">Phone</label></p>
-            <p> <input class="inp-phone" type="tel" name="tel" id="phone" placeholder="Your phone number:" required pattern="2[0-9]{3}-[0-9]{3}"></p>
-            <p class="p-label-question"> <label class="label-question" for="question">Question</label></p>
-            <p> <input class="inp-question" type="text" name="question" id="question" placeholder="I want to know:" ></p>
-            <p class="p-agree"><input class="agree" type="checkbox" id="reading" value="yes" checked hidden><label class="check" for="reading">I agree to the processing of personal data</label></p>
-            <p> <input class="submit" type="submit" value="SUBMIT"></p>
+            <p class="p-label-name"> <label class="label-name">
+                <span>Name</span> 
+                <input class="inp-name" type="text"  placeholder="What is your name:" required pattern="[A-z]{2,}">
+                </label>
+           </p>
+            
+            <p class="p-label-phone">
+                 <label class="label-phone">
+                   <span>Phone</span> 
+                   <input class="inp-phone" type="tel" name="tel" placeholder="Your phone number:" required pattern="2[0-9]{3}-[0-9]{3}">
+                 </label>
+            </p>
+            
+             <p class="p-label-question"> 
+                 <label class="label-question">
+                    <span> Question</span> 
+                    <input class="inp-question" type="text" name="question" placeholder="I want to know:" >
+                 </label>
+            </p>
+          
+           <div class="block-check"> 
+            <label class="check">
+              <input class="check__input" type="checkbox" value="yes" checked >
+              <span class="check__box"></span> 
+              <span class="check__box-text"> I agree to the processing of personal data</span>
+            </label>
+             </div>
+            <input class="submit" type="submit" value="SUBMIT">
         </div>
 
     </form>
+    </div>
+<div class="how-to-find-us">
     <div class="map">
-        <iframe width="340" height="255" src="https://maps.google.com/maps?width=340&amp;height=255&amp;hl=en&amp;q=Luninec%2CBELARUS+(%D0%9D%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)&amp;ie=UTF8&amp;t=&amp;z=10&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+        <iframe class="map__iframe"  src="https://maps.google.com/maps?width=340&amp;height=255&amp;hl=en&amp;q=Luninec%2CBELARUS+(%D0%9D%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)&amp;ie=UTF8&amp;t=&amp;z=10&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
         </iframe>
         <div class="map-small-group">
             <small  class="map-small">Powered by 
             <a href="https://embedgooglemaps.com/ru/">https://embedgooglemaps.com/ru/</a> & <a href="https://iamsterdamcard.it">i amsterdamcard it
             </a></small>
         </div>
-      <!--  <style>#gmap_canvas img{max-width:none!important;background:none!important}
-       <br /> </style>-->
     </div>
+    <div class="our-contact">
+            <h2 class="h__our-contact">
+                    Rostov-on-Don, Nansen St., 239 Shopping Center Decorum Tel +7 (928) 768 32 29 
+            </h2>
+            <div class="feedback">
+                <a href="#"><img src="src/img/group3.svg" alt=""></a>
+                <a href="#"><img src="src/img/group4.svg" alt=""></a>
+            </div>
+    </div>
+</div>
 </section>
         </main>
         <footer class="footer">
-            <h2 class="h-footer">
-                    Rostov-on-Don, Nansen St., 239<br /> Shopping Center Decorum<br /> Tel +7 (928) 768 32 29 
-            </h2>
-            <div class="feedback">
-                <img src="src/img/group3.svg" alt="">
-                <img src="src/img/group4.svg" alt="">
+            <div class="logo">
+                <p class="name">IC "Repair Design Project"</p>
             </div>
-        </footer>
-    </div>
+            <div class="nav">
+                <ul>
+                    <li class="item1">HOME</li>
+                    <li class="item2">PROJECTS</li>
+                    <li class="item3">MEASUREMENT</li>
+                    <li class="item4">TEAM</li>
+                    <li class="item5">REVIEWS</li>
+                    <li class="item6">CONTACTS</li>
+                </ul>
+            </div>
+
+            <a href="tel:+7 (928) 768-32-39" class="telefon">+7 (928) 768-32-39</a>
+            <button class="button_call">REQUEST A CALL</button>
+
+                    </footer>
+                </div>
+                <script src="dist/bundle.js"></script>
 </body>
 
-</html><s></s>
+</html>
