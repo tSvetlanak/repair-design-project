@@ -1,0 +1,363 @@
+    @media only screen and (min-width: 375px) {
+        .second-container {
+            position: relative;
+            width: 100%;
+            .second-container__wrap {
+                margin: 0;
+                background-color: #252525;
+                @include displ();
+                flex-direction: column;
+                .second-container__nav {
+                    display: none;
+                }
+                .tit {
+                    margin: 36px 0 0 0;
+                    position: relative;
+                    width: 45%;
+                    @include font($fonts: 22px, $color: #E3B873);
+                    letter-spacing: -0.07em;
+                }
+                .offer {
+                    margin: 22px 0 0 0;
+                    width: 83%;
+                    @include futbokc($fonts: 14px, $lineh: 158.48%, $textal: center);
+                }
+                .first-slid {
+                    background: url(../img/image2.jpg) no-repeat;
+                    background-size: cover;
+                }
+                .second-slid {
+                    background: url(../img/image3.jpg) no-repeat;
+                    background-size: cover;
+                }
+                .third-slid {
+                    background: url(../img/MaskGroup1.jpg) no-repeat;
+                    background-size: cover;
+                }
+                .second-container__slider {
+                    position: relative;
+                    margin: 36px 0 0 0;
+                    width: 91%;
+                    display: block;
+                    @include displ($jcont: space-between);
+                    height: 242px;
+                    transition: all .5s;
+                    .buttom-left__butt,
+                    .buttom-right__butt {
+                        border: none;
+                        outline: none;
+                        background-color: #E3B873;
+                        border-radius: 50%;
+                        width: 36px;
+                        height: 36px;
+                        margin: 0 13px 0 14px;
+                        transition: all .2s;
+                        &:hover,
+                        &:focus {
+                            cursor: pointer;
+                        }
+                        &:active {
+                            cursor: pointer;
+                            background-color: rgb(252, 158, 8);
+                            transform: scale(1.2, 1.2);
+                        }
+                    }
+                    .buttom-right__butt img,
+                    .buttom-left__butt img {
+                        display: block;
+                        margin: 0 auto;
+                    }
+                }
+                .slider-big__btn,
+                .slider-big,
+                .block-radio-btn {
+                    display: none;
+                }
+                .specification {
+                    margin: 36px 0 0 0;
+                    width: 90%;
+                    height: 146px;
+                    display: grid;
+                    grid-template-rows: 1fr 2fr;
+                    grid-template-columns: 1fr 2fr;
+                    grid-column-gap: 10vw;
+                    grid-row-gap: 27px;
+                    .specific-tit {
+                        margin: 0;
+                        @include font($fonts: 14px, $color: #E3B873, $textal: left);
+                    }
+                    .specific-descr {
+                        margin: 11px 0 0 0;
+                        @include futbokc( $fonts: 14px, $lineh: 135.84%, $color: #ffffff);
+                    }
+                    .address,
+                    .time {
+                        width: 99px;
+                    }
+                }
+            }
+        }
+    }
+    
+    @media only screen and (min-width: 450px) {
+        .second-container {
+            .second-container__wrap {
+                .second-container__slider {
+                    height: 380px;
+                }
+                .slider-big__btn {
+                    display: none;
+                }
+            }
+        }
+    }
+    
+    @media only screen and (min-width: 600px) {
+        .second-container {
+            .second-container__wrap {
+                .second-container__slider {
+                    height: 500px;
+                }
+                .specification {
+                    margin: 30px 0 0 0;
+                    width: 90%;
+                    height: 155px;
+                    .specific-tit {
+                        @include font($fonts: 16px, $color: #E3B873, $textal: left);
+                    }
+                    .specific-descr {
+                        @include futbokc( $fonts: 16px, $lineh: 17px, $color: #ffffff);
+                    }
+                }
+                .slider-big__btn {
+                    display: none;
+                }
+            }
+        }
+    }
+    
+    @media only screen and (min-width: 900px) {
+        .second-container {
+            .second-container__wrap {
+                overflow: hidden;
+                padding: 5.7% 0 0 5%;
+                background-color: #252525;
+                position: relative;
+                display: grid;
+                grid-template-areas: ' .  second-container__nav' 'tit   slider' 'offer  slider' ' specification  slider' 'block-radio-btn slider' '. buttom-left__butt';
+                grid-template-columns: 33% 1fr;
+                grid-template-rows: 34px 66px 87px 160px 60px;
+                grid-column-gap: 2vw;
+                grid-row-gap: 35px;
+                .second-container__nav {
+                    width: auto;
+                    display: block;
+                    grid-area: second-container__nav;
+                    ul {
+                        @include displ($jcont: start);
+                        list-style: none;
+                        li {
+                            margin-left: 31.5px;
+                            @include font($fonts: 11px, $lineh: 17px, $color: rgba(255, 255, 255, 0.3));
+                            &:hover,
+                            &:active,
+                            &:focus {
+                                color: #E3B873;
+                                border-bottom: 1px solid #E3B873;
+                                cursor: pointer;
+                            }
+                            &:first-child {
+                                margin-left: 0;
+                                border-bottom: 1px solid #E3B873;
+                                color: #E3B873;
+                            }
+                        }
+                    }
+                }
+                .tit {
+                    grid-area: tit;
+                    margin: 0;
+                    width: 45%;
+                    @include font($fonts: 22px, $lineh: 34px, $color: #E3B873, $textal: left);
+                    letter-spacing: -0.07em;
+                    &::after {
+                        width: 92px;
+                        margin: 20px 0 0 30px;
+                        position: absolute;
+                        content: "";
+                        border: 1px solid #E3B873;
+                    }
+                }
+                .offer {
+                    width: 83%;
+                    margin: 0;
+                    grid-area: offer;
+                    @include futbokc($lineh: 24px, $fonts: 15px);
+                }
+                .specification {
+                    grid-area: specification;
+                    margin: 0;
+                    width: 77%;
+                    display: grid;
+                    grid-template-rows: 1fr 2fr;
+                    grid-template-columns: 1fr 2fr;
+                    grid-column-gap: 3vw;
+                    .specific-tit {
+                        margin: 0;
+                        @include font($fonts: 16px, $lineh: 23px, $color: #E3B873, $textal: left);
+                    }
+                    .specific-descr {
+                        margin: 9px 0 0 0;
+                        @include futbokc( $fonts: 14px, $lineh: 20px, $color: #ffffff);
+                    }
+                    .address,
+                    .time {
+                        width: 99px;
+                    }
+                }
+                .second-container__slider {
+                    display: none;
+                    background-image: none;
+                }
+                .slider-big {
+                    grid-area: slider;
+                    display: block;
+                    min-width: 0;
+                    display: flex;
+                    justify-content: space-between;
+                    img:nth-child(2) {
+                        display: none;
+                        margin-left: 20px;
+                    }
+                }
+                .slider-big__btn {
+                    display: block;
+                    grid-area: buttom-left__butt;
+                    border: none;
+                    outline: none;
+                    background-color: #E3B873;
+                    border-radius: 50%;
+                    width: 55px;
+                    height: 55px;
+                    margin: -602px 0 0 519px;
+                    transition: all .2s;
+                    &:hover,
+                    &:focus {
+                        cursor: pointer;
+                    }
+                    &:active {
+                        cursor: pointer;
+                        background-color: rgb(252, 158, 8);
+                        transform: scale(1.2, 1.2);
+                    }
+                    img {
+                        display: block;
+                        margin: 0 auto;
+                    }
+                }
+                .block-radio-btn {
+                    margin: 47px 0 0 0;
+                    @include displ();
+                    width: 206px;
+                    height: 13.3px;
+                    grid-area: block-radio-btn;
+                    .img-block-radio-btn {
+                        &:hover,
+                        &:active,
+                        &:focus {
+                            cursor: pointer;
+                        }
+                    }
+                    .radio-wrap {
+                        @include displ();
+                        width: 64px;
+                        height: 40px;
+                        margin: 0 29.5px 0 29.5px;
+                        overflow: hidden;
+                        color: #fff;
+                        .my-custom-label {
+                            display: inline-block;
+                            width: 40px;
+                            height: 20px;
+                            line-height: 20px;
+                            text-align: center;
+                            input[type=radio] {
+                                display: none;
+                            }
+                            span {
+                                background: #bbb;
+                                display: inline-block;
+                                width: 9px;
+                                height: 9px;
+                                border-radius: 100%;
+                                vertical-align: middle;
+                                &:hover,
+                                &:active,
+                                &:focus {
+                                    cursor: pointer;
+                                }
+                            }
+                            input[type=radio]:checked+span {
+                                background: #fff;
+                                width: 10px;
+                                height: 10px;
+                                border-radius: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @media only screen and (min-width: 1100px) {
+        .second-container {
+            .second-container__wrap {
+                .second-container__nav {
+                    ul {
+                        li {
+                            margin-left: 60.5px;
+                            @include font($fonts: 14px, $lineh: 19px, $color: rgba(255, 255, 255, 0.3));
+                        }
+                    }
+                }
+                .tit {
+                    @include font($fonts: 27px, $lineh: 37px, $color: #E3B873, $textal: left);
+                    letter-spacing: -0.07em;
+                }
+                .offer {
+                    width: 100%;
+                    @include futbokc($lineh: 29px);
+                }
+                .specification {
+                    width: 100%;
+                    grid-column-gap: 5vw;
+                    .specific-tit {
+                        margin: 0;
+                        @include font($fonts: 18px, $lineh: 25px, $color: #E3B873, $textal: left);
+                    }
+                    .specific-descr {
+                        margin: 9px 0 0 0;
+                        @include futbokc( $fonts: 15px, $lineh: 20px, $color: #ffffff);
+                    }
+                }
+                .second-container__slider {
+                    display: none;
+                    background-image: none;
+                }
+                .slider-big {
+                    img:nth-child(2) {
+                        display: block;
+                        margin-left: 20px;
+                    }
+                }
+                .slider-big__btn {
+                    margin: -602px 0 0 714px;
+                    img {
+                        display: block;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }

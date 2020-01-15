@@ -1,0 +1,257 @@
+@media only screen and (min-width: 375px) {
+    .seventh-container {
+        padding-top: 63px;
+        background-color: #252525;
+        position: relative;
+        @include displ();
+        flex-direction: column;
+        width: 100%;
+        .form-wrap {
+            width: 90%;
+            .seventh-container__tit {
+                margin: 76px 0 12.5px 0;
+                @include font($fonts: 22px);
+            }
+            .application-form {
+                margin-top: 32px;
+                width: 100%;
+                .name-phone {
+                    .form-input {
+                        margin: 0;
+                        .inp-text {
+                            margin: 0;
+                            width: 100%;
+                            border: none;
+                            outline: none;
+                            border-bottom: solid 1px #FFFFFF;
+                            background-color: transparent;
+                            @include futbokc($fonts: 18px, $lineh: 138.72%, $color: #FFFFFF);
+                            transition: 0.3s;
+                            &:focus {
+                                border-bottom: 1px solid #acafb1;
+                            }
+                        }
+                        .inp-text::-moz-placeholder {
+                            color: #FFFFFF;
+                            /* Цвет подсказывающего текста */
+                        }
+                        .inp-text::-webkit-input-placeholder {
+                            color: #FFFFFF;
+                        }
+                        .inp-text:-ms-input-placeholder {
+                            color: #FFFFFF;
+                        }
+                        .inp-text::-ms-input-placeholder {
+                            color: #FFFFFF;
+                        }
+                        .inp-text::placeholder {
+                            color: #FFFFFF;
+                        }
+                        .label-inp span {
+                            @include futbokc($fonts: 15px, $lineh: 20px, $color: rgba(255, 255, 255, 0.5));
+                        }
+                    }
+                    .p-label-question,
+                    .p-label-phone {
+                        margin: 63px 0 0 0;
+                    }
+                    .block-check {
+                        margin: 27px 0 0 0;
+                        color: #FFFFFF;
+                        .check {
+                            .check__input {
+                                position: absolute;
+                                -webkit-appearance: none;
+                                -moz-appearance: none;
+                                appearance: none;
+                            }
+                            .check__box {
+                                position: absolute;
+                                width: 1em;
+                                height: 1em;
+                                background-color: #E3B873;
+                            }
+                            .check__box-text {
+                                @include futbokc($fonts: 18px, $lineh: 138.72%, $color: #FFFFFF);
+                                padding-left: 10%;
+                            }
+                            .check__input:checked+.check__box {
+                                background-size: cover;
+                                background-image: url(../img/group48.svg);
+                            }
+                            .check__input:focus+.check__box {
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    .submit {
+                        margin: 63px 0 0 0;
+                        width: 100%;
+                        height: 51px;
+                        left: 18px;
+                        border: none;
+                        background: #E3B873;
+                        box-shadow: 0px 10px 20px rgba(227, 184, 115, 0.1);
+                        @include futdem($lineh: 26px, $fonts: 15px, $textal: center, $texttrans: uppercase);
+                        &:focus,
+                        &:hover,
+                        &:active {
+                            cursor: pointer;
+                            background: rgb(248, 207, 141);
+                        }
+                    }
+                }
+            }
+        }
+        .how-to-find-us {
+            position: relative;
+            @include displ();
+            flex-direction: column;
+            width: 100%;
+            .map {
+                margin: 46px 0 0 0;
+                overflow: hidden;
+                width: 100%;
+                position: relative;
+                text-align: center;
+                .map__iframe {
+                    width: 340px;
+                    height: 255px;
+                }
+                .map-small-group {
+                    position: absolute;
+                    width: 80%;
+                    bottom: 10px;
+                    left: 0;
+                    right: 0;
+                    margin-left: auto;
+                    margin-right: auto;
+                    color: #000;
+                    text-align: center;
+                    .map-small {
+                        line-height: 1.8;
+                        font-size: 2px;
+                        background: #fff;
+                    }
+                }
+                #gmap_canvas img {
+                    max-width: none!important;
+                    background: none!important;
+                }
+            }
+            .our-contact {
+                margin-top: -4px;
+                background-color: #252525;
+                position: relative;
+                @include displ();
+                flex-direction: column;
+                width: 100%;
+                height: 210px;
+                .h__our-contact {
+                    margin: 42px 0 0 0;
+                    @include font($fonts: 18px, $color: #E3B873);
+                }
+                .feedback {
+                    margin: 24px 0 40px 0;
+                    position: relative;
+                    @include displ($jcont: space-between);
+                    width: 99px;
+                    height: 40px;
+                    a>img {
+                        width: 39px;
+                        height: 39px;
+                        &:hover,
+                        &:focus {
+                            cursor: pointer;
+                        }
+                        &:active {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .seventh-container {
+        background: #FFFFFF;
+        z-index: 1;
+        &::after {
+            z-index: -1;
+            content: '';
+            width: 100%;
+            height: 64%;
+            background: linear-gradient(180deg, rgba(24, 24, 24, 0.9) 3.47%, rgba(24, 24, 24, 0.8) 100%), url(../img/image72.jpg) no-repeat;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+        .form-wrap {
+            width: 66%;
+            padding: 1% 10%;
+            background-color: #252525;
+            .seventh-container__tit {
+                margin-bottom: 7.5%;
+                @include font($fonts: 20px, $lineh: 28px);
+            }
+            .application-form {
+                margin: 0 auto;
+                width: 85%;
+                .name-phone {
+                    display: flex;
+                    flex-wrap: wrap;
+                    height: 400px;
+                    align-content: space-between;
+                    .form-input {
+                        margin: 0;
+                    }
+                    .p-label-name {
+                        margin-right: 11%;
+                    }
+                    .p-label-name,
+                    .p-label-phone {
+                        width: 44.5%;
+                    }
+                    .p-label-phone {
+                        margin: 0;
+                    }
+                    .p-label-question {
+                        width: 100%;
+                    }
+                    .block-check {
+                        margin: 0 0 0 21%;
+                        width: 100%;
+                    }
+                    .submit {
+                        width: 38.5%;
+                        margin: 0 0 7% 34%;
+                    }
+                }
+            }
+        }
+        .how-to-find-us {
+            margin-top: 4%;
+            position: relative;
+            @include displ();
+            flex-direction: column-reverse;
+            .map {
+                z-index: 10;
+                margin: 0 0 5% 0;
+                .map__iframe {
+                    width: 65%;
+                    height: 465px;
+                }
+            }
+            .our-contact {
+                z-index: 10;
+                background: transparent;
+                .h__our-contact {
+                    width: 38%;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

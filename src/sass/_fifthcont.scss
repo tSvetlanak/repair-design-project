@@ -1,0 +1,347 @@
+    @media only screen and (min-width: 375px) {
+        .fifth-container {
+            position: relative;
+            margin: 0;
+            width: 100%;
+            background-color: #252525;
+            @include displ();
+            flex-direction: column;
+            .six-steps-our-work {
+                display: none;
+            }
+            .fifth-container__tit {
+                margin-top: 52px;
+                @include font($fonts: 22px);
+            }
+            .group-project {
+                margin: 16px 0 23px 0;
+                & .line {
+                    margin-bottom: 14px;
+                }
+            }
+            .p-project {
+                width: 74%;
+                height: 76px;
+                @include futbokc($fonts: 15px, $textal: center);
+            }
+            .fifth-container__content {
+                margin: 0;
+                width: 100%;
+                position: relative;
+                display: grid;
+                grid-template-columns: 1fr;
+                justify-content: center;
+                .type-of-works {
+                    position: relative;
+                    display: grid;
+                    justify-content: center;
+                    width: 73%;
+                    .redecorating {
+                        width: 165%;
+                        height: 100%;
+                        margin-top: 40px;
+                        background: url(../img/image.jpg) no-repeat;
+                    }
+                    .overhaul {
+                        width: 165%;
+                        height: 100%;
+                        margin-top: 51px;
+                        background: url(../img/image3.jpg) no-repeat;
+                    }
+                    .designer-repair {
+                        width: 165%;
+                        height: 100%;
+                        margin-top: 59px;
+                        background: url(../img/image31.jpg) no-repeat;
+                    }
+                    .list-of-works {
+                        width: 77%;
+                        height: 245px;
+                        margin: 224px 17% 0 0;
+                        background: #FFFFFF;
+                        box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.05);
+                        .list-tit {
+                            padding: 21px 47px 0 31px;
+                            @include font($fonts: 15px, $color: #363636, $texttrans: none, $textal: left);
+                        }
+                        ul {
+                            padding: 10px 41px 38px 45px;
+                            .items {
+                                @include futbokc($lineh: 169.8%, $fonts: 13px, $color: #959595);
+                            }
+                        }
+                        .completelist-ul {
+                            display: none;
+                        }
+                    }
+                    .listmini {
+                        height: 182px
+                    }
+                    .cost {
+                        margin: -23px 45% 0 0;
+                        width: 51%;
+                        height: 49px;
+                        background: #E3B873;
+                        box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+                        .cost-p {
+                            padding-top: 15px;
+                            @include font($fonts: 15px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @media only screen and (min-width: 600px) {
+        .fifth-container {
+            .fifth-container__tit {
+                @include font($fonts: 23px, $color: #ffffff);
+            }
+            .fifth-container__content {
+                width: -webkit-fill-available;
+                display: grid;
+                justify-items: stretch;
+                justify-content: space-evenly;
+                grid-template-columns: repeat(2, minmax(200px, 300px));
+                grid-gap: 1%;
+                .type-of-works {
+                    justify-content: normal;
+                    .redecorating,
+                    .overhaul,
+                    .designer-repair {
+                        margin-top: 40px;
+                        width: 130%;
+                        background-size: 100% 366px;
+                        .incompletelist {
+                            height: 366px;
+                            .completelist-ul {
+                                display: block;
+                            }
+                            .incompletelist-ul {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @media only screen and (min-width: 1000px) {
+        .fifth-container {
+            background-color: #252525;
+            z-index: 2;
+            &::after {
+                content: '';
+                width: 100%;
+                height: 33%;
+                background: #FFFFFF;
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: -1;
+            }
+            .fifth-container__tit {
+                margin-top: 120px;
+                @include font($fonts: 20px, $lineh: 28px, $color: #181818);
+            }
+            .group-project {
+                margin: 13px 0 24px 0;
+            }
+            .p-project {
+                height: 57px;
+                width: 53%;
+                @include futbokc($fonts: 20px, $lineh: 27px, $textal: center, $color: #363636);
+            }
+            .fifth-container__content {
+                margin: 80px 0 0 0;
+                display: grid;
+                justify-content: center;
+                grid-template-columns: repeat(3, minmax(230px, 330px));
+                grid-gap: 1%;
+                .type-of-works {
+                    justify-content: normal;
+                    .redecorating,
+                    .designer-repair,
+                    .overhaul {
+                        background-size: 100% 366px;
+                    }
+                    .list-of-works {
+                        .list-tit {
+                            @include font($lineh: 25px, $fonts: 16px, $color: #363636, $textal: left);
+                        }
+                        .items {
+                            @include futbokc($lineh: 25px, $fonts: 15px, $color: #959595);
+                        }
+                    }
+                    .cost {
+                        @include font($fonts: 18px, $lineh: 25px);
+                    }
+                }
+            }
+            .six-steps-our-work {
+                display: block;
+                width: 86%;
+                position: relative;
+                display: grid;
+                grid-template-columns: 27.4% 60%;
+                grid-column-gap: 9%;
+                .six-steps-our-work__text-block {
+                    margin-top: -35%;
+                    grid-column: span 1;
+                    @include displ($jcont: space-around);
+                    flex-direction: column;
+                    .how-working-text {
+                        margin-left: -33%;
+                        @include futdem($fonts: 15px, $lineh: 21px, $texttrans: uppercase);
+                    }
+                    .six-steps-tit {
+                        margin: -43% 40% 0 0;
+                        @include font($fonts: 24px, $lineh: 37px, $color: #E3B873, $textal: left);
+                        &::after {
+                            width: 92px;
+                            margin: 20px 0 0 62px;
+                            position: absolute;
+                            content: "";
+                            border: 1px solid #E3B873;
+                        }
+                    }
+                    .num-work {
+                        margin: -23% 87% 0 0;
+                        @include font($fonts: 18px, $lineh: 25px, $textal: left);
+                    }
+                    .first-tit {
+                        margin-top: -35%;
+                        @include font($fonts: 15px, $lineh: 23px, $color: #E3B873, $textal: left);
+                    }
+                    .about-first-step {
+                        margin-top: -40%;
+                        @include futbokc($fonts: 15px, $lineh: 25px);
+                    }
+                }
+                .list-of-six-steps {
+                    margin-top: 60px;
+                    grid-column: span 1;
+                    display: grid;
+                    grid-template-rows: 15% 15% 50%;
+                    grid-row-gap: 45px;
+                    .steps {
+                        margin-left: 8%;
+                        grid-row: span 1;
+                        @include displ($jcont: space-between);
+                        list-style: none;
+                        li {
+                            opacity: 0.3;
+                            width: 16%;
+                            @include futbokc($fonts: 15px, $lineh: 18px);
+                            a {
+                                border-bottom: 1px solid #FFFFFF;
+                                @include font($fonts: 15px, $lineh: 21px);
+                            }
+                            &:hover,
+                            &:active,
+                            &:focus {
+                                opacity: 1;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    .first-list {
+                        li {
+                            &:first-child {
+                                opacity: 1;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    .howwework-img {
+                        width: 93%;
+                        margin-left: 8%;
+                        height: 376px;
+                        margin-bottom: 8%;
+                    }
+                }
+                .btn__section5 {
+                    @include displ();
+                    .img-btn__section5 {
+                        &:hover,
+                        &:active,
+                        &:focus {
+                            cursor: pointer;
+                        }
+                    }
+                    .slider-wrap {
+                        margin: 0 29.5px 0 29.5px;
+                        .my-custom-label {
+                            display: inline-block;
+                            width: 10px;
+                            height: 20px;
+                            line-height: 20px;
+                            text-align: center;
+                            input[type=radio] {
+                                display: none;
+                            }
+                            span {
+                                background: rgba($color: #FFFFFF, $alpha: 0.3);
+                                display: inline-block;
+                                width: 9px;
+                                height: 9px;
+                                border-radius: 100%;
+                                vertical-align: middle;
+                                &:hover,
+                                &:active,
+                                &:focus {
+                                    cursor: pointer;
+                                    opacity: 1;
+                                }
+                            }
+                            input[type=radio]:checked+span {
+                                opacity: 1;
+                                width: 10px;
+                                height: 10px;
+                                border-radius: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @media only screen and (min-width: 1200px) {
+        .fifth-container {
+            .fifth-container__content {
+                margin: 0;
+                width: 86%;
+                display: grid;
+                justify-content: center;
+                grid-template-columns: repeat(3, minmax(230px, 370px));
+                grid-gap: 2%;
+                .type-of-works {
+                    margin-top: 39px;
+                    .redecorating,
+                    .designer-repair,
+                    .overhaul {
+                        background-size: 100% 411px;
+                    }
+                    .list-of-works {
+                        margin: 251px 17% 0 0;
+                        .list-tit {
+                            @include font($lineh: 25px, $fonts: 18px, $color: #363636, $textal: left);
+                        }
+                    }
+                }
+            }
+            .six-steps-our-work {
+                .six-steps-our-work__text-block {
+                    .how-working-text {
+                        margin-left: -41%;
+                    }
+                    .six-steps-tit {
+                        @include font($fonts: 27px, $lineh: 37px, $color: #E3B873, $textal: left);
+                    }
+                }
+            }
+        }
+    }

@@ -1,0 +1,215 @@
+@media only screen and (min-width: 375px) {
+    .our-clients {
+        display: none;
+    }
+    .sixth-container {
+        margin: 0;
+        background-color: #252525;
+        position: relative;
+        @include displ();
+        flex-direction: column;
+        .tit__sixth-container {
+            margin: 77px 0 12.5px 0;
+            @include font($fonts: 22px);
+        }
+        .group-project .line {
+            margin-bottom: 14px;
+        }
+        .p-project {
+            width: 90%;
+            height: 42px;
+            margin: 23.5px 0 41px 0;
+            @include futbokc($fonts: 15px, $textal: center);
+        }
+        .our-employees {
+            margin: 0 0 114px 4.5%;
+            width: 100%;
+            min-height: 1335px;
+            position: relative;
+            @include displ($jcont: space-between);
+            flex-direction: column;
+            .employee {
+                position: relative;
+                width: auto;
+                height: auto;
+                .photo {
+                    height: 358px;
+                    top: 35px;
+                    right: 0;
+                    position: relative;
+                }
+                .avatar {
+                    position: absolute;
+                    top: -12px;
+                    left: -46px;
+                }
+            }
+            .employee-portfolio {
+                position: absolute;
+                bottom: -89px;
+                right: 13.66%;
+                width: 69.13%;
+                height: 137px;
+                background: #FFFFFF;
+                box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
+                .name {
+                    margin: 22px 0 0 0;
+                    @include font($fonts: 18px, $lineh: 25px, $color: #181818, $texttrans: none);
+                }
+                .profession {
+                    margin: 9px 0 17px 0;
+                    @include futbokc($fonts: 18px, $lineh: 26px, $textal: center, $color: #959595);
+                }
+                .experience {
+                    padding: 4px 0 5px 0;
+                    background-color: #E3B873;
+                    @include font($fonts: 13px, $lineh: 29px);
+                }
+            }
+        }
+        .the-details {
+            margin-top: 154px;
+        }
+    }
+    .about-our-employees {
+        display: none;
+    }
+}
+
+@media (min-width: 600px) {
+    .sixth-container {
+        .p-project {
+            @include futbokc($fonts: 20px, $lineh: 27px, $textal: center);
+        }
+        .our-employees {
+            width: 100%;
+            min-height: 971px;
+            position: relative;
+            @include displ($jcont: space-evenly);
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .the-details {
+            margin: 0 0 0 1%;
+            .photo {
+                top: 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .sixth-container {
+        position: relative;
+        text-align: center;
+        padding-top: 95.5px;
+        background-color: #FFFFFF;
+        z-index: 2;
+        &::after {
+            content: '';
+            width: 100%;
+            height: 64%;
+            background: #252525;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+        .tit__sixth-container {
+            @include font($fonts: 20px, $lineh: 28px);
+        }
+        .our-employees {
+            margin: 81px 0 0 0;
+            min-height: 364px;
+            .employee {
+                .photo {
+                    top: 0;
+                }
+                .avatar {
+                    position: absolute;
+                    top: -47px;
+                    left: -46px;
+                }
+                .employee-portfolio {
+                    position: absolute;
+                    bottom: -13%;
+                    right: 15.66%;
+                    width: 69.13%;
+                    height: 137px;
+                    background: #FFFFFF;
+                    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
+                }
+            }
+            .the-details {
+                margin: 0;
+            }
+        }
+        .about-our-employees {
+            padding: 6% 0 88.6px 0;
+            display: block;
+            width: 45%;
+            p {
+                @include futbokc($fonts: 20px, $lineh: 34px, $textal: center, $color: #363636);
+            }
+        }
+    }
+    .our-clients {
+        display: block;
+        position: relative;
+        text-align: center;
+        width: 100%;
+        .our-clients__tit {
+            padding-bottom: 14px;
+            @include font($fonts: 20px, $lineh: 28px, $color: #181818);
+        }
+        .group-clients .line {
+            margin-bottom: 14px;
+        }
+        .our-clients__p {
+            padding-top: 25px;
+            @include futbokc($fonts: 20px, $lineh: 27px, $textal: center, $color: #363636);
+        }
+        .feedback-about-us {
+            padding-top: 39px;
+            position: relative;
+            @include displ();
+            flex-direction: row;
+            .clients-wrap {
+                margin-left: 2%;
+                width: 28%;
+                &:first-child {
+                    margin-left: 0;
+                }
+                .clients {
+                    padding: 7%;
+                    background: #FFFFFF;
+                    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
+                    .clients__info {
+                        @include displ($jcont: left);
+                        .clients__name {
+                            padding-left: 5%;
+                            width: 66%;
+                            @include font($fonts: 18px, $lineh: 23px, $color: #181818, $textal: left);
+                        }
+                    }
+                    .p_about {
+                        @include futbokc($fonts: 15px, $lineh: 27px, $color: #959595);
+                        text-transform: lowercase;
+                    }
+                }
+                .clients-area {
+                    width: 89%;
+                    margin: -9% 0 0 -19%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .sixth-container {
+        .our-employees {
+            width: 80%;
+        }
+    }
+}

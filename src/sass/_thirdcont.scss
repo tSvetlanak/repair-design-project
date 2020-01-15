@@ -1,0 +1,316 @@
+@media only screen and (min-width: 375px) {
+    .third-container {
+        background-color: #252525;
+        position: relative;
+        @include displ();
+        flex-direction: column;
+        .third-container__tit {
+            margin-top: 69px;
+            @include font($fonts: 22px, $color: #ffffff);
+        }
+        .group-camera {
+            margin: 20px 0 23px 0;
+            & .line {
+                margin-bottom: 14px;
+            }
+        }
+        .video {
+            position: relative;
+            width: 340px;
+            height: 0;
+            padding-bottom: 47.25%;
+            background-color: #000000;
+            box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15);
+            &:hover .video__button,
+            .video__button:focus {
+                opacity: 1;
+            }
+            .video__media {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: none;
+            }
+            .video__button {
+                display: none;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                padding: 0;
+                width: 54px;
+                height: 54px;
+                border: none;
+                border-radius: 50%;
+                background-color: #E3B873;
+                opacity: 0.8;
+                outline: none;
+                transform: translate(-50%, -50%);
+                .video__button-icon {
+                    position: absolute;
+                    margin-left: 2px;
+                    transform: translate(-50%, -50%);
+                }
+                &:hover {
+                    opacity: 1;
+                }
+            }
+            .video__embed {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: none;
+            }
+        }
+        .video--enabled {
+            cursor: pointer;
+        }
+        .video--enabled .video__button {
+            display: block;
+        }
+        .rect613 {
+            margin: 28px 0 22px 0;
+        }
+        .third-container__text {
+            width: 90%;
+            @include futbokc($fonts: 14px, $lineh: 169.8%, $textal: center);
+        }
+        .application-form {
+            margin: 32px 0 0 0;
+            width: 90%;
+            height: 301px;
+            z-index: 3;
+            .name-phone {
+                p {
+                    .inp-name,
+                    .inp-phone {
+                        width: 100%;
+                        border: none;
+                        outline: none;
+                        border-bottom: solid 1px #FFFFFF;
+                        background-color: #252525;
+                        @include futbokc($fonts: 18px, $lineh: 138.72%, $color: #FFFFFF);
+                    }
+                    .inp-name::-moz-placeholder,
+                    .inp-phone::-moz-placeholder {
+                        color: #FFFFFF;
+                        /* Цвет подсказывающего текста */
+                    }
+                    .inp-name::-webkit-input-placeholder,
+                    .inp-phone::-webkit-input-placeholder {
+                        color: #FFFFFF;
+                    }
+                    .inp-name:-ms-input-placeholder,
+                    .inp-phone:-ms-input-placeholder {
+                        color: #FFFFFF;
+                    }
+                    .inp-name::-ms-input-placeholder,
+                    .inp-phone::-ms-input-placeholder {
+                        color: #FFFFFF;
+                    }
+                    .inp-name::placeholder,
+                    .inp-phone::placeholder {
+                        color: #FFFFFF;
+                    }
+                }
+                .label-name,
+                .label-phone,
+                .check {
+                    @include futbokc($fonts: 15px, $lineh: 20px, $color: rgba(255, 255, 255, 0.5));
+                }
+                .block-check {
+                    margin: 27px 0 0 0;
+                    color: #FFFFFF;
+                    .check {
+                        .check__input {
+                            position: absolute;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            appearance: none;
+                        }
+                        .check__box {
+                            margin-top: .5%;
+                            position: absolute;
+                            width: 1em;
+                            height: 1em;
+                            background-color: #E3B873;
+                        }
+                        .check__box-text {
+                            @include futbokc($fonts: 18px, $lineh: 138.72%, $color: #FFFFFF);
+                            padding-left: 8%;
+                        }
+                        .check__input:checked+.check__box {
+                            background-size: cover;
+                            background-image: url(../img/group48.svg);
+                        }
+                        .check__input:focus+.check__box {
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .p-label-phone {
+                    margin: 63px 0 0 0;
+                }
+                .submit {
+                    margin: 63px 0 0 0;
+                    width: 100%;
+                    height: 51px;
+                    left: 18px;
+                    border: none;
+                    background: #E3B873;
+                    box-shadow: 0px 10px 20px rgba(227, 184, 115, 0.1);
+                    @include futdem($lineh: 26px, $fonts: 15px, $textal: center, $texttrans: uppercase);
+                    &:hover,
+                    &:focus {
+                        cursor: pointer;
+                    }
+                    &:active {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 400px) {
+    .third-container {
+        .application-form {
+            width: 50%;
+            height: 328px;
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .third-container {
+        background: #FFF;
+        z-index: 2;
+        &::after {
+            content: '';
+            width: 100%;
+            height: 30%;
+            background: #252525;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+        .group-camera {
+            margin: 13px 0 31.2px 0;
+        }
+        .video {
+            width: 57%;
+            padding-bottom: 32.45%;
+        }
+        .rect613 {
+            margin: 63px 0 35px 0;
+        }
+        .third-container__text {
+            width: 80%;
+            height: 130px;
+            @include futbokc($fonts: 20px, $lineh: 34px, $color: #363636, $textal: center);
+        }
+        .application-form {
+            margin-top: 100px;
+            margin-bottom: 148px;
+            width: 80%;
+            height: auto;
+            .name-phone {
+                position: relative;
+                display: grid;
+                grid-template-areas: 'p-label-name p-label-phone submit' ' p-agree p-agree  p-agree ';
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 51px 18px;
+                grid-column-gap: 3.5%;
+                grid-row-gap: 26px;
+                .p-label-name {
+                    grid-area: p-label-name;
+                }
+                .p-label-phone {
+                    grid-area: p-label-phone;
+                    margin: 0;
+                }
+                p {
+                    margin: 0;
+                    .inp-name,
+                    .inp-phone {
+                        border-bottom: solid 1px rgba(54, 54, 54, 0.5);
+                        background-color: #ffffff;
+                        @include futbokc($fonts: 18px, $lineh: 24px, $color: #363636);
+                    }
+                    .label-name,
+                    .label-phone,
+                    .check {
+                        @include futbokc($fonts: 15px, $lineh: 20px, $color: rgba(54, 54, 54, 0.5));
+                        transform: rotate(-0.07deg);
+                    }
+                    .inp-name::-moz-placeholder,
+                    .inp-phone::-moz-placeholder {
+                        color: #363636;
+                        /* Цвет подсказывающего текста */
+                    }
+                    .inp-name::-webkit-input-placeholder,
+                    .inp-phone::-webkit-input-placeholder {
+                        color: #363636;
+                    }
+                    .inp-name:-ms-input-placeholder,
+                    .inp-phone:-ms-input-placeholder {
+                        color: #363636;
+                    }
+                    .inp-name::-ms-input-placeholder,
+                    .inp-phone::-ms-input-placeholder {
+                        color: #363636;
+                    }
+                    .inp-name::placeholder,
+                    .inp-phone::placeholder {
+                        color: #363636;
+                    }
+                }
+                .p-submit {
+                    grid-area: submit;
+                    .submit {
+                        margin: 0;
+                        height: 42px;
+                    }
+                }
+                .block-check {
+                    width: 65%;
+                    margin: 0 auto;
+                    grid-area: p-agree;
+                    grid-column-start: 1;
+                    grid-column-end: 4;
+                    .check .check__box-text {
+                        color: #363636
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .third-container {
+        &::after {
+            content: '';
+            height: 34%;
+        }
+        .third-container__text {
+            width: 47%;
+        }
+        .application-form {
+            width: 57%;
+            .name-phone {
+                .p-submit {
+                    .submit {
+                        margin: 0;
+                        height: 51px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,226 @@
+@media only screen and (min-width: 375px) {
+    .first-container {
+        width: 100%;
+        height: 520px;
+        background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/bg__first-cont.jpg) no-repeat;
+        display: grid;
+        grid-template-rows: 145px 110px 83px 77px 5%;
+        grid-template-columns: 1fr;
+        grid-template-areas: "h" "offer" "calcmob" "applicmob";
+        background-size: cover;
+        .scroll-block,
+        .instagram,
+        .applic {
+            display: none;
+        }
+        .h {
+            grid-area: h;
+            width: 90%;
+            padding-top: 85px;
+            margin: 0 4.7% 0 4.7%;
+            @include font($lineh: 132.83%, $textal: left);
+        }
+        .offer {
+            grid-area: offer;
+            width: auto;
+            padding-top: 16px;
+            margin: 0 16.7% 0 4.7%;
+            @include futbokc();
+        }
+        .btn-group {
+            .calcmob {
+                height: 70%;
+                border: none;
+                margin-top: 32px;
+                grid-area: calcmob;
+                background: #E3B873;
+            }
+            .applicmob {
+                height: 70%;
+                margin-top: 26px;
+                grid-area: applicmob;
+                background: rgba(0, 0, 0, 0.0);
+                border: 1px solid #FFFFFF;
+                box-sizing: border-box;
+            }
+            .calcmob,
+            .applicmob {
+                margin-left: 4.7%;
+                width: 90%;
+                @include futdem($lineh: 15px, $fonts: 13px, $textal: center);
+                &:hover,
+                &:active &:focus {
+                    cursor: pointer;
+                    background: #E3B873;
+                    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 450px) {
+    .first-container {
+        .h {
+            width: 70%;
+        }
+        .offer {
+            width: 70%;
+        }
+        .btn-group {
+            .calcmob,
+            .applicmob {
+                width: 70%;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .first-container {
+        background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/bg__first-cont.jpg) no-repeat;
+        background-size: cover;
+        height: 707px;
+        display: grid;
+        grid-template-rows: 299px 108px 92px;
+        grid-template-areas: " h " "offer" " btn ";
+        .instagram {
+            position: relative;
+            background-color: #252525;
+            display: none;
+            grid-area: instagram;
+            .instagram__link {
+                position: absolute;
+                top: 50%;
+                @include futdem($fonts: 14px, $lineh: 16px, $textal: center, $color: #E3B873);
+                transform: rotate(90deg);
+                &:after {
+                    width: 51px;
+                    margin: 8% 18%;
+                    position: absolute;
+                    content: "";
+                    border: 1.5px solid #E3B873;
+                    transform: rotate(-180deg);
+                }
+            }
+        }
+        .scroll-block {
+            position: absolute;
+            left: 0px;
+            top: 747px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 75px;
+            width: 29%;
+            z-index: 10;
+            background-color: #131313;
+            &:hover {
+                color: #e4dede99;
+                cursor: pointer;
+            }
+            .scroll-block__p {
+                margin-left: -16%;
+                a {
+                    @include font($fonts: 14px, $lineh: 19px);
+                    &::after {
+                        display: block;
+                        position: absolute;
+                        margin: -22px 0 0 120px;
+                        content: url('../img/Group62.svg');
+                    }
+                }
+            }
+        }
+        .h {
+            padding-top: 194px;
+            margin: 0 0 0 7%;
+            grid-area: h;
+            @include font($lineh: 43px, $fonts: 30px, $textal: left);
+            span {
+                color: #E3B873;
+            }
+        }
+        .offer {
+            padding-top: 19px;
+            width: 46%;
+            margin: 0 0 0 7%;
+            grid-area: offer;
+            @include futbokc($fonts: 19px, $lineh: 25px);
+        }
+        .btn-group {
+            margin: 0;
+            display: flex;
+            grid-area: btn;
+            .calcmob {
+                width: 17%;
+                margin: 41px 4% 0 7%;
+                border: none;
+                background: #E3B873;
+            }
+            .applic {
+                width: 17%;
+                display: block;
+                margin: 41px 0 0 0;
+                background: rgba(0, 0, 0, 0.0);
+                border: 1px solid #FFFFFF;
+            }
+            .btn {
+                height: 51px;
+                @include futdem($lineh: 12px, $fonts: 10px, $textal: center);
+                &:hover,
+                &:active,
+                &:focus {
+                    cursor: pointer;
+                    background: #E3B873;
+                    box-shadow: 0px 5px 15px rgba(115, 145, 227, 0.3);
+                }
+            }
+            .applicmob {
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 900px) {}
+
+@media only screen and (min-width: 1100px) {
+    .first-container {
+        background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/image43.jpg) no-repeat;
+        height: 707px;
+        display: grid;
+        grid-template-rows: 299px 108px 92px;
+        grid-template-columns: 82px 1fr 1fr 1fr 1fr;
+        grid-row-gap: 20px;
+        grid-template-areas: "instagram h h h ." "instagram offer offer offer ." "instagram btn btn .  . " "instagram  .  .  .  . ";
+        .instagram {
+            display: block;
+        }
+        .scroll-block {
+            top: 738px;
+            height: 97px;
+            width: 17%;
+        }
+        .h {
+            @include font($lineh: 53px, $fonts: 40px, $textal: left);
+        }
+        .offer {
+            margin: 0 46.5% 0 7%;
+            @include futbokc($fonts: 22px, $lineh: 30px);
+        }
+        .btn-group {
+            .calcmob {
+                width: 30%;
+                margin: 41px 16% 0 11%;
+            }
+            .applic {
+                width: 30%;
+                margin: 41px 0 0 -9.5%;
+            }
+            .btn {
+                @include futdem($lineh: 15px, $fonts: 13px, $textal: center);
+            }
+        }
+    }
+}
