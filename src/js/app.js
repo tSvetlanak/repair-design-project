@@ -12,14 +12,14 @@ SecondButtonFc.addEventListener("click", funcFc, { passive: true }, false);
 function funcFc() {
     const contentFc = document.getElementById("sliderfc");
     switch (contentFc.className) {
-        case "slider__fouth-container first-slid":
-            contentFc.className = ("slider__fouth-container second-slid");
+        case "fourth-container__slider first-slid":
+            contentFc.className = ("fourth-container__slider second-slid");
             break;
-        case "slider__fouth-container second-slid":
-            contentFc.className = ("slider__fouth-container third-slid");
+        case "fourth-container__slider second-slid":
+            contentFc.className = ("fourth-container__slider third-slid");
             break;
-        case "slider__fouth-container third-slid":
-            contentFc.className = ("slider__fouth-container first-slid");
+        case "fourth-container__slider third-slid":
+            contentFc.className = ("fourth-container__slider first-slid");
             break;
             return contentFc.className;
     }
