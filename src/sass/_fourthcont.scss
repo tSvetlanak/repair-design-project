@@ -107,8 +107,8 @@
                 width: 90%;
                 height: 242px;
                 transition: all .5s;
-                .buttom-left__butt,
-                .buttom-right__butt {
+                .butt-prev,
+                .butt-next {
                     border: none;
                     outline: none;
                     background-color: #E3B873;
@@ -127,8 +127,8 @@
                         transform: scale(1.2, 1.2);
                     }
                 }
-                .buttom-right__butt img,
-                .buttom-left__butt img {
+                .butt-prev img,
+                .butt-next img {
                     display: block;
                     margin: 0 auto;
                 }
@@ -290,9 +290,7 @@
                     .name-phone {
                         margin-top: 35px;
                         padding: 0 9.7% 0 9.7%;
-                        .inp-name,
-                        .inp-phone,
-                        .inp-email {
+                        .form-inp {
                             margin: 0;
                             width: 100%;
                             border: none;
@@ -304,43 +302,28 @@
                             line-height: 25px;
                             color: #FFFFFF;
                         }
-                        .inp-name::-moz-placeholder,
-                        .inp-phone::-moz-placeholder,
-                        .inp-email::-moz-placeholder {
+                        .form-inp::-moz-placeholder {
                             color: #FFFFFF;
                             /* Цвет подсказывающего текста */
                         }
-                        .inp-name::-webkit-input-placeholder,
-                        .inp-phone::-webkit-input-placeholder,
-                        .inp-email::-webkit-input-placeholder {
+                        .form-inp::-webkit-input-placeholder {
                             color: #FFFFFF;
                         }
-                        .inp-name:-ms-input-placeholder,
-                        .inp-phone:-ms-input-placeholder,
-                        .inp-email:-ms-input-placeholder {
+                        .form-inp:-ms-input-placeholder {
                             color: #FFFFFF;
                         }
-                        .inp-name::-ms-input-placeholder,
-                        .inp-phone::-ms-input-placeholder,
-                        .inp-email::-ms-input-placeholder {
+                        .form-inp::-ms-input-placeholder {
                             color: #FFFFFF;
                         }
-                        .inp-name::placeholder,
-                        .inp-phone::placeholder,
-                        .inp-email::placeholder {
+                        .form-inp::placeholder {
                             color: #FFFFFF;
                         }
-                        .label-name,
-                        .label-phone,
-                        .label-email {
+                        .form-label {
                             @include futbokc($fonts: 15px, $lineh: 20px, $color: rgba(255, 255, 255, 0.5));
-                        }
-                        .label-name {
                             display: block;
                         }
                         .label-email,
                         .label-phone {
-                            display: block;
                             margin: 48px 0 0 0;
                         }
                         .p-agree {
